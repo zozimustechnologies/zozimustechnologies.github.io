@@ -54,8 +54,8 @@
     .nav-links { display: flex; gap: 28px; align-items: center; }
     .nav-links a { font-size: 0.9rem; font-weight: 500; color: var(--text-muted); transition: color 0.2s; }
     .nav-links a:hover, .nav-links a.active { color: var(--text-bright); text-decoration: none; }
-    .nav-cta { padding: 8px 20px; background: var(--accent); color: #fff !important; border-radius: 8px; font-weight: 600; font-size: 0.85rem; transition: background 0.2s, transform 0.1s; }
-    .nav-cta:hover { background: var(--accent-light); transform: translateY(-1px); text-decoration: none; }
+    .nav-cta { padding: 8px 20px; background: var(--danger); color: #fff !important; border-radius: 8px; font-weight: 600; font-size: 0.85rem; transition: background 0.2s, transform 0.1s; }
+    .nav-cta:hover { background: #e04450; transform: translateY(-1px); text-decoration: none; }
     .nav-toggle { display: none; background: none; border: none; cursor: pointer; padding: 4px; }
     .nav-toggle svg { stroke: var(--text-muted); }
 
@@ -253,12 +253,12 @@
 <body>
 
   <nav class="nav">
-    <a href="index.html" class="nav-brand">
-      <svg width="28" height="28" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="6" fill="#3d7ea6"/><text x="14" y="19" text-anchor="middle" font-size="15" font-weight="800" fill="white" font-family="Inter,sans-serif">Z</text></svg>
+    <a href="/" class="nav-brand">
+      <img src="https://avatars.githubusercontent.com/u/175112813?s=28&v=4" alt="Zozimus Technologies" width="28" height="28" style="border-radius:6px">
       Zozimus Technologies
     </a>
     <div class="nav-links">
-      <a href="index.html">Home</a>
+      <a href="/">Home</a>
       <a href="extensions.html" class="active">Extensions</a>
       <a href="about.html">About</a>
       <a href="privacy.html">Privacy</a>
