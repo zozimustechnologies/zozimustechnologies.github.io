@@ -1,1 +1,1 @@
-# zozimus.github.io
+# zozimustechnologies.github.io
