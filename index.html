@@ -6,7 +6,7 @@
   <title>Zozimus Technologies — Browser Extensions That Respect You</title>
   <meta name="description" content="Privacy-first browser extensions by Zozimus Technologies. Powerful tools that run locally, respect your data, and just work.">
   <meta name="theme-color" content="#3d7ea6">
-  <link rel="icon" type="image/png" sizes="48x48" href="https://avatars.githubusercontent.com/u/175112813?s=48&v=4">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48'><clipPath id='r'><rect width='48' height='48' rx='10'/></clipPath><image href='https://avatars.githubusercontent.com/u/175112813?s=48' width='48' height='48' clip-path='url(%23r)'/></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -214,7 +214,7 @@
     .btn:hover { text-decoration: none; transform: translateY(-2px); }
 
     .btn-primary {
-      background: linear-gradient(135deg, var(--accent), var(--gradient-2));
+      background: var(--accent);
       color: #fff;
       box-shadow: 0 4px 20px rgba(61,126,166,0.3);
     }
@@ -286,6 +286,30 @@
       overflow: hidden;
       backdrop-filter: blur(10px);
       transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+      cursor: pointer;
+    }
+
+    .ext-card-link {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+    }
+
+    .ext-card-actions { position: relative; z-index: 2; }
+    .ext-card-actions .btn { position: relative; z-index: 2; }
+
+    .coming-soon-badge {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 3px 10px;
+      border-radius: 100px;
+      background: rgba(212,49,59,0.15);
+      color: #e04450;
+      border: 1px solid rgba(212,49,59,0.25);
+      margin-left: 8px;
     }
 
     .ext-card:hover {
@@ -622,9 +646,9 @@
     </a>
     <div class="nav-links">
       <a href="/" class="active">Home</a>
-      <a href="extensions.html">Extensions</a>
-      <a href="about.html">About</a>
-      <a href="privacy.html">Privacy</a>
+      <a href="/extensions">Extensions</a>
+      <a href="/about">About</a>
+      <a href="/privacy">Privacy</a>
       <a href="https://github.com/zozimustechnologies" target="_blank" rel="noopener">GitHub</a>
       <a href="https://www.instagram.com/zozimustechnologies" target="_blank" rel="noopener">Instagram</a>
       <a href="https://wise.com/pay/business/sandeepchadda?utm_source=open_link" class="nav-cta" target="_blank" rel="noopener">&#9829; Donate</a>
@@ -638,11 +662,11 @@
   <section class="hero">
     <div class="hero-bg"></div>
     <div class="hero-grid"></div>
-    <div class="hero-badge"><span class="dot"></span> Open source &middot; Privacy first &middot; Free forever</div>
+    <div class="hero-badge"><span class="dot"></span> Open source &middot; Privacy first</div>
     <h1>Browser tools that<br><span class="gradient-text">respect your privacy</span></h1>
     <p class="subtitle">We build lightweight, powerful browser extensions that run 100% locally. No tracking, no accounts, no data collection. Just tools that work.</p>
     <div class="hero-buttons">
-      <a href="extensions.html" class="btn btn-primary">
+      <a href="/extensions" class="btn btn-primary">
         <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
         Explore Extensions
       </a>
@@ -666,7 +690,7 @@
 
     <div class="ext-grid">
       <!-- Site Blocker -->
-      <div class="ext-card reveal">
+      <div class="ext-card reveal" onclick="window.open('https://zozimustechnologies.github.io/siteblocker/','_blank')">
         <div class="ext-card-image">
           <img src="https://raw.githubusercontent.com/zozimustechnologies/siteblocker/main/store-assets/promo-1400x560.png" alt="Site Blocker promotional banner" width="1400" height="560">
         </div>
@@ -676,6 +700,7 @@
             <div>
               <h3>Site Blocker</h3>
               <span class="ext-tag">Productivity</span>
+              <span class="coming-soon-badge">Coming Soon</span>
             </div>
           </div>
           <p>Block distracting websites and boost your productivity. Manage up to 100 sites with individual toggle controls and a math-challenge child safety gate.</p>
@@ -694,7 +719,7 @@
       </div>
 
       <!-- Image Editor -->
-      <div class="ext-card reveal">
+      <div class="ext-card reveal" onclick="window.open('https://zozimustechnologies.github.io/ImageEditor/','_blank')">
         <div class="ext-card-image">
           <img src="https://raw.githubusercontent.com/zozimustechnologies/ImageEditor/main/storeassets/largepromotionaltile.png" alt="Image Editor promotional banner" width="1400" height="560">
         </div>
@@ -704,6 +729,7 @@
             <div>
               <h3>Image Editor</h3>
               <span class="ext-tag">Creative</span>
+              <span class="coming-soon-badge">Coming Soon</span>
             </div>
           </div>
           <p>A full image editing toolkit in your browser sidebar. Crop, resize, apply 8 filters, 8 presets, and 12 creative pixel-manipulation effects — all without leaving your tab.</p>
@@ -722,7 +748,7 @@
       </div>
 
       <!-- PiP Camera -->
-      <div class="ext-card reveal">
+      <div class="ext-card reveal" onclick="window.open('https://zozimustechnologies.github.io/pipcamera/','_blank')">
         <div class="ext-card-image">
           <img src="https://raw.githubusercontent.com/zozimustechnologies/pipcamera/main/store-assets/largepromotionaltile.png" alt="PiP Camera promotional banner" width="1400" height="560">
         </div>
@@ -731,7 +757,8 @@
             <img src="https://raw.githubusercontent.com/zozimustechnologies/pipcamera/main/store-assets/extensionlogo.png" alt="PiP Camera logo" class="ext-card-logo" width="48" height="48">
             <div>
               <h3>PiP Camera</h3>
-              <span class="ext-tag">Utility</span>
+              <span class="ext-tag">Productivity</span>
+              <span class="coming-soon-badge">Coming Soon</span>
             </div>
           </div>
           <p>A tiny, always-on-top camera feed that floats in the corner of your screen. Open your webcam in picture-in-picture mode while browsing, presenting, or video chatting.</p>
@@ -750,7 +777,7 @@
       </div>
 
       <!-- QR Code Generator -->
-      <div class="ext-card reveal">
+      <div class="ext-card reveal" onclick="window.open('https://zozimustechnologies.github.io/qrcodegenerator/','_blank')">
         <div class="ext-card-image">
           <img src="https://raw.githubusercontent.com/zozimustechnologies/qrcodegenerator/main/extension/screenshots/screenshot-1400x560.png" alt="QR Code Generator promotional banner" width="1400" height="560">
         </div>
@@ -759,7 +786,7 @@
             <img src="https://raw.githubusercontent.com/zozimustechnologies/qrcodegenerator/main/images/icon.png" alt="QR Code Generator logo" class="ext-card-logo" width="48" height="48">
             <div>
               <h3>QR Code Generator</h3>
-              <span class="ext-tag">Utility</span>
+              <span class="ext-tag">Productivity</span>
             </div>
           </div>
           <p>Generate QR codes instantly for any URL or text, right from your browser sidebar. Lightweight, fast, and privacy-friendly with a clean side panel UI.</p>
@@ -771,14 +798,15 @@
             <span>Zero dependencies</span>
           </div>
           <div class="ext-card-actions">
-            <a href="https://zozimustechnologies.github.io/qrcodegenerator/" class="btn btn-primary" target="_blank" rel="noopener">Learn More</a>
+            <a href="https://the-qrcode-generator.netlify.app/" class="btn btn-primary" target="_blank" rel="noopener">Open App</a>
+            <a href="https://microsoftedge.microsoft.com/addons/detail/qr-code-generator/kcjdgoccjamenahcmpipbdcfkpnknami" class="btn btn-outline" target="_blank" rel="noopener">Download from Edge</a>
             <a href="https://github.com/zozimustechnologies/qrcodegenerator" class="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
       </div>
 
       <!-- QR Code Reader -->
-      <div class="ext-card reveal">
+      <div class="ext-card reveal" onclick="window.open('https://the-qrcode-reader.netlify.app/','_blank')">
         <div class="ext-card-image">
           <img src="https://raw.githubusercontent.com/zozimustechnologies/the-qrcode-reader/main/storeassets/largepromotionaltile-1400x560.png" alt="QR Code Reader promotional banner" width="1400" height="560">
         </div>
@@ -787,7 +815,8 @@
             <img src="https://raw.githubusercontent.com/zozimustechnologies/the-qrcode-reader/main/storeassets/extensionlogo-300x300.png" alt="QR Code Reader logo" class="ext-card-logo" width="48" height="48">
             <div>
               <h3>QR Code Reader</h3>
-              <span class="ext-tag">Utility</span>
+              <span class="ext-tag">Productivity</span>
+              <span class="coming-soon-badge">Coming Soon</span>
             </div>
           </div>
           <p>A fast, private QR code scanner. Point your webcam at any QR code for instant decoding, or upload a screenshot. 100% local processing — no data collected or transmitted.</p>
@@ -799,7 +828,7 @@
             <span>Lightweight</span>
           </div>
           <div class="ext-card-actions">
-            <a href="https://the-qrcode-reader.netlify.app/" class="btn btn-primary" target="_blank" rel="noopener">Learn More</a>
+            <a href="https://the-qrcode-reader.netlify.app/" class="btn btn-primary" target="_blank" rel="noopener">Open App</a>
             <a href="https://github.com/zozimustechnologies/the-qrcode-reader" class="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
@@ -851,11 +880,6 @@
         <h3>Open Source</h3>
         <p>Every line of code is public on GitHub. Audit it, fork it, improve it — transparency is non-negotiable.</p>
       </div>
-      <div class="value-card reveal">
-        <div class="icon">&#127793;</div>
-        <h3>Free Forever</h3>
-        <p>No subscriptions, no premium tiers, no hidden costs. Every feature is available to everyone, always.</p>
-      </div>
     </div>
   </section>
 
@@ -864,7 +888,7 @@
     <h2>Ready to take back control?</h2>
     <p>Install our extensions and experience tools that actually respect you.</p>
     <div class="cta-buttons">
-      <a href="extensions.html" class="btn btn-primary">Browse Extensions</a>
+      <a href="/extensions" class="btn btn-outline">Browse Extensions</a>
       <a href="https://wise.com/pay/business/sandeepchadda?utm_source=open_link" class="btn btn-donate" target="_blank" rel="noopener">&#9829; Support Our Work</a>
     </div>
   </section>
@@ -889,8 +913,8 @@
       </div>
       <div class="footer-col">
         <h4>Company</h4>
-        <a href="about.html">About</a>
-        <a href="privacy.html">Privacy</a>
+        <a href="/about">About</a>
+        <a href="/privacy">Privacy</a>
         <a href="https://wise.com/pay/business/sandeepchadda?utm_source=open_link" target="_blank" rel="noopener">Donate</a>
       </div>
       <div class="footer-col">

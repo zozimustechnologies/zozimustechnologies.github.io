@@ -6,7 +6,7 @@
   <title>Extensions — Zozimus Technologies</title>
   <meta name="description" content="Browse all browser extensions by Zozimus Technologies. Privacy-first, open source, and free.">
   <meta name="theme-color" content="#3d7ea6">
-  <link rel="icon" type="image/png" sizes="48x48" href="https://avatars.githubusercontent.com/u/175112813?s=48&v=4">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='48' height='48'><clipPath id='r'><rect width='48' height='48' rx='10'/></clipPath><image href='https://avatars.githubusercontent.com/u/175112813?s=48' width='48' height='48' clip-path='url(%23r)'/></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -61,7 +61,7 @@
 
     /* ── Page Header ── */
     .page-header {
-      padding: 140px 24px 60px;
+      padding: 100px 24px 20px;
       text-align: center;
       position: relative;
       overflow: hidden;
@@ -91,7 +91,7 @@
     }
 
     /* ── Section ── */
-    .section { max-width: 1200px; margin: 0 auto; padding: 60px 24px 100px; }
+    .section { max-width: 1200px; margin: 0 auto; padding: 20px 24px 40px; }
 
     /* ── Detailed Extension Cards ── */
     .ext-detail {
@@ -100,54 +100,85 @@
       border-radius: var(--radius);
       overflow: hidden;
       backdrop-filter: blur(10px);
-      margin-bottom: 40px;
-      transition: border-color 0.3s;
+      margin-bottom: 24px;
+      transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
     }
 
-    .ext-detail:hover { border-color: var(--accent); }
+    .ext-detail:hover { border-color: var(--accent); transform: translateY(-3px); box-shadow: 0 12px 40px rgba(0,0,0,0.3); }
+
+    .ext-detail-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      min-height: calc(100vh - 200px);
+    }
+
+    .ext-detail-left { padding: 28px 28px 20px; display: flex; flex-direction: column; }
+
+    .ext-detail-right {
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      border-left: 1px solid var(--border);
+    }
 
     .ext-detail-header {
       display: flex;
       align-items: center;
-      gap: 20px;
-      padding: 32px 32px 0;
+      gap: 16px;
+      margin-bottom: 12px;
     }
 
     .ext-detail-logo {
-      width: 64px;
-      height: 64px;
-      border-radius: 16px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
     }
 
     .ext-detail-title h2 {
-      font-size: 1.6rem;
+      font-size: 1.3rem;
       font-weight: 800;
       color: var(--text-bright);
     }
 
     .ext-detail-title .tag {
       display: inline-block;
-      margin-top: 4px;
-      font-size: 0.72rem;
+      margin-top: 2px;
+      font-size: 0.68rem;
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.08em;
-      padding: 3px 12px;
+      padding: 2px 10px;
       border-radius: 100px;
       background: var(--accent-glow);
       color: var(--accent-light);
       border: 1px solid rgba(61,126,166,0.2);
     }
 
-    .ext-detail-body { padding: 24px 32px; }
+    .coming-soon-badge {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 2px 10px;
+      border-radius: 100px;
+      background: rgba(212,49,59,0.15);
+      color: #e04450;
+      border: 1px solid rgba(212,49,59,0.25);
+      margin-left: 6px;
+    }
+
+    .ext-detail-body { flex: 1; }
 
     .ext-detail-body > p {
-      font-size: 1rem;
+      font-size: 0.9rem;
       color: var(--text-muted);
-      line-height: 1.7;
-      margin-bottom: 24px;
-      max-width: 700px;
+      line-height: 1.6;
+      margin-bottom: 16px;
+      max-width: 600px;
     }
 
     .ext-detail-banner {
@@ -155,41 +186,39 @@
       height: auto;
       aspect-ratio: 1400 / 560;
       object-fit: contain;
-      border-radius: 12px;
+      border-radius: 10px;
       border: 1px solid var(--border);
-      margin-bottom: 24px;
     }
 
     .ext-features-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 12px;
-      margin-bottom: 28px;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 8px;
+      flex: 1;
     }
 
     .ext-feat {
-      padding: 16px;
+      padding: 12px;
       background: var(--bg-elevated);
       border-radius: var(--radius-sm);
       border: 1px solid var(--border);
     }
 
     .ext-feat h4 {
-      font-size: 0.9rem;
+      font-size: 0.82rem;
       color: var(--text-bright);
-      margin-bottom: 4px;
+      margin-bottom: 2px;
     }
 
     .ext-feat p {
-      font-size: 0.8rem;
+      font-size: 0.75rem;
       color: var(--text-muted);
     }
 
     .ext-screenshots {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 16px;
-      margin-bottom: 28px;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 12px;
     }
 
     .ext-screenshots img {
@@ -203,24 +232,32 @@
 
     .ext-detail-actions {
       display: flex;
-      gap: 12px;
+      gap: 10px;
       flex-wrap: wrap;
-      padding: 0 32px 32px;
+      padding-top: 12px;
     }
 
     .btn {
       display: inline-flex; align-items: center; gap: 8px;
-      padding: 12px 24px; font-size: 14px; font-weight: 600;
+      padding: 10px 20px; font-size: 13px; font-weight: 600;
       font-family: inherit; border: none; border-radius: var(--radius-sm);
       cursor: pointer; transition: all 0.25s ease; text-decoration: none;
     }
     .btn:hover { text-decoration: none; transform: translateY(-2px); }
-    .btn-primary { background: linear-gradient(135deg, var(--accent), var(--gradient-2)); color: #fff; box-shadow: 0 4px 20px rgba(61,126,166,0.3); }
+    .btn-primary { background: var(--accent); color: #fff; box-shadow: 0 4px 20px rgba(61,126,166,0.3); }
     .btn-primary:hover { box-shadow: 0 8px 32px rgba(61,126,166,0.4); color: #fff; }
     .btn-outline { background: transparent; color: var(--text-bright); border: 1px solid var(--border); }
     .btn-outline:hover { border-color: var(--accent); background: var(--accent-glow); color: var(--text-bright); }
     .btn-danger { background: var(--danger); color: #fff; }
     .btn-danger:hover { background: #e04450; color: #fff; }
+
+    /* ── Animations ── */
+    .reveal { opacity: 0; transform: translateY(40px) scale(0.98); transition: opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1); }
+    .reveal.visible { opacity: 1; transform: translateY(0) scale(1); }
+    .reveal:nth-child(2) { transition-delay: 0.1s; }
+    .reveal:nth-child(3) { transition-delay: 0.2s; }
+    .reveal:nth-child(4) { transition-delay: 0.3s; }
+    .reveal:nth-child(5) { transition-delay: 0.4s; }
 
     /* ── Footer ── */
     .site-footer {
@@ -234,17 +271,18 @@
     .site-footer .links a { color: var(--text-muted); }
     .site-footer .links a:hover { color: var(--text-bright); }
 
-    .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.7s ease, transform 0.7s ease; }
-    .reveal.visible { opacity: 1; transform: translateY(0); }
+    @media (max-width: 900px) {
+      .ext-detail-inner { grid-template-columns: 1fr; }
+      .ext-detail-right { border-left: none; border-top: 1px solid var(--border); }
+    }
 
     @media (max-width: 640px) {
       .nav-links { display: none; }
       .nav-toggle { display: block; }
-      .page-header { padding: 120px 16px 40px; }
-      .section { padding: 40px 16px 60px; }
-      .ext-detail-header { flex-direction: column; align-items: flex-start; padding: 24px 20px 0; }
-      .ext-detail-body { padding: 20px; }
-      .ext-detail-actions { padding: 0 20px 24px; }
+      .page-header { padding: 100px 16px 20px; }
+      .section { padding: 16px 16px 40px; }
+      .ext-detail-left { padding: 20px; }
+      .ext-detail-right { padding: 20px; }
       .ext-features-grid { grid-template-columns: 1fr; }
       .ext-screenshots { grid-template-columns: 1fr; }
     }
@@ -259,9 +297,9 @@
     </a>
     <div class="nav-links">
       <a href="/">Home</a>
-      <a href="extensions.html" class="active">Extensions</a>
-      <a href="about.html">About</a>
-      <a href="privacy.html">Privacy</a>
+      <a href="/extensions" class="active">Extensions</a>
+      <a href="/about">About</a>
+      <a href="/privacy">Privacy</a>
       <a href="https://github.com/zozimustechnologies" target="_blank" rel="noopener">GitHub</a>
       <a href="https://www.instagram.com/zozimustechnologies" target="_blank" rel="noopener">Instagram</a>
       <a href="https://wise.com/pay/business/sandeepchadda?utm_source=open_link" class="nav-cta" target="_blank" rel="noopener">&#9829; Donate</a>
@@ -280,265 +318,194 @@
 
     <!-- Site Blocker -->
     <div class="ext-detail reveal">
-      <div class="ext-detail-header">
-        <img src="https://raw.githubusercontent.com/zozimustechnologies/siteblocker/main/store-assets/icon-300x300.png" alt="Site Blocker logo" class="ext-detail-logo" width="64" height="64">
-        <div class="ext-detail-title">
-          <h2>Site Blocker</h2>
-          <span class="tag">Productivity</span>
-        </div>
-      </div>
-      <div class="ext-detail-body">
-        <p>Take control of your browsing. Block up to 100 distracting websites with a clean side panel interface. Includes individual toggle controls per site, a master switch, subdomain blocking, and an optional math-challenge gate that prevents children from modifying the blocklist.</p>
-
-        <img src="https://raw.githubusercontent.com/zozimustechnologies/siteblocker/main/store-assets/promo-1400x560.png" alt="Site Blocker banner" class="ext-detail-banner" width="1400" height="560">
-
-        <div class="ext-features-grid">
-          <div class="ext-feat">
-            <h4>&#128737; Block 100 Sites</h4>
-            <p>Add any domain and it's blocked immediately across all subdomains.</p>
+      <div class="ext-detail-inner">
+        <div class="ext-detail-left">
+          <div class="ext-detail-header">
+            <img src="https://raw.githubusercontent.com/zozimustechnologies/siteblocker/main/store-assets/icon-300x300.png" alt="Site Blocker logo" class="ext-detail-logo" width="48" height="48">
+            <div class="ext-detail-title">
+              <h2>Site Blocker</h2>
+              <span class="tag">Productivity</span>
+              <span class="coming-soon-badge">Coming Soon</span>
+            </div>
           </div>
-          <div class="ext-feat">
-            <h4>&#128260; Individual Toggles</h4>
-            <p>Pause blocking per site without removing it from your list.</p>
+          <div class="ext-detail-body">
+            <p>Take control of your browsing. Block up to 100 distracting websites with a clean side panel interface. Includes individual toggle controls per site, a master switch, subdomain blocking, and an optional math-challenge gate that prevents children from modifying the blocklist.</p>
+            <img src="https://raw.githubusercontent.com/zozimustechnologies/siteblocker/main/store-assets/promo-1400x560.png" alt="Site Blocker banner" class="ext-detail-banner" width="1400" height="560">
           </div>
-          <div class="ext-feat">
-            <h4>&#9889; Master Switch</h4>
-            <p>Turn all blocking on/off with one click. Your list is preserved.</p>
-          </div>
-          <div class="ext-feat">
-            <h4>&#128274; Child Safety</h4>
-            <p>Math question gate prevents kids from modifying settings.</p>
-          </div>
-          <div class="ext-feat">
-            <h4>&#127760; Subdomain Blocking</h4>
-            <p>Block facebook.com and all variants are blocked too.</p>
-          </div>
-          <div class="ext-feat">
-            <h4>&#127919; Side Panel UI</h4>
-            <p>Modern interface in the browser sidebar. No popups.</p>
+          <div class="ext-detail-actions">
+            <a href="https://zozimustechnologies.github.io/siteblocker/" class="btn btn-primary" target="_blank" rel="noopener">Learn More</a>
+            <a href="https://microsoftedge.microsoft.com/addons/search?developer=Zozimus%20Technologies" class="btn btn-outline" target="_blank" rel="noopener">Edge Add-ons</a>
+            <a href="https://github.com/zozimustechnologies/siteblocker/issues" class="btn btn-outline" target="_blank" rel="noopener">File a Bug</a>
           </div>
         </div>
-
-        <div class="ext-screenshots">
-          <img src="https://raw.githubusercontent.com/zozimustechnologies/siteblocker/main/store-assets/screenshot-1-overview.png" alt="Site Blocker overview" loading="lazy" width="1280" height="800">
-          <img src="https://raw.githubusercontent.com/zozimustechnologies/siteblocker/main/store-assets/screenshot-5-features.png" alt="Site Blocker math challenge" loading="lazy" width="1280" height="800">
+        <div class="ext-detail-right">
+          <div class="ext-features-grid">
+            <div class="ext-feat"><h4>&#128737; Block 100 Sites</h4><p>Add any domain and it's blocked immediately across all subdomains.</p></div>
+            <div class="ext-feat"><h4>&#128260; Individual Toggles</h4><p>Pause blocking per site without removing it from your list.</p></div>
+            <div class="ext-feat"><h4>&#9889; Master Switch</h4><p>Turn all blocking on/off with one click. Your list is preserved.</p></div>
+            <div class="ext-feat"><h4>&#128274; Child Safety</h4><p>Math question gate prevents kids from modifying settings.</p></div>
+            <div class="ext-feat"><h4>&#127760; Subdomain Blocking</h4><p>Block facebook.com and all variants are blocked too.</p></div>
+            <div class="ext-feat"><h4>&#127919; Side Panel UI</h4><p>Modern interface in the browser sidebar. No popups.</p></div>
+          </div>
+          <div class="ext-screenshots">
+            <img src="https://raw.githubusercontent.com/zozimustechnologies/siteblocker/main/store-assets/screenshot-1-overview.png" alt="Site Blocker overview" loading="lazy" width="1280" height="800">
+            <img src="https://raw.githubusercontent.com/zozimustechnologies/siteblocker/main/store-assets/screenshot-5-features.png" alt="Site Blocker math challenge" loading="lazy" width="1280" height="800">
+          </div>
         </div>
-      </div>
-      <div class="ext-detail-actions">
-        <a href="https://zozimustechnologies.github.io/siteblocker/" class="btn btn-primary" target="_blank" rel="noopener">Visit Website</a>
-        <a href="https://microsoftedge.microsoft.com/addons/search?developer=Zozimus%20Technologies" class="btn btn-outline" target="_blank" rel="noopener">Edge Add-ons</a>
-        <a href="https://github.com/zozimustechnologies/siteblocker" class="btn btn-outline" target="_blank" rel="noopener">Source Code</a>
       </div>
     </div>
 
     <!-- Image Editor -->
     <div class="ext-detail reveal">
-      <div class="ext-detail-header">
-        <img src="https://raw.githubusercontent.com/zozimustechnologies/ImageEditor/main/storeassets/extensionlogo.png" alt="Image Editor logo" class="ext-detail-logo" width="64" height="64">
-        <div class="ext-detail-title">
-          <h2>Image Editor</h2>
-          <span class="tag">Creative</span>
-        </div>
-      </div>
-      <div class="ext-detail-body">
-        <p>A lightweight, privacy-first image editor that lives in your browser's side panel. Crop, resize, apply 8 filter sliders, 8 one-click presets, and 12 unique creative pixel-manipulation effects with AI-powered recommendations — all without leaving your current tab.</p>
-
-        <img src="https://raw.githubusercontent.com/zozimustechnologies/ImageEditor/main/storeassets/largepromotionaltile.png" alt="Image Editor banner" class="ext-detail-banner" width="1400" height="560">
-
-        <div class="ext-features-grid">
-          <div class="ext-feat">
-            <h4>&#9986; Crop</h4>
-            <p>Drag handles with 5 aspect ratio presets and pixel input.</p>
+      <div class="ext-detail-inner">
+        <div class="ext-detail-left">
+          <div class="ext-detail-header">
+            <img src="https://raw.githubusercontent.com/zozimustechnologies/ImageEditor/main/storeassets/extensionlogo.png" alt="Image Editor logo" class="ext-detail-logo" width="48" height="48">
+            <div class="ext-detail-title">
+              <h2>Image Editor</h2>
+              <span class="tag">Creative</span>
+              <span class="coming-soon-badge">Coming Soon</span>
+            </div>
           </div>
-          <div class="ext-feat">
-            <h4>&#8596; Resize</h4>
-            <p>Scale by dimension or percentage with locked aspect ratio.</p>
+          <div class="ext-detail-body">
+            <p>A lightweight, privacy-first image editor that lives in your browser's side panel. Crop, resize, apply 8 filter sliders, 8 one-click presets, and 12 unique creative pixel-manipulation effects with AI-powered recommendations — all without leaving your current tab.</p>
+            <img src="https://raw.githubusercontent.com/zozimustechnologies/ImageEditor/main/storeassets/largepromotionaltile.png" alt="Image Editor banner" class="ext-detail-banner" width="1400" height="560">
           </div>
-          <div class="ext-feat">
-            <h4>&#127912; 16 Filters</h4>
-            <p>8 adjustable sliders plus 8 one-click presets.</p>
-          </div>
-          <div class="ext-feat">
-            <h4>&#10024; 12 Creative Effects</h4>
-            <p>Memory Drift, Signal Corruption, Time Slice, and more.</p>
-          </div>
-          <div class="ext-feat">
-            <h4>&#128190; Multi-format Export</h4>
-            <p>Save as PNG, JPEG, or WebP with quality control.</p>
-          </div>
-          <div class="ext-feat">
-            <h4>&#127760; Page Image Detection</h4>
-            <p>Scan and edit any image on the current page.</p>
+          <div class="ext-detail-actions">
+            <a href="https://zozimustechnologies.github.io/ImageEditor/" class="btn btn-primary" target="_blank" rel="noopener">Learn More</a>
+            <a href="https://microsoftedge.microsoft.com/addons/detail/image-editor/" class="btn btn-outline" target="_blank" rel="noopener">Edge Add-ons</a>
+            <a href="https://github.com/zozimustechnologies/ImageEditor/issues" class="btn btn-outline" target="_blank" rel="noopener">File a Bug</a>
           </div>
         </div>
-
-        <div class="ext-screenshots">
-          <img src="https://raw.githubusercontent.com/zozimustechnologies/ImageEditor/main/storeassets/screenshot-1280x800.png" alt="Image Editor full view" loading="lazy" width="1280" height="800">
-          <img src="https://raw.githubusercontent.com/zozimustechnologies/ImageEditor/main/storeassets/screenshot-640x400.png" alt="Image Editor compact view" loading="lazy" width="640" height="400">
+        <div class="ext-detail-right">
+          <div class="ext-features-grid">
+            <div class="ext-feat"><h4>&#9986; Crop</h4><p>Drag handles with 5 aspect ratio presets and pixel input.</p></div>
+            <div class="ext-feat"><h4>&#8596; Resize</h4><p>Scale by dimension or percentage with locked aspect ratio.</p></div>
+            <div class="ext-feat"><h4>&#127912; 16 Filters</h4><p>8 adjustable sliders plus 8 one-click presets.</p></div>
+            <div class="ext-feat"><h4>&#10024; 12 Creative Effects</h4><p>Memory Drift, Signal Corruption, Time Slice, and more.</p></div>
+            <div class="ext-feat"><h4>&#128190; Multi-format Export</h4><p>Save as PNG, JPEG, or WebP with quality control.</p></div>
+            <div class="ext-feat"><h4>&#127760; Page Image Detection</h4><p>Scan and edit any image on the current page.</p></div>
+          </div>
+          <div class="ext-screenshots">
+            <img src="https://raw.githubusercontent.com/zozimustechnologies/ImageEditor/main/storeassets/screenshot-1280x800.png" alt="Image Editor full view" loading="lazy" width="1280" height="800">
+            <img src="https://raw.githubusercontent.com/zozimustechnologies/ImageEditor/main/storeassets/screenshot-640x400.png" alt="Image Editor compact view" loading="lazy" width="640" height="400">
+          </div>
         </div>
-      </div>
-      <div class="ext-detail-actions">
-        <a href="https://zozimustechnologies.github.io/ImageEditor/" class="btn btn-primary" target="_blank" rel="noopener">Visit Website</a>
-        <a href="https://microsoftedge.microsoft.com/addons/detail/image-editor/" class="btn btn-outline" target="_blank" rel="noopener">Edge Add-ons</a>
-        <a href="https://github.com/zozimustechnologies/ImageEditor" class="btn btn-outline" target="_blank" rel="noopener">Source Code</a>
       </div>
     </div>
 
     <!-- PiP Camera -->
     <div class="ext-detail reveal">
-      <div class="ext-detail-header">
-        <img src="https://raw.githubusercontent.com/zozimustechnologies/pipcamera/main/store-assets/extensionlogo.png" alt="PiP Camera logo" class="ext-detail-logo" width="64" height="64">
-        <div class="ext-detail-title">
-          <h2>PiP Camera</h2>
-          <span class="tag">Utility</span>
-        </div>
-      </div>
-      <div class="ext-detail-body">
-        <p>A tiny, always-on-top camera feed that floats in the corner of your screen — like a rear-view mirror for your desk. Open your webcam in picture-in-picture mode so you can video chat or present while browsing.</p>
-
-        <img src="https://raw.githubusercontent.com/zozimustechnologies/pipcamera/main/store-assets/largepromotionaltile.png" alt="PiP Camera banner" class="ext-detail-banner" width="1400" height="560">
-
-        <div class="ext-features-grid">
-          <div class="ext-feat">
-            <h4>&#128247; Quick Camera Access</h4>
-            <p>Open your camera with a single click from the toolbar.</p>
+      <div class="ext-detail-inner">
+        <div class="ext-detail-left">
+          <div class="ext-detail-header">
+            <img src="https://raw.githubusercontent.com/zozimustechnologies/pipcamera/main/store-assets/extensionlogo.png" alt="PiP Camera logo" class="ext-detail-logo" width="48" height="48">
+            <div class="ext-detail-title">
+              <h2>PiP Camera</h2>
+              <span class="tag">Productivity</span>
+              <span class="coming-soon-badge">Coming Soon</span>
+            </div>
           </div>
-          <div class="ext-feat">
-            <h4>&#127909; Picture-in-Picture</h4>
-            <p>Float your camera feed on top of any window or tab.</p>
+          <div class="ext-detail-body">
+            <p>A tiny, always-on-top camera feed that floats in the corner of your screen — like a rear-view mirror for your desk. Open your webcam in picture-in-picture mode so you can video chat or present while browsing.</p>
+            <img src="https://raw.githubusercontent.com/zozimustechnologies/pipcamera/main/store-assets/largepromotionaltile.png" alt="PiP Camera banner" class="ext-detail-banner" width="1400" height="560">
           </div>
-          <div class="ext-feat">
-            <h4>&#128274; Privacy Focused</h4>
-            <p>Runs locally, no cloud uploads, no data collection.</p>
-          </div>
-          <div class="ext-feat">
-            <h4>&#9889; Lightweight</h4>
-            <p>Minimal resource usage. Zero background processes when off.</p>
-          </div>
-          <div class="ext-feat">
-            <h4>&#127919; Easy to Use</h4>
-            <p>Simple, intuitive interface with big, obvious controls.</p>
-          </div>
-          <div class="ext-feat">
-            <h4>&#128204; Always on Top</h4>
-            <p>Floating PiP window stays visible across all tabs and windows.</p>
+          <div class="ext-detail-actions">
+            <a href="https://zozimustechnologies.github.io/pipcamera/" class="btn btn-primary" target="_blank" rel="noopener">Learn More</a>
+            <a href="https://microsoftedge.microsoft.com/addons/search?developer=Zozimus%20Technologies" class="btn btn-outline" target="_blank" rel="noopener">Edge Add-ons</a>
+            <a href="https://github.com/zozimustechnologies/pipcamera/issues" class="btn btn-outline" target="_blank" rel="noopener">File a Bug</a>
           </div>
         </div>
-
-        <div class="ext-screenshots">
-          <img src="https://raw.githubusercontent.com/zozimustechnologies/pipcamera/main/store-assets/screenshot-1280x800.png" alt="PiP Camera in browser" loading="lazy" width="1280" height="800">
-          <img src="https://raw.githubusercontent.com/zozimustechnologies/pipcamera/main/store-assets/screenshot-640x400.png" alt="PiP Camera compact view" loading="lazy" width="640" height="400">
+        <div class="ext-detail-right">
+          <div class="ext-features-grid">
+            <div class="ext-feat"><h4>&#128247; Quick Camera Access</h4><p>Open your camera with a single click from the toolbar.</p></div>
+            <div class="ext-feat"><h4>&#127909; Picture-in-Picture</h4><p>Float your camera feed on top of any window or tab.</p></div>
+            <div class="ext-feat"><h4>&#128274; Privacy Focused</h4><p>Runs locally, no cloud uploads, no data collection.</p></div>
+            <div class="ext-feat"><h4>&#9889; Lightweight</h4><p>Minimal resource usage. Zero background processes when off.</p></div>
+            <div class="ext-feat"><h4>&#127919; Easy to Use</h4><p>Simple, intuitive interface with big, obvious controls.</p></div>
+            <div class="ext-feat"><h4>&#128204; Always on Top</h4><p>Floating PiP window stays visible across all tabs and windows.</p></div>
+          </div>
+          <div class="ext-screenshots">
+            <img src="https://raw.githubusercontent.com/zozimustechnologies/pipcamera/main/store-assets/screenshot-1280x800.png" alt="PiP Camera in browser" loading="lazy" width="1280" height="800">
+            <img src="https://raw.githubusercontent.com/zozimustechnologies/pipcamera/main/store-assets/screenshot-640x400.png" alt="PiP Camera compact view" loading="lazy" width="640" height="400">
+          </div>
         </div>
-      </div>
-      <div class="ext-detail-actions">
-        <a href="https://zozimustechnologies.github.io/pipcamera/" class="btn btn-primary" target="_blank" rel="noopener">Visit Website</a>
-        <a href="https://microsoftedge.microsoft.com/addons/search?developer=Zozimus%20Technologies" class="btn btn-outline" target="_blank" rel="noopener">Edge Add-ons</a>
-        <a href="https://github.com/zozimustechnologies/pipcamera" class="btn btn-outline" target="_blank" rel="noopener">Source Code</a>
       </div>
     </div>
 
     <!-- QR Code Generator -->
     <div class="ext-detail reveal">
-      <div class="ext-detail-header">
-        <img src="https://raw.githubusercontent.com/zozimustechnologies/qrcodegenerator/main/images/icon.png" alt="QR Code Generator logo" class="ext-detail-logo" width="64" height="64">
-        <div class="ext-detail-title">
-          <h2>QR Code Generator</h2>
-          <span class="tag">Utility</span>
-        </div>
-      </div>
-      <div class="ext-detail-body">
-        <p>Generate QR codes instantly for any URL or text, right from your browser sidebar. A simple, lightweight side panel extension — no sign-up, no external scripts, just fast QR code generation.</p>
-
-        <img src="https://raw.githubusercontent.com/zozimustechnologies/qrcodegenerator/main/extension/screenshots/screenshot-1400x560.png" alt="QR Code Generator banner" class="ext-detail-banner" width="1400" height="560">
-
-        <div class="ext-features-grid">
-          <div class="ext-feat">
-            <h4>&#9889; Instant Generation</h4>
-            <p>Enter any URL or text and get a scannable QR code in seconds.</p>
+      <div class="ext-detail-inner">
+        <div class="ext-detail-left">
+          <div class="ext-detail-header">
+            <img src="https://raw.githubusercontent.com/zozimustechnologies/qrcodegenerator/main/images/icon.png" alt="QR Code Generator logo" class="ext-detail-logo" width="48" height="48">
+            <div class="ext-detail-title">
+              <h2>QR Code Generator</h2>
+              <span class="tag">Productivity</span>
+            </div>
           </div>
-          <div class="ext-feat">
-            <h4>&#128193; Side Panel UI</h4>
-            <p>Opens in the browser sidebar without leaving your current tab.</p>
+          <div class="ext-detail-body">
+            <p>Generate QR codes instantly for any URL or text, right from your browser sidebar. A simple, lightweight side panel extension — no sign-up, no external scripts, just fast QR code generation.</p>
+            <img src="https://raw.githubusercontent.com/zozimustechnologies/qrcodegenerator/main/extension/screenshots/screenshot-1400x560.png" alt="QR Code Generator banner" class="ext-detail-banner" width="1400" height="560">
           </div>
-          <div class="ext-feat">
-            <h4>&#127912; Clean Design</h4>
-            <p>Distraction-free card layout with a polished blue theme.</p>
-          </div>
-          <div class="ext-feat">
-            <h4>&#128241; Responsive</h4>
-            <p>Works beautifully on any screen size. Scan with any mobile device.</p>
-          </div>
-          <div class="ext-feat">
-            <h4>&#129526; Lightweight</h4>
-            <p>Pure HTML, CSS, and vanilla JS. No frameworks, no bloat.</p>
-          </div>
-          <div class="ext-feat">
-            <h4>&#128275; No Sign-Up</h4>
-            <p>Works right away. No account, no login, no setup needed.</p>
+          <div class="ext-detail-actions">
+            <a href="https://the-qrcode-generator.netlify.app/" class="btn btn-primary" target="_blank" rel="noopener">Open App</a>
+            <a href="https://microsoftedge.microsoft.com/addons/detail/qr-code-generator/kcjdgoccjamenahcmpipbdcfkpnknami" class="btn btn-outline" target="_blank" rel="noopener">Download from Edge</a>
+            <a href="https://github.com/zozimustechnologies/qrcodegenerator/issues" class="btn btn-outline" target="_blank" rel="noopener">File a Bug</a>
           </div>
         </div>
-
-        <div class="ext-screenshots">
-          <img src="https://raw.githubusercontent.com/zozimustechnologies/qrcodegenerator/main/extension/screenshots/screenshot-1280x800.png" alt="QR Code Generator in browser" loading="lazy" width="1280" height="800">
+        <div class="ext-detail-right">
+          <div class="ext-features-grid">
+            <div class="ext-feat"><h4>&#9889; Instant Generation</h4><p>Enter any URL or text and get a scannable QR code in seconds.</p></div>
+            <div class="ext-feat"><h4>&#128193; Side Panel UI</h4><p>Opens in the browser sidebar without leaving your current tab.</p></div>
+            <div class="ext-feat"><h4>&#127912; Clean Design</h4><p>Distraction-free card layout with a polished blue theme.</p></div>
+            <div class="ext-feat"><h4>&#128241; Responsive</h4><p>Works beautifully on any screen size. Scan with any mobile device.</p></div>
+            <div class="ext-feat"><h4>&#129526; Lightweight</h4><p>Pure HTML, CSS, and vanilla JS. No frameworks, no bloat.</p></div>
+            <div class="ext-feat"><h4>&#128275; No Sign-Up</h4><p>Works right away. No account, no login, no setup needed.</p></div>
+          </div>
+          <div class="ext-screenshots">
+            <img src="https://raw.githubusercontent.com/zozimustechnologies/qrcodegenerator/main/extension/screenshots/screenshot-1280x800.png" alt="QR Code Generator in browser" loading="lazy" width="1280" height="800">
+          </div>
         </div>
-      </div>
-      <div class="ext-detail-actions">
-        <a href="https://zozimustechnologies.github.io/qrcodegenerator/" class="btn btn-primary" target="_blank" rel="noopener">Visit Website</a>
-        <a href="https://microsoftedge.microsoft.com/addons/detail/qr-code-generator/kcjdgoccjamenahcmpipbdcfkpnknami" class="btn btn-outline" target="_blank" rel="noopener">Edge Add-ons</a>
-        <a href="https://github.com/zozimustechnologies/qrcodegenerator" class="btn btn-outline" target="_blank" rel="noopener">Source Code</a>
       </div>
     </div>
 
     <!-- QR Code Reader -->
     <div class="ext-detail reveal">
-      <div class="ext-detail-header">
-        <img src="https://raw.githubusercontent.com/zozimustechnologies/the-qrcode-reader/main/storeassets/extensionlogo-300x300.png" alt="QR Code Reader logo" class="ext-detail-logo" width="64" height="64">
-        <div class="ext-detail-title">
-          <h2>QR Code Reader</h2>
-          <span class="tag">Utility</span>
-        </div>
-      </div>
-      <div class="ext-detail-body">
-        <p>A fast, private QR code scanner available as a browser extension and web app. Point your webcam at any QR code for instant decoding, or upload a screenshot. All processing happens locally — no data is collected or transmitted.</p>
-
-        <img src="https://raw.githubusercontent.com/zozimustechnologies/the-qrcode-reader/main/storeassets/largepromotionaltile-1400x560.png" alt="QR Code Reader banner" class="ext-detail-banner" width="1400" height="560">
-
-        <div class="ext-features-grid">
-          <div class="ext-feat">
-            <h4>&#128247; Camera Scanning</h4>
-            <p>Point your webcam at any QR code for instant decoding.</p>
+      <div class="ext-detail-inner">
+        <div class="ext-detail-left">
+          <div class="ext-detail-header">
+            <img src="https://raw.githubusercontent.com/zozimustechnologies/the-qrcode-reader/main/storeassets/extensionlogo-300x300.png" alt="QR Code Reader logo" class="ext-detail-logo" width="48" height="48">
+            <div class="ext-detail-title">
+              <h2>QR Code Reader</h2>
+              <span class="tag">Productivity</span>
+              <span class="coming-soon-badge">Coming Soon</span>
+            </div>
           </div>
-          <div class="ext-feat">
-            <h4>&#128193; Image File Scanning</h4>
-            <p>Upload a screenshot or photo containing a QR code.</p>
+          <div class="ext-detail-body">
+            <p>A fast, private QR code scanner available as a browser extension and web app. Point your webcam at any QR code for instant decoding, or upload a screenshot. All processing happens locally — no data is collected or transmitted.</p>
+            <img src="https://raw.githubusercontent.com/zozimustechnologies/the-qrcode-reader/main/storeassets/largepromotionaltile-1400x560.png" alt="QR Code Reader banner" class="ext-detail-banner" width="1400" height="560">
           </div>
-          <div class="ext-feat">
-            <h4>&#128274; 100% Private</h4>
-            <p>All processing happens locally in your browser. No data sent.</p>
-          </div>
-          <div class="ext-feat">
-            <h4>&#127912; Clean Modern UI</h4>
-            <p>Gradient-themed design with smooth animations and responsive layout.</p>
-          </div>
-          <div class="ext-feat">
-            <h4>&#129526; Lightweight</h4>
-            <p>No background processes. Only runs when you open it.</p>
-          </div>
-          <div class="ext-feat">
-            <h4>&#128275; Free &amp; Open Source</h4>
-            <p>MIT licensed, no ads, no premium tiers.</p>
+          <div class="ext-detail-actions">
+            <a href="https://the-qrcode-reader.netlify.app/" class="btn btn-primary" target="_blank" rel="noopener">Open App</a>
+            <a href="https://microsoftedge.microsoft.com/addons/search?developer=Zozimus%20Technologies" class="btn btn-outline" target="_blank" rel="noopener">Edge Add-ons</a>
+            <a href="https://github.com/zozimustechnologies/the-qrcode-reader/issues" class="btn btn-outline" target="_blank" rel="noopener">File a Bug</a>
           </div>
         </div>
-
-        <div class="ext-screenshots">
-          <img src="https://raw.githubusercontent.com/zozimustechnologies/the-qrcode-reader/main/storeassets/screenshot-1280x800.png" alt="QR Code Reader overview" loading="lazy" width="1280" height="800">
-          <img src="https://raw.githubusercontent.com/zozimustechnologies/the-qrcode-reader/main/storeassets/screenshot-640x400.png" alt="QR Code Reader compact view" loading="lazy" width="640" height="400">
+        <div class="ext-detail-right">
+          <div class="ext-features-grid">
+            <div class="ext-feat"><h4>&#128247; Camera Scanning</h4><p>Point your webcam at any QR code for instant decoding.</p></div>
+            <div class="ext-feat"><h4>&#128193; Image File Scanning</h4><p>Upload a screenshot or photo containing a QR code.</p></div>
+            <div class="ext-feat"><h4>&#128274; 100% Private</h4><p>All processing happens locally in your browser. No data sent.</p></div>
+            <div class="ext-feat"><h4>&#127912; Clean Modern UI</h4><p>Gradient-themed design with smooth animations and responsive layout.</p></div>
+            <div class="ext-feat"><h4>&#129526; Lightweight</h4><p>No background processes. Only runs when you open it.</p></div>
+            <div class="ext-feat"><h4>&#128275; Free &amp; Open Source</h4><p>MIT licensed, no ads, no premium tiers.</p></div>
+          </div>
+          <div class="ext-screenshots">
+            <img src="https://raw.githubusercontent.com/zozimustechnologies/the-qrcode-reader/main/storeassets/screenshot-1280x800.png" alt="QR Code Reader overview" loading="lazy" width="1280" height="800">
+            <img src="https://raw.githubusercontent.com/zozimustechnologies/the-qrcode-reader/main/storeassets/screenshot-640x400.png" alt="QR Code Reader compact view" loading="lazy" width="640" height="400">
+          </div>
         </div>
-      </div>
-      <div class="ext-detail-actions">
-        <a href="https://the-qrcode-reader.netlify.app/" class="btn btn-primary" target="_blank" rel="noopener">Visit Website</a>
-        <a href="https://microsoftedge.microsoft.com/addons/search?developer=Zozimus%20Technologies" class="btn btn-outline" target="_blank" rel="noopener">Edge Add-ons</a>
-        <a href="https://github.com/zozimustechnologies/the-qrcode-reader" class="btn btn-outline" target="_blank" rel="noopener">Source Code</a>
       </div>
     </div>
 
@@ -546,9 +513,9 @@
 
   <footer class="site-footer">
     <div class="links">
-      <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="privacy.html">Privacy</a>
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/privacy">Privacy</a>
       <a href="https://github.com/zozimustechnologies" target="_blank" rel="noopener">GitHub</a>
       <a href="https://www.instagram.com/zozimustechnologies" target="_blank" rel="noopener">Instagram</a>
       <a href="https://wise.com/pay/business/sandeepchadda?utm_source=open_link" target="_blank" rel="noopener">Donate</a>
