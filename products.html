@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Extensions — Zozimus Technologies</title>
-  <meta name="description" content="Browse all browser extensions by Zozimus Technologies. Privacy-first, open source, and free.">
+  <title>Products — Zozimus Technologies</title>
+  <meta name="description" content="Browse all products by Zozimus Technologies. Privacy-first, open source, and free.">
   <meta name="theme-color" content="#3d7ea6">
   <link rel="icon" type="image/png" sizes="48x48" href="https://avatars.githubusercontent.com/u/175112813?s=48&v=4">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="extensions.css">
+  <link rel="stylesheet" href="products.css">
 </head>
 <body>
 
@@ -21,7 +21,7 @@
     </a>
     <div class="nav-links">
       <a href="/">Home</a>
-      <a href="/extensions" class="active">Extensions</a>
+      <a href="/products" class="active">Products</a>
       <a href="/about">About</a>
       <a href="/privacy">Privacy</a>
       <a href="https://github.com/zozimustechnologies" target="_blank" rel="noopener">GitHub</a>
@@ -34,9 +34,24 @@
   </nav>
 
   <header class="page-header">
-    <h1>Our Extensions</h1>
-    <p>Every extension we build is open source, privacy-first, and completely free. No exceptions.</p>
+    <h1>Our Products</h1>
+    <p>Every product we build is open source, privacy-first, and completely free. No exceptions.</p>
   </header>
+
+  <div class="tab-bar">
+    <a href="/products" class="tab active">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+      Browser Extensions
+    </a>
+    <a href="/vscode-extensions" class="tab">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16.5 9.4L7.55 4.24a1 1 0 00-1 0L2 7v10l4.55 2.76a1 1 0 001 0L16.5 14.6"/><path d="M16.5 9.4v5.2M2 7l7 4.5M2 17l7-4.5M9 11.5V21"/></svg>
+      VS Code Extensions
+    </a>
+    <a href="/cli-tools" class="tab">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+      CLI Tools
+    </a>
+  </div>
 
   <section class="section">
 
@@ -91,7 +106,7 @@
           </div>
           <div class="ext-detail-body">
             <p>Generate QR codes instantly for any URL or text, right from your browser sidebar. A simple, lightweight side panel extension — no sign-up, no external scripts, just fast QR code generation.</p>
-            <img src="https://raw.githubusercontent.com/zozimustechnologies/qrcodegenerator/main/images/screenshot.png" alt="QR Code Generator banner" class="ext-detail-banner" width="1400" height="560">
+            <img src="https://raw.githubusercontent.com/zozimustechnologies/qrcodegenerator/main/extension/screenshots/screenshot-1280x800.png" alt="QR Code Generator banner" class="ext-detail-banner" width="1280" height="800">
           </div>
           <div class="ext-detail-actions">
             <a href="https://zozimustechnologies.github.io/qrcodegenerator/" class="btn btn-primary" target="_blank" rel="noopener">Learn More</a>
@@ -110,7 +125,6 @@
             <div class="ext-feat"><h4>&#128275; No Sign-Up</h4><p>Works right away. No account, no login, no setup needed.</p></div>
           </div>
           <div class="ext-screenshots">
-            <img src="https://raw.githubusercontent.com/zozimustechnologies/qrcodegenerator/main/extension/screenshots/screenshot-1280x800.png" alt="QR Code Generator in browser" loading="lazy" width="1280" height="800">
             <img src="https://raw.githubusercontent.com/zozimustechnologies/qrcodegenerator/main/extension/screenshots/screenshot-440x280.png" alt="QR Code Generator promo tile" loading="lazy" width="440" height="280">
           </div>
         </div>
@@ -248,7 +262,7 @@
     <p>&copy; 2026 Zozimus Technologies. All rights reserved.</p>
   </footer>
 
-  <script src="extensions.js"></script>
+  <script src="products.js"></script>
 
 </body>
 </html>

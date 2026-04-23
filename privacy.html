@@ -21,7 +21,7 @@
     </a>
     <div class="nav-links">
       <a href="/">Home</a>
-      <a href="/extensions">Extensions</a>
+      <a href="/products">Products</a>
       <a href="/about">About</a>
       <a href="/privacy" class="active">Privacy</a>
       <a href="https://github.com/zozimustechnologies" target="_blank" rel="noopener">GitHub</a>
@@ -35,7 +35,7 @@
 
   <header class="page-header">
     <h1>Privacy</h1>
-    <p>We don&rsquo;t collect your data. Not now, not ever. Here&rsquo;s exactly what that means.</p>
+    <p>Our products don&rsquo;t collect your data. Here&rsquo;s exactly what that means &mdash; and what we do (and don&rsquo;t) collect on this website.</p>
   </header>
 
   <section class="section">
@@ -43,13 +43,13 @@
     <!-- TLDR -->
     <div class="tldr reveal">
       <h2>TL;DR</h2>
-      <p>Our extensions run 100% locally. We have no servers, no analytics, and no idea who you are.</p>
+      <p>Our products run 100% locally with zero tracking. This <em>website</em> uses Google Analytics to measure aggregate, anonymous traffic &mdash; nothing more.</p>
       <div class="badge-row">
-        <span class="badge">&#10003; No data collection</span>
+        <span class="badge">&#10003; Products: no data collection</span>
         <span class="badge">&#10003; No accounts</span>
-        <span class="badge">&#10003; No analytics</span>
-        <span class="badge">&#10003; No cookies</span>
-        <span class="badge">&#10003; Works offline</span>
+        <span class="badge">&#10003; Products work offline</span>
+        <span class="badge">&#10003; Open source</span>
+        <span class="badge">&#9432; Website uses Google Analytics</span>
       </div>
     </div>
 
@@ -62,12 +62,12 @@
       </div>
       <div class="commit-card">
         <span class="icon">&#128683;</span>
-        <h3>Zero Tracking</h3>
-        <p>No Google Analytics, no Mixpanel, no telemetry, no beacons. We don&rsquo;t measure anything about you.</p>
+        <h3>Zero Tracking in Products</h3>
+        <p>Our extensions and tools contain no analytics, telemetry, or beacons. They don&rsquo;t measure anything about you.</p>
       </div>
       <div class="commit-card">
         <span class="icon">&#128230;</span>
-        <h3>No External Requests</h3>
+        <h3>No External Requests from Products</h3>
         <p>Our extensions make zero network requests. No CDNs, no APIs, no remote resources of any kind.</p>
       </div>
       <div class="commit-card">
@@ -90,7 +90,7 @@
         </thead>
         <tbody>
           <tr>
-            <td>Collects usage data</td>
+            <td>Products collect usage data</td>
             <td class="check">Never</td>
             <td class="cross">Often</td>
           </tr>
@@ -153,13 +153,42 @@
 
     <!-- Data -->
     <div class="prose reveal">
-      <h2>What data do we store?</h2>
+      <h2>What data do our products store?</h2>
       <p>Only what you explicitly create, and only in your browser&rsquo;s local storage:</p>
       <ul>
-        <li>Your blocklist (Site Blocker) — the domains you choose to block</li>
-        <li>Your settings — toggle states, preferences you configure</li>
+        <li>Your blocklist (Site Blocker) &mdash; the domains you choose to block</li>
+        <li>Your settings &mdash; toggle states, preferences you configure</li>
         <li>Nothing else. No history, no profiles, no identifiers</li>
       </ul>
+    </div>
+
+    <!-- Website Analytics -->
+    <div class="prose reveal">
+      <h2>This website uses Google Analytics</h2>
+      <p>To understand how many people visit our site and which products they&rsquo;re interested in, this website (zozimustechnologies.github.io) loads Google Analytics 4. This applies <strong>only to the website</strong> &mdash; not to any of our extensions, tools, or downloaded products.</p>
+      <p><strong>What Google Analytics collects:</strong></p>
+      <ul>
+        <li>Anonymous, aggregated page views and session counts</li>
+        <li>Approximate location (country / region), derived from IP &mdash; the IP itself is not stored by us</li>
+        <li>Browser, device type, and operating system</li>
+        <li>Referring website (how you got here)</li>
+        <li>A Google-managed cookie used to distinguish unique sessions</li>
+      </ul>
+      <p><strong>What we do <em>not</em> do:</strong></p>
+      <ul>
+        <li>We do not collect names, emails, or any personally identifying information</li>
+        <li>We do not sell or share data with advertisers</li>
+        <li>We do not run ads or use remarketing</li>
+        <li>We have IP anonymization enabled by default (GA4 standard behavior)</li>
+      </ul>
+      <p><strong>How to opt out:</strong></p>
+      <ul>
+        <li>Use a browser with tracking protection (Brave, Firefox strict mode, Safari)</li>
+        <li>Install the official <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-out Browser Add-on</a></li>
+        <li>Block analytics with uBlock Origin or a similar extension &mdash; the site works perfectly without it</li>
+        <li>Enable &ldquo;Do Not Track&rdquo; or Global Privacy Control in your browser</li>
+      </ul>
+      <p>Google&rsquo;s handling of this data is governed by the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</p>
     </div>
 
     <!-- Changes -->
@@ -172,11 +201,11 @@
     <!-- Verification -->
     <div class="prose reveal">
       <h2>Verify it yourself</h2>
-      <p>Don&rsquo;t take our word for it. Here&rsquo;s how you can confirm our privacy claims:</p>
+      <p>Don&rsquo;t take our word for it. Here&rsquo;s how you can confirm our privacy claims about our products:</p>
       <ul>
         <li>Read our source code on <a href="https://github.com/zozimustechnologies" target="_blank" rel="noopener">GitHub</a></li>
-        <li>Open DevTools Network tab — you&rsquo;ll see zero outgoing requests</li>
-        <li>Search the codebase for &ldquo;fetch&rdquo;, &ldquo;XMLHttpRequest&rdquo;, or any URL — you won&rsquo;t find external calls</li>
+        <li>Open DevTools Network tab while using an extension &mdash; you&rsquo;ll see zero outgoing requests</li>
+        <li>Search the codebase for &ldquo;fetch&rdquo;, &ldquo;XMLHttpRequest&rdquo;, or any URL &mdash; you won&rsquo;t find external calls</li>
         <li>Check Application &rarr; Storage in DevTools to see exactly what&rsquo;s stored</li>
       </ul>
     </div>
@@ -186,7 +215,7 @@
   <footer class="site-footer">
     <div class="links">
       <a href="/">Home</a>
-      <a href="/extensions">Extensions</a>
+      <a href="/products">Products</a>
       <a href="/about">About</a>
       <a href="https://github.com/zozimustechnologies" target="_blank" rel="noopener">GitHub</a>
       <a href="https://www.instagram.com/zozimustechnologies" target="_blank" rel="noopener">Instagram</a>
