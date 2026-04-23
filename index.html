@@ -125,7 +125,8 @@
             <span>Zero dependencies</span>
           </div>
           <div class="ext-card-actions">
-            <a href="https://the-qrcode-generator.netlify.app/" class="btn btn-primary" target="_blank" rel="noopener">Open App</a>
+            <a href="https://zozimustechnologies.github.io/qrcodegenerator/" class="btn btn-primary" target="_blank" rel="noopener">Learn More</a>
+            <a href="https://the-qrcode-generator.netlify.app/" class="btn btn-outline" target="_blank" rel="noopener">Open App</a>
             <a href="https://microsoftedge.microsoft.com/addons/detail/qr-code-generator/kcjdgoccjamenahcmpipbdcfkpnknami" class="btn btn-outline" target="_blank" rel="noopener">Download from Edge</a>
             <a href="https://github.com/zozimustechnologies/qrcodegenerator" class="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
           </div>
@@ -213,8 +214,38 @@
             <span>Lightweight</span>
           </div>
           <div class="ext-card-actions">
-            <a href="https://the-qrcode-reader.netlify.app/" class="btn btn-primary" target="_blank" rel="noopener">Open App</a>
+            <a href="https://zozimustechnologies.github.io/the-qrcode-reader/" class="btn btn-primary" target="_blank" rel="noopener">Learn More</a>
+            <a href="https://the-qrcode-reader.netlify.app/" class="btn btn-outline" target="_blank" rel="noopener">Open App</a>
             <a href="https://github.com/zozimustechnologies/the-qrcode-reader" class="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- VocabBuilder -->
+      <div class="ext-card reveal" onclick="window.open('https://zozimustechnologies.github.io/vocabbuilder/','_blank')">
+        <div class="ext-card-image">
+          <img src="https://raw.githubusercontent.com/zozimustechnologies/vocabbuilder/main/storeassets/largepromotionaltile.png" alt="VocabBuilder promotional banner" width="1400" height="560">
+        </div>
+        <div class="ext-card-body">
+          <div class="ext-card-top">
+            <img src="https://raw.githubusercontent.com/zozimustechnologies/vocabbuilder/main/storeassets/extensionlogo.png" alt="VocabBuilder logo" class="ext-card-logo" width="48" height="48">
+            <div>
+              <h3>VocabBuilder</h3>
+              <span class="ext-tag">Education</span>
+              <span class="coming-soon-badge">Coming Soon</span>
+            </div>
+          </div>
+          <p>Master vocabulary through spaced repetition — right in your browser sidebar. Four difficulty levels including GMAT/GRE/LSAT words, streak tracking, and rich word cards with IPA pronunciation.</p>
+          <div class="ext-card-features">
+            <span>Spaced repetition</span>
+            <span>4 difficulty levels</span>
+            <span>Streak &amp; badges</span>
+            <span>Daily reminders</span>
+            <span>100% local</span>
+          </div>
+          <div class="ext-card-actions">
+            <a href="https://zozimustechnologies.github.io/vocabbuilder/" class="btn btn-primary" target="_blank" rel="noopener">Learn More</a>
+            <a href="https://github.com/zozimustechnologies/vocabbuilder" class="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
           </div>
         </div>
       </div>
@@ -224,7 +255,7 @@
   <!-- Stats -->
   <div class="stats reveal">
     <div class="stat">
-      <div class="number">5</div>
+      <div class="number">6</div>
       <div class="label">Extensions</div>
     </div>
     <div class="stat">
@@ -325,18 +356,7 @@
     </div>
   </footer>
 
-  <script>
-    // Scroll reveal
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-  </script>
+  <script src="index.js"></script>
 
 </body>
 </html>

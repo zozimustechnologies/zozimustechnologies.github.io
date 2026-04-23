@@ -282,7 +282,7 @@
       z-index: 1;
     }
 
-    .ext-card-actions { position: relative; z-index: 2; }
+    .ext-card-actions { position: relative; z-index: 2; cursor: default; }
     .ext-card-actions .btn { position: relative; z-index: 2; }
 
     .coming-soon-badge {
@@ -332,7 +332,7 @@
     }
 
     .ext-card-body {
-      padding: 28px 28px 24px;
+      padding: 22px 20px 20px;
     }
 
     .ext-card-top {
@@ -397,7 +397,7 @@
       flex-wrap: wrap;
     }
 
-    .ext-card-actions .btn { padding: 10px 20px; font-size: 0.85rem; }
+    .ext-card-actions .btn { padding: 9px 14px; font-size: 0.82rem; }
 
     /* ── Values Grid ── */
     .values-grid {

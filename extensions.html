@@ -196,6 +196,44 @@
       </div>
     </div>
 
+    <!-- VocabBuilder -->
+    <div class="ext-detail reveal">
+      <div class="ext-detail-inner">
+        <div class="ext-detail-left">
+          <div class="ext-detail-header">
+            <img src="https://raw.githubusercontent.com/zozimustechnologies/vocabbuilder/main/storeassets/extensionlogo.png" alt="VocabBuilder logo" class="ext-detail-logo" width="48" height="48">
+            <div class="ext-detail-title">
+              <h2>VocabBuilder</h2>
+              <span class="tag">Education</span>
+              <span class="coming-soon-badge">Coming Soon</span>
+            </div>
+          </div>
+          <div class="ext-detail-body">
+            <p>Master vocabulary through spaced repetition — right in your browser sidebar. VocabBuilder serves you one word per day and schedules reviews at progressive intervals (1→3→7→14→30 days) so words move from short-term to long-term memory efficiently. Includes streak tracking, milestone badges, a rich progress dashboard, and daily reminder notifications.</p>
+            <img src="https://raw.githubusercontent.com/zozimustechnologies/vocabbuilder/main/storeassets/largepromotionaltile.png" alt="VocabBuilder banner" class="ext-detail-banner" width="1400" height="560">
+          </div>
+          <div class="ext-detail-actions">
+            <a href="https://zozimustechnologies.github.io/vocabbuilder/" class="btn btn-primary" target="_blank" rel="noopener">Learn More</a>
+            <a href="https://github.com/zozimustechnologies/vocabbuilder/issues" class="btn btn-outline" target="_blank" rel="noopener">File a Bug</a>
+          </div>
+        </div>
+        <div class="ext-detail-right">
+          <div class="ext-features-grid">
+            <div class="ext-feat"><h4>&#128218; 4 Difficulty Levels</h4><p>Simple, Medium, Complex, and Competitive (GMAT/GRE/LSAT) word sets.</p></div>
+            <div class="ext-feat"><h4>&#129504; Spaced Repetition</h4><p>Progressive 1→3→7→14→30 day review intervals for lasting retention.</p></div>
+            <div class="ext-feat"><h4>&#128293; Streak &amp; Badges</h4><p>Daily streak counter with milestone badges at 3, 7, 30, and 365 days.</p></div>
+            <div class="ext-feat"><h4>&#128276; Daily Reminders</h4><p>9 AM browser notification keeps vocabulary building a daily habit.</p></div>
+            <div class="ext-feat"><h4>&#128202; Progress Dashboard</h4><p>Track streaks, words learned, daily goal, and monthly totals.</p></div>
+            <div class="ext-feat"><h4>&#128274; 100% Local</h4><p>All data in Chrome Storage API — no accounts, no tracking, no cloud.</p></div>
+          </div>
+          <div class="ext-screenshots">
+            <img src="https://raw.githubusercontent.com/zozimustechnologies/vocabbuilder/main/storeassets/screenshot-1280x800.png" alt="VocabBuilder full view" loading="lazy" width="1280" height="800">
+            <img src="https://raw.githubusercontent.com/zozimustechnologies/vocabbuilder/main/storeassets/screenshot-640x400.png" alt="VocabBuilder compact view" loading="lazy" width="640" height="400">
+          </div>
+        </div>
+      </div>
+    </div>
+
   </section>
 
   <footer class="site-footer">
@@ -210,12 +248,7 @@
     <p>&copy; 2026 Zozimus Technologies. All rights reserved.</p>
   </footer>
 
-  <script>
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
-    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-  </script>
+  <script src="extensions.js"></script>
 
 </body>
 </html>
