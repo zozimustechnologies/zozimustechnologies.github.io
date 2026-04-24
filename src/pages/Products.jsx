@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import TabBar from '../components/TabBar';
 import useScrollReveal from '../hooks/useScrollReveal';
 import extensions from '../extensions.json';
 import _vscodeExtensions from '../vscodeExtensions.json';
@@ -56,9 +57,9 @@ function ExtDetail({ e }) {
   );
 }
 
-function SectionHeading({ title }) {
+function SectionHeading({ id, title }) {
   return (
-    <div className="products-section-heading reveal">
+    <div id={id} className="products-section-heading reveal">
       <h2>{title}</h2>
     </div>
   );
@@ -75,11 +76,13 @@ export default function Products() {
         <p>Every product we build is open source, privacy-first, and completely free. No exceptions.</p>
       </header>
 
+      <TabBar />
+
       <section className="products-section">
-        <SectionHeading title="Browser Extensions" />
+        <SectionHeading id="browser-extensions" title="Browser Extensions" />
         {extensions.map(e => <ExtDetail key={e.id} e={e} />)}
 
-        <SectionHeading title="VS Code Extensions" />
+        <SectionHeading id="vscode-extensions" title="VS Code Extensions" />
         {vscodeExtensions.length === 0 ? (
           <div className="empty-state reveal">
             <div className="empty-icon">&#128736;</div>
@@ -89,7 +92,7 @@ export default function Products() {
           </div>
         ) : vscodeExtensions.map(e => <ExtDetail key={e.id} e={e} />)}
 
-        <SectionHeading title="CLI Tools" />
+        <SectionHeading id="cli-tools" title="CLI Tools" />
         {cliTools.map(e => <ExtDetail key={e.id} e={e} />)}
       </section>
     </>
