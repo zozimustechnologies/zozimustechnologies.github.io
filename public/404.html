@@ -5,10 +5,11 @@
   <title>Zozimus Technologies</title>
   <script>
     var externalRoutes = {
-      '/github': 'https://github.com/zozimustechnologies',
-      '/instagram': 'https://www.instagram.com/zozimustechnologies',
-      '/donate': 'https://wise.com/pay/business/sandeepchadda?utm_source=open_link'
-    };
+    "/github": "https://github.com/zozimustechnologies",
+    "/instagram": "https://www.instagram.com/zozimustechnologies",
+    "/donate": "https://wise.com/pay/business/sandeepchadda?utm_source=open_link",
+    "/youtube": "https://www.youtube.com/@zozimustechnologies"
+};
     var path = window.location.pathname.replace(/\/$/, '');
     if (externalRoutes[path]) {
       window.location.replace(externalRoutes[path]);
