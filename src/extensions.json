@@ -92,7 +92,7 @@
     "id": "pipcamera",
     "name": "PiP Camera",
     "tag": "Productivity",
-    "status": "coming-soon",
+    "status": "available",
     "cardUrl": "https://zozimustechnologies.github.io/pipcamera/",
     "bannerImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/pipcamera/main/store-assets/largepromotionaltile.png", "alt": "PiP Camera banner", "width": 1400, "height": 560 },
     "logoImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/pipcamera/main/store-assets/extensionlogo.png", "alt": "PiP Camera logo" },
@@ -109,6 +109,8 @@
     ],
     "links": [
       { "label": "Learn More", "url": "https://zozimustechnologies.github.io/pipcamera/", "variant": "primary" },
+      { "label": "Download from Edge", "url": "https://microsoftedge.microsoft.com/addons/detail/pip-camera/jgojchmadgbdkiobcmhephdmlajnenja", "variant": "outline" },
+      { "label": "File a Bug", "url": "https://github.com/zozimustechnologies/pipcamera/issues/new", "variant": "outline" },
       { "label": "GitHub", "url": "https://github.com/zozimustechnologies/pipcamera", "variant": "outline" }
     ],
     "screenshots": [
