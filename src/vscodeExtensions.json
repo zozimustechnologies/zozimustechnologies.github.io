@@ -1,5 +1,39 @@
 [
   {
+    "id": "browser-extension-validator",
+    "name": "Browser Extension Validator",
+    "tag": "Linting",
+    "status": "available",
+    "cardUrl": "https://marketplace.visualstudio.com/items?itemName=zozimustechnologies.zozimus-extension-validator",
+    "bannerImage": {
+      "url": "https://zozimustechnologies.github.io/ExtensionValidator/logo.svg",
+      "alt": "Browser Extension Validator banner",
+      "width": 1400,
+      "height": 560
+    },
+    "logoImage": {
+      "url": "https://raw.githubusercontent.com/zozimustechnologies/ExtensionValidator/main/media/icon.png",
+      "alt": "Browser Extension Validator logo"
+    },
+    "description": "Validate browser extension packages against Edge, Chrome, Firefox, and Safari store policies — plus your own custom rules. Runs 100% locally inside VS Code.",
+    "longDescription": "A VS Code sidebar extension that validates .zip / .crx / .xpi packages and unpacked folders against the published developer policies for Microsoft Edge, Chrome Web Store, Firefox AMO, and Safari Web Extensions. Bundled policy catalogs cover 165+ policies across all four browsers, including real reported rejection reasons. Every check runs locally — no telemetry, no uploads.",
+    "featurePills": ["165+ policies", "4 browsers", "AI fix prompt", "100% local"],
+    "featureGrid": [
+      { "emoji": "🛡️", "title": "4 Browser Policy Catalogs", "description": "Bundled policies for Edge (56), Chrome (38), Firefox (40), and Safari (31) — seeded from each store's published developer guidelines." },
+      { "emoji": "⚠️", "title": "Real Rejection Reasons", "description": "Goes beyond official policy text — includes reasons real review teams have cited for rejections (Blue Argon, Purple Agate, and more)." },
+      { "emoji": "🤖", "title": "AI Auto-Fix Prompt", "description": "Generates a copy-pasteable prompt grouped by browser and policy ID, ready to drop into ChatGPT, Copilot, or Claude." },
+      { "emoji": "✏️", "title": "Custom Definitions", "description": "Capture failure messages from your own review rejections and run them alongside built-in policies." },
+      { "emoji": "🔄", "title": "Scheduled Policy Refresh", "description": "Hashes upstream policy pages and notifies you when a source change is detected. Configurable interval, or run on demand." },
+      { "emoji": "🔒", "title": "No Telemetry", "description": "Every check runs locally inside VS Code. No data is sent anywhere." }
+    ],
+    "links": [
+      { "label": "Install", "url": "https://marketplace.visualstudio.com/items?itemName=zozimustechnologies.zozimus-extension-validator", "variant": "primary" },
+      { "label": "Docs", "url": "https://zozimustechnologies.github.io/ExtensionValidator/", "variant": "outline" },
+      { "label": "View Source", "url": "https://github.com/zozimustechnologies/ExtensionValidator", "variant": "outline" }
+    ],
+    "screenshots": []
+  },
+  {
     "_template": true,
     "id": "my-extension",
     "name": "My Extension",
