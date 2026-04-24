@@ -106,8 +106,8 @@ function Layout() {
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Navigate to="/" replace />} />
         <Route path="/products" element={<Products />} />
-        <Route path="/vscode-extensions" element={<VscodeExtensions />} />
-        <Route path="/cli-tools" element={<CliTools />} />
+        <Route path="/vscode-extensions" element={<Navigate to="/products" replace />} />
+        <Route path="/cli-tools" element={<Navigate to="/products" replace />} />
         <Route path="/about" element={<About />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="*" element={<NotFound />} />

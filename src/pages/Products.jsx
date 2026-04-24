@@ -1,16 +1,23 @@
 import { useEffect } from 'react';
-import TabBar from '../components/TabBar';
 import useScrollReveal from '../hooks/useScrollReveal';
 import extensions from '../extensions.json';
+import _vscodeExtensions from '../vscodeExtensions.json';
+import cliTools from '../cliTools.json';
 import '../styles/products.css';
 
-function ExtCard({ e }) {
+const vscodeExtensions = _vscodeExtensions.filter(e => !e._template);
+
+function ExtDetail({ e }) {
   return (
     <div className="ext-detail reveal">
       <div className="ext-detail-inner">
         <div className="ext-detail-left">
           <div className="ext-detail-header">
-            <img src={e.logoImage.url} alt={e.logoImage.alt} className="ext-detail-logo" width="48" height="48" />
+            {e.logoType === 'emoji' ? (
+              <div className="ext-detail-logo" style={e.logoStyle}>{e.logoEmoji}</div>
+            ) : (
+              <img src={e.logoImage.url} alt={e.logoImage.alt} className="ext-detail-logo" width="48" height="48" />
+            )}
             <div className="ext-detail-title">
               <h2>{e.name}</h2>
               <span className="tag">{e.tag}</span>
@@ -19,7 +26,7 @@ function ExtCard({ e }) {
           </div>
           <div className="ext-detail-body">
             <p>{e.longDescription}</p>
-            <img src={e.bannerImage.url} alt={e.bannerImage.alt} className="ext-detail-banner" width={e.bannerImage.width} height={e.bannerImage.height} />
+            {e.bannerImage && <img src={e.bannerImage.url} alt={e.bannerImage.alt} className="ext-detail-banner" width={e.bannerImage.width} height={e.bannerImage.height} />}
           </div>
           <div className="ext-detail-actions">
             {e.links.map(link => (
@@ -49,18 +56,17 @@ function ExtCard({ e }) {
   );
 }
 
+function SectionHeading({ title }) {
+  return (
+    <div className="products-section-heading reveal">
+      <h2>{title}</h2>
+    </div>
+  );
+}
+
 export default function Products() {
   useEffect(() => { document.title = 'Products — Zozimus Technologies'; }, []);
   useScrollReveal();
-
-  const groupMap = {};
-  extensions.filter(e => e.group).forEach(e => {
-    (groupMap[e.group] = groupMap[e.group] || []).push(e);
-  });
-  const grouped = Object.values(groupMap).flat();
-  const ungroupedAvailable = extensions.filter(e => e.status === 'available' && !e.group);
-  const comingSoon = extensions.filter(e => e.status !== 'available' && !e.group);
-  const sorted = [...grouped, ...ungroupedAvailable, ...comingSoon];
 
   return (
     <>
@@ -69,11 +75,25 @@ export default function Products() {
         <p>Every product we build is open source, privacy-first, and completely free. No exceptions.</p>
       </header>
 
-      <TabBar />
-
       <section className="products-section">
-        {sorted.map(e => <ExtCard key={e.id} e={e} />)}
+        <SectionHeading title="Browser Extensions" />
+        {extensions.map(e => <ExtDetail key={e.id} e={e} />)}
+
+        <SectionHeading title="VS Code Extensions" />
+        {vscodeExtensions.length === 0 ? (
+          <div className="empty-state reveal">
+            <div className="empty-icon">&#128736;</div>
+            <h2>VS Code Extensions</h2>
+            <p>We&rsquo;re working on some exciting VS Code extensions. Check back soon.</p>
+            <span className="coming-soon-badge" style={{ fontSize: '1rem', padding: '0.5rem 1.2rem', marginTop: '16px', display: 'inline-block' }}>Coming Soon</span>
+          </div>
+        ) : vscodeExtensions.map(e => <ExtDetail key={e.id} e={e} />)}
+
+        <SectionHeading title="CLI Tools" />
+        {cliTools.map(e => <ExtDetail key={e.id} e={e} />)}
       </section>
     </>
   );
 }
+
+
