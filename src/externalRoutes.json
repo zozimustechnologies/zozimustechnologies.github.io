@@ -2,5 +2,6 @@
   { "path": "/github",             "url": "https://github.com/zozimustechnologies" },
   { "path": "/instagram",          "url": "https://www.instagram.com/zozimustechnologies" },
   { "path": "/donate",             "url": "https://wise.com/pay/business/sandeepchadda?utm_source=open_link" },
-  { "path": "/youtube",            "url": "https://www.youtube.com/@zozimustechnologies" }
+  { "path": "/youtube",            "url": "https://www.youtube.com/@zozimustechnologies" },
+  { "path": "/email",              "url": "mailto:zozimustechnologies@outlook.com" }
 ]
