@@ -46,7 +46,14 @@ export default function Home() {
         </div>
 
         <div className="ext-grid">
-          {[...extensions].sort((a, b) => a.status === b.status ? 0 : a.status === 'available' ? -1 : 1).map(e => (
+          {(() => {
+            const groupMap = {};
+            extensions.filter(e => e.group).forEach(e => { (groupMap[e.group] = groupMap[e.group] || []).push(e); });
+            const grouped = Object.values(groupMap).flat();
+            const ungroupedAvailable = extensions.filter(e => e.status === 'available' && !e.group);
+            const comingSoon = extensions.filter(e => e.status !== 'available' && !e.group);
+            return [...grouped, ...ungroupedAvailable, ...comingSoon];
+          })().map(e => (
             <div key={e.id} className="ext-card reveal" onClick={() => window.open(e.cardUrl, '_blank')}>
               <div className="ext-card-image">
                 <img src={e.bannerImage.url} alt={e.bannerImage.alt} width={e.bannerImage.width} height={e.bannerImage.height} />
