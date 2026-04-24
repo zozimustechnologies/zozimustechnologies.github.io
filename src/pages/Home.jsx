@@ -46,7 +46,7 @@ export default function Home() {
         </div>
 
         <div className="ext-grid">
-          {extensions.map(e => (
+          {[...extensions].sort((a, b) => a.status === b.status ? 0 : a.status === 'available' ? -1 : 1).map(e => (
             <div key={e.id} className="ext-card reveal" onClick={() => window.open(e.cardUrl, '_blank')}>
               <div className="ext-card-image">
                 <img src={e.bannerImage.url} alt={e.bannerImage.alt} width={e.bannerImage.width} height={e.bannerImage.height} />

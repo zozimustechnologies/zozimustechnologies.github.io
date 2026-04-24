@@ -1,3 +1,12 @@
+/* ── Paired cards (side by side) ── */
+.ext-pair {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-bottom: 24px;
+}
+.ext-pair .ext-detail { margin-bottom: 0; }
+.ext-pair .ext-detail-inner { grid-template-columns: 1fr; min-height: unset; }
+.ext-pair .ext-detail-right { border-left: none; border-top: 1px solid var(--border); }
+@media (max-width: 900px) { .ext-pair { grid-template-columns: 1fr; } }
+
 /* ── Section ── */
 .products-section { max-width: 1200px; margin: 0 auto; padding: 20px 8px 40px; }
 
