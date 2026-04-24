@@ -1,0 +1,85 @@
+/* ── Section ── */
+.products-section { max-width: 1200px; margin: 0 auto; padding: 20px 8px 40px; }
+
+/* ── Ext Detail Cards ── */
+.ext-detail {
+  background: var(--bg-card); border: 1px solid var(--border);
+  border-radius: var(--radius); overflow: hidden; backdrop-filter: blur(10px);
+  margin-bottom: 24px; transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+}
+.ext-detail:hover { border-color: var(--accent); transform: translateY(-3px); box-shadow: 0 12px 40px rgba(0,0,0,0.3); }
+
+.ext-detail-inner {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0;
+  min-height: calc(100vh - 200px);
+}
+.ext-detail-left { padding: 28px 28px 20px; display: flex; flex-direction: column; }
+.ext-detail-right {
+  padding: 28px; display: flex; flex-direction: column; gap: 16px;
+  border-left: 1px solid var(--border);
+}
+.ext-detail-header { display: flex; align-items: center; gap: 16px; margin-bottom: 12px; }
+.ext-detail-logo { width: 48px; height: 48px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.3); }
+.ext-detail-title h2 { font-size: 1.3rem; font-weight: 800; color: var(--text-bright); }
+.ext-detail-title .tag {
+  display: inline-block; margin-top: 2px;
+  font-size: 0.68rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em;
+  padding: 2px 10px; border-radius: 100px;
+  background: var(--accent-glow); color: var(--accent-light); border: 1px solid rgba(61,126,166,0.2);
+}
+.ext-detail-body { flex: 1; }
+.ext-detail-body > p {
+  font-size: 0.9rem; color: var(--text-muted);
+  line-height: 1.6; margin-bottom: 16px; max-width: 600px;
+}
+.ext-detail-banner {
+  width: 100%; height: auto; aspect-ratio: 1400 / 560;
+  object-fit: contain; border-radius: 10px; border: 1px solid var(--border);
+}
+
+/* ── Features / Screenshots ── */
+.ext-features-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 8px; flex: 1;
+}
+.ext-feat { padding: 12px; background: var(--bg-elevated); border-radius: var(--radius-sm); border: 1px solid var(--border); }
+.ext-feat h4 { font-size: 0.82rem; color: var(--text-bright); margin-bottom: 2px; }
+.ext-feat p { font-size: 0.75rem; color: var(--text-muted); }
+.ext-feat code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.72rem; color: var(--accent-light); }
+
+.ext-screenshots { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
+.ext-screenshots img {
+  width: 100%; height: auto; aspect-ratio: 1280 / 800;
+  object-fit: contain; border-radius: var(--radius-sm); border: 1px solid var(--border);
+}
+.ext-detail-actions { display: flex; gap: 10px; flex-wrap: wrap; padding-top: 12px; }
+
+/* ── Reveal (products) ── */
+.reveal { opacity: 0; transform: translateY(40px) scale(0.98); transition: opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1); }
+.reveal.visible { opacity: 1; transform: translateY(0) scale(1); }
+.reveal:nth-child(2) { transition-delay: 0.1s; }
+.reveal:nth-child(3) { transition-delay: 0.2s; }
+.reveal:nth-child(4) { transition-delay: 0.3s; }
+.reveal:nth-child(5) { transition-delay: 0.4s; }
+
+/* ── Empty state ── */
+.empty-state { text-align: center; padding: 80px 24px; max-width: 480px; margin: 0 auto; }
+.empty-state-icon { font-size: 3rem; margin-bottom: 20px; display: block; }
+.empty-state h2 { font-size: 1.6rem; font-weight: 800; color: var(--text-bright); margin-bottom: 12px; }
+.empty-state p { color: var(--text-muted); font-size: 1rem; line-height: 1.7; }
+
+/* ── Btn overrides (smaller on cards) ── */
+.ext-detail-actions .btn { padding: 10px 20px; font-size: 13px; font-weight: 600; }
+
+/* ── Responsive ── */
+@media (max-width: 900px) {
+  .ext-detail-inner { grid-template-columns: 1fr; }
+  .ext-detail-right { border-left: none; border-top: 1px solid var(--border); }
+}
+@media (max-width: 640px) {
+  .page-header { padding: 100px 16px 20px; }
+  .products-section { padding: 16px 16px 40px; }
+  .ext-detail-left { padding: 20px; }
+  .ext-detail-right { padding: 20px; }
+  .ext-features-grid { grid-template-columns: 1fr; }
+  .ext-screenshots { grid-template-columns: 1fr; }
+}
