@@ -24,6 +24,7 @@ const ROUTES = [
   { path: '/cli-tools', label: 'CLI Tools', aliases: ['cli', 'cli-tool', 'terminal', 'command', 'icongen'] },
   { path: '/about', label: 'About', aliases: ['about-us', 'team', 'us', 'who'] },
   { path: '/privacy', label: 'Privacy Policy', aliases: ['privacy-policy', 'policy', 'data', 'gdpr'] },
+  { path: '/donate', label: 'Donate', aliases: ['donation', 'support', 'wise', 'pay', 'contribute'] },
 ];
 
 function levenshtein(a, b) {
