@@ -1,6 +1,7 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import useScrollReveal from '../hooks/useScrollReveal';
+import extensions from '../extensions.json';
 import '../styles/home.css';
 
 export default function Home() {
@@ -45,157 +46,32 @@ export default function Home() {
         </div>
 
         <div className="ext-grid">
-          {/* Site Blocker */}
-          <div className="ext-card reveal" onClick={() => window.open('https://zozimustechnologies.github.io/siteblocker/', '_blank')}>
-            <div className="ext-card-image">
-              <img src="https://raw.githubusercontent.com/zozimustechnologies/siteblocker/main/store-assets/promo-1400x560.png" alt="Site Blocker banner" width="1400" height="560" />
-            </div>
-            <div className="ext-card-body">
-              <div className="ext-card-top">
-                <img src="https://raw.githubusercontent.com/zozimustechnologies/siteblocker/main/store-assets/icon-300x300.png" alt="Site Blocker logo" className="ext-card-logo" width="48" height="48" />
-                <div><h3>Site Blocker</h3><span className="ext-tag">Productivity</span></div>
+          {extensions.map(e => (
+            <div key={e.id} className="ext-card reveal" onClick={() => window.open(e.cardUrl, '_blank')}>
+              <div className="ext-card-image">
+                <img src={e.bannerImage.url} alt={e.bannerImage.alt} width={e.bannerImage.width} height={e.bannerImage.height} />
               </div>
-              <p>Block distracting websites and boost your productivity. Manage up to 100 sites with individual toggle controls and a math-challenge child safety gate.</p>
-              <div className="ext-card-features">
-                <span>100 site limit</span><span>Master switch</span><span>Child safety</span>
-                <span>Subdomain blocking</span><span>Side panel UI</span>
-              </div>
-              <div className="ext-card-actions">
-                <a href="https://zozimustechnologies.github.io/siteblocker/" className="btn btn-primary" target="_blank" rel="noopener">Learn More</a>
-                <a href="https://microsoftedge.microsoft.com/addons/detail/site-blocker/lkcklabdlogcdcmbddiffonafahgagmm" className="btn btn-outline" target="_blank" rel="noopener">Download from Edge</a>
-                <a href="https://github.com/zozimustechnologies/siteblocker" className="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
-              </div>
-            </div>
-          </div>
-
-          {/* QR Code Generator */}
-          <div className="ext-card reveal" onClick={() => window.open('https://zozimustechnologies.github.io/qrcodegenerator/', '_blank')}>
-            <div className="ext-card-image">
-              <img src="https://raw.githubusercontent.com/zozimustechnologies/qrcodegenerator/main/extension/screenshots/screenshot-1400x560.png" alt="QR Code Generator banner" width="1400" height="560" />
-            </div>
-            <div className="ext-card-body">
-              <div className="ext-card-top">
-                <img src="https://raw.githubusercontent.com/zozimustechnologies/qrcodegenerator/main/images/icon.png" alt="QR Code Generator logo" className="ext-card-logo" width="48" height="48" />
-                <div><h3>QR Code Generator</h3><span className="ext-tag">Productivity</span></div>
-              </div>
-              <p>Generate QR codes instantly for any URL or text, right from your browser sidebar. Lightweight, fast, and privacy-friendly with a clean side panel UI.</p>
-              <div className="ext-card-features">
-                <span>Instant generation</span><span>Side panel UI</span><span>No sign-up</span>
-                <span>Responsive</span><span>Zero dependencies</span>
-              </div>
-              <div className="ext-card-actions">
-                <a href="https://zozimustechnologies.github.io/qrcodegenerator/" className="btn btn-primary" target="_blank" rel="noopener">Learn More</a>
-                <a href="https://the-qrcode-generator.netlify.app/" className="btn btn-outline" target="_blank" rel="noopener">Open App</a>
-                <a href="https://microsoftedge.microsoft.com/addons/detail/qr-code-generator/kcjdgoccjamenahcmpipbdcfkpnknami" className="btn btn-outline" target="_blank" rel="noopener">Download from Edge</a>
-                <a href="https://github.com/zozimustechnologies/qrcodegenerator" className="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
-              </div>
-            </div>
-          </div>
-
-          {/* Image Editor */}
-          <div className="ext-card reveal" onClick={() => window.open('https://zozimustechnologies.github.io/ImageEditor/', '_blank')}>
-            <div className="ext-card-image">
-              <img src="https://raw.githubusercontent.com/zozimustechnologies/ImageEditor/main/storeassets/largepromotionaltile.png" alt="Image Editor banner" width="1400" height="560" />
-            </div>
-            <div className="ext-card-body">
-              <div className="ext-card-top">
-                <img src="https://raw.githubusercontent.com/zozimustechnologies/ImageEditor/main/storeassets/extensionlogo.png" alt="Image Editor logo" className="ext-card-logo" width="48" height="48" />
-                <div>
-                  <h3>Image Editor</h3>
-                  <span className="ext-tag">Creative</span>
-                  <span className="coming-soon-badge">Coming Soon</span>
+              <div className="ext-card-body">
+                <div className="ext-card-top">
+                  <img src={e.logoImage.url} alt={e.logoImage.alt} className="ext-card-logo" width="48" height="48" />
+                  <div>
+                    <h3>{e.name}</h3>
+                    <span className="ext-tag">{e.tag}</span>
+                    {e.status === 'coming-soon' && <span className="coming-soon-badge">Coming Soon</span>}
+                  </div>
+                </div>
+                <p>{e.description}</p>
+                <div className="ext-card-features">
+                  {e.featurePills.map(f => <span key={f}>{f}</span>)}
+                </div>
+                <div className="ext-card-actions">
+                  {e.links.map(link => (
+                    <a key={link.label} href={link.url} className={`btn btn-${link.variant}`} target="_blank" rel="noopener" onClick={ev => ev.stopPropagation()}>{link.label}</a>
+                  ))}
                 </div>
               </div>
-              <p>A full image editing toolkit in your browser sidebar. Crop, resize, apply 8 filters, 8 presets, and 12 creative pixel-manipulation effects — all without leaving your tab.</p>
-              <div className="ext-card-features">
-                <span>Crop &amp; Resize</span><span>16 Filters</span><span>12 Creative Effects</span>
-                <span>Export PNG/JPEG/WebP</span><span>Drag &amp; drop</span>
-              </div>
-              <div className="ext-card-actions">
-                <a href="https://zozimustechnologies.github.io/ImageEditor/" className="btn btn-primary" target="_blank" rel="noopener">Learn More</a>
-                <a href="https://github.com/zozimustechnologies/ImageEditor" className="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
-              </div>
             </div>
-          </div>
-
-          {/* PiP Camera */}
-          <div className="ext-card reveal" onClick={() => window.open('https://zozimustechnologies.github.io/pipcamera/', '_blank')}>
-            <div className="ext-card-image">
-              <img src="https://raw.githubusercontent.com/zozimustechnologies/pipcamera/main/store-assets/largepromotionaltile.png" alt="PiP Camera banner" width="1400" height="560" />
-            </div>
-            <div className="ext-card-body">
-              <div className="ext-card-top">
-                <img src="https://raw.githubusercontent.com/zozimustechnologies/pipcamera/main/store-assets/extensionlogo.png" alt="PiP Camera logo" className="ext-card-logo" width="48" height="48" />
-                <div>
-                  <h3>PiP Camera</h3>
-                  <span className="ext-tag">Productivity</span>
-                  <span className="coming-soon-badge">Coming Soon</span>
-                </div>
-              </div>
-              <p>A tiny, always-on-top camera feed that floats in the corner of your screen. Open your webcam in picture-in-picture mode while browsing, presenting, or video chatting.</p>
-              <div className="ext-card-features">
-                <span>Picture-in-Picture</span><span>One-click launch</span><span>Always on top</span>
-                <span>Privacy focused</span><span>Lightweight</span>
-              </div>
-              <div className="ext-card-actions">
-                <a href="https://zozimustechnologies.github.io/pipcamera/" className="btn btn-primary" target="_blank" rel="noopener">Learn More</a>
-                <a href="https://github.com/zozimustechnologies/pipcamera" className="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
-              </div>
-            </div>
-          </div>
-
-          {/* QR Code Reader */}
-          <div className="ext-card reveal" onClick={() => window.open('https://the-qrcode-reader.netlify.app/', '_blank')}>
-            <div className="ext-card-image">
-              <img src="https://raw.githubusercontent.com/zozimustechnologies/the-qrcode-reader/main/storeassets/largepromotionaltile-1400x560.png" alt="QR Code Reader banner" width="1400" height="560" />
-            </div>
-            <div className="ext-card-body">
-              <div className="ext-card-top">
-                <img src="https://raw.githubusercontent.com/zozimustechnologies/the-qrcode-reader/main/storeassets/extensionlogo-300x300.png" alt="QR Code Reader logo" className="ext-card-logo" width="48" height="48" />
-                <div>
-                  <h3>QR Code Reader</h3>
-                  <span className="ext-tag">Productivity</span>
-                  <span className="coming-soon-badge">Coming Soon</span>
-                </div>
-              </div>
-              <p>A fast, private QR code scanner. Point your webcam at any QR code for instant decoding, or upload a screenshot. 100% local processing — no data collected or transmitted.</p>
-              <div className="ext-card-features">
-                <span>Camera scanning</span><span>Image file scanning</span><span>100% private</span>
-                <span>Clean modern UI</span><span>Lightweight</span>
-              </div>
-              <div className="ext-card-actions">
-                <a href="https://zozimustechnologies.github.io/the-qrcode-reader/" className="btn btn-primary" target="_blank" rel="noopener">Learn More</a>
-                <a href="https://the-qrcode-reader.netlify.app/" className="btn btn-outline" target="_blank" rel="noopener">Open App</a>
-                <a href="https://github.com/zozimustechnologies/the-qrcode-reader" className="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
-              </div>
-            </div>
-          </div>
-
-          {/* VocabBuilder */}
-          <div className="ext-card reveal" onClick={() => window.open('https://zozimustechnologies.github.io/vocabbuilder/', '_blank')}>
-            <div className="ext-card-image">
-              <img src="https://raw.githubusercontent.com/zozimustechnologies/vocabbuilder/main/storeassets/largepromotionaltile.png" alt="VocabBuilder banner" width="1400" height="560" />
-            </div>
-            <div className="ext-card-body">
-              <div className="ext-card-top">
-                <img src="https://raw.githubusercontent.com/zozimustechnologies/vocabbuilder/main/storeassets/extensionlogo.png" alt="VocabBuilder logo" className="ext-card-logo" width="48" height="48" />
-                <div>
-                  <h3>VocabBuilder</h3>
-                  <span className="ext-tag">Education</span>
-                  <span className="coming-soon-badge">Coming Soon</span>
-                </div>
-              </div>
-              <p>Master vocabulary through spaced repetition — right in your browser sidebar. Four difficulty levels including GMAT/GRE/LSAT words, streak tracking, and rich word cards with IPA pronunciation.</p>
-              <div className="ext-card-features">
-                <span>Spaced repetition</span><span>4 difficulty levels</span><span>Streak &amp; badges</span>
-                <span>Daily reminders</span><span>100% local</span>
-              </div>
-              <div className="ext-card-actions">
-                <a href="https://zozimustechnologies.github.io/vocabbuilder/" className="btn btn-primary" target="_blank" rel="noopener">Learn More</a>
-                <a href="https://github.com/zozimustechnologies/vocabbuilder" className="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
 

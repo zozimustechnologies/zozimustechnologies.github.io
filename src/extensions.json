@@ -1,0 +1,175 @@
+[
+  {
+    "id": "siteblocker",
+    "name": "Site Blocker",
+    "tag": "Productivity",
+    "status": "available",
+    "cardUrl": "https://zozimustechnologies.github.io/siteblocker/",
+    "bannerImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/siteblocker/main/store-assets/promo-1400x560.png", "alt": "Site Blocker banner", "width": 1400, "height": 560 },
+    "logoImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/siteblocker/main/store-assets/icon-300x300.png", "alt": "Site Blocker logo" },
+    "description": "Block distracting websites and boost your productivity. Manage up to 100 sites with individual toggle controls and a math-challenge child safety gate.",
+    "longDescription": "Take control of your browsing. Block up to 100 distracting websites with a clean side panel interface. Includes individual toggle controls per site, a master switch, subdomain blocking, and an optional math-challenge gate that prevents children from modifying the blocklist.",
+    "featurePills": ["100 site limit", "Master switch", "Child safety", "Subdomain blocking", "Side panel UI"],
+    "featureGrid": [
+      { "emoji": "🛡", "title": "Block 100 Sites", "description": "Add any domain and it's blocked immediately across all subdomains." },
+      { "emoji": "🔄", "title": "Individual Toggles", "description": "Pause blocking per site without removing it from your list." },
+      { "emoji": "⚡", "title": "Master Switch", "description": "Turn all blocking on/off with one click. Your list is preserved." },
+      { "emoji": "🔒", "title": "Child Safety", "description": "Math question gate prevents kids from modifying settings." },
+      { "emoji": "🌐", "title": "Subdomain Blocking", "description": "Block facebook.com and all variants are blocked too." },
+      { "emoji": "🎯", "title": "Side Panel UI", "description": "Modern interface in the browser sidebar. No popups." }
+    ],
+    "links": [
+      { "label": "Learn More", "url": "https://zozimustechnologies.github.io/siteblocker/", "variant": "primary" },
+      { "label": "Download from Edge", "url": "https://microsoftedge.microsoft.com/addons/detail/site-blocker/lkcklabdlogcdcmbddiffonafahgagmm", "variant": "outline" },
+      { "label": "File a Bug", "url": "https://github.com/zozimustechnologies/siteblocker/issues", "variant": "outline" },
+      { "label": "GitHub", "url": "https://github.com/zozimustechnologies/siteblocker", "variant": "outline" }
+    ],
+    "screenshots": [
+      { "url": "https://raw.githubusercontent.com/zozimustechnologies/siteblocker/main/store-assets/screenshot-1-overview.png", "alt": "Site Blocker overview", "width": 1280, "height": 800 },
+      { "url": "https://raw.githubusercontent.com/zozimustechnologies/siteblocker/main/store-assets/screenshot-5-features.png", "alt": "Site Blocker math challenge", "width": 1280, "height": 800 }
+    ]
+  },
+  {
+    "id": "qrcodegenerator",
+    "name": "QR Code Generator",
+    "tag": "Productivity",
+    "status": "available",
+    "cardUrl": "https://zozimustechnologies.github.io/qrcodegenerator/",
+    "bannerImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/qrcodegenerator/main/extension/screenshots/screenshot-1400x560.png", "alt": "QR Code Generator banner", "width": 1400, "height": 560 },
+    "logoImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/qrcodegenerator/main/images/icon.png", "alt": "QR Code Generator logo" },
+    "description": "Generate QR codes instantly for any URL or text, right from your browser sidebar. Lightweight, fast, and privacy-friendly with a clean side panel UI.",
+    "longDescription": "Generate QR codes instantly for any URL or text, right from your browser sidebar. A simple, lightweight side panel extension — no sign-up, no external scripts, just fast QR code generation.",
+    "featurePills": ["Instant generation", "Side panel UI", "No sign-up", "Responsive", "Zero dependencies"],
+    "featureGrid": [
+      { "emoji": "⚡", "title": "Instant Generation", "description": "Enter any URL or text and get a scannable QR code in seconds." },
+      { "emoji": "📁", "title": "Side Panel UI", "description": "Opens in the browser sidebar without leaving your current tab." },
+      { "emoji": "🎨", "title": "Clean Design", "description": "Distraction-free card layout with a polished blue theme." },
+      { "emoji": "📱", "title": "Responsive", "description": "Works beautifully on any screen size. Scan with any mobile device." },
+      { "emoji": "🧶", "title": "Lightweight", "description": "Pure HTML, CSS, and vanilla JS. No frameworks, no bloat." },
+      { "emoji": "🔓", "title": "No Sign-Up", "description": "Works right away. No account, no login, no setup needed." }
+    ],
+    "links": [
+      { "label": "Learn More", "url": "https://zozimustechnologies.github.io/qrcodegenerator/", "variant": "primary" },
+      { "label": "Open App", "url": "https://the-qrcode-generator.netlify.app/", "variant": "outline" },
+      { "label": "Download from Edge", "url": "https://microsoftedge.microsoft.com/addons/detail/qr-code-generator/kcjdgoccjamenahcmpipbdcfkpnknami", "variant": "outline" },
+      { "label": "File a Bug", "url": "https://github.com/zozimustechnologies/qrcodegenerator/issues", "variant": "outline" },
+      { "label": "GitHub", "url": "https://github.com/zozimustechnologies/qrcodegenerator", "variant": "outline" }
+    ],
+    "screenshots": [
+      { "url": "https://raw.githubusercontent.com/zozimustechnologies/qrcodegenerator/main/extension/screenshots/screenshot-440x280.png", "alt": "QR Code Generator promo tile", "width": 440, "height": 280 }
+    ]
+  },
+  {
+    "id": "imageeditor",
+    "name": "Image Editor",
+    "tag": "Creative",
+    "status": "coming-soon",
+    "cardUrl": "https://zozimustechnologies.github.io/ImageEditor/",
+    "bannerImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/ImageEditor/main/storeassets/largepromotionaltile.png", "alt": "Image Editor banner", "width": 1400, "height": 560 },
+    "logoImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/ImageEditor/main/storeassets/extensionlogo.png", "alt": "Image Editor logo" },
+    "description": "A full image editing toolkit in your browser sidebar. Crop, resize, apply 8 filters, 8 presets, and 12 creative pixel-manipulation effects — all without leaving your tab.",
+    "longDescription": "A lightweight, privacy-first image editor that lives in your browser's side panel. Crop, resize, apply 8 filter sliders, 8 one-click presets, and 12 unique creative pixel-manipulation effects — all without leaving your current tab.",
+    "featurePills": ["Crop & Resize", "16 Filters", "12 Creative Effects", "Export PNG/JPEG/WebP", "Drag & drop"],
+    "featureGrid": [
+      { "emoji": "✂", "title": "Crop", "description": "Drag handles with 5 aspect ratio presets and pixel input." },
+      { "emoji": "↔", "title": "Resize", "description": "Scale by dimension or percentage with locked aspect ratio." },
+      { "emoji": "🎨", "title": "16 Filters", "description": "8 adjustable sliders plus 8 one-click presets." },
+      { "emoji": "✨", "title": "12 Creative Effects", "description": "Memory Drift, Signal Corruption, Time Slice, and more." },
+      { "emoji": "💾", "title": "Multi-format Export", "description": "Save as PNG, JPEG, or WebP with quality control." },
+      { "emoji": "🌐", "title": "Page Image Detection", "description": "Scan and edit any image on the current page." }
+    ],
+    "links": [
+      { "label": "Learn More", "url": "https://zozimustechnologies.github.io/ImageEditor/", "variant": "primary" },
+      { "label": "File a Bug", "url": "https://github.com/zozimustechnologies/ImageEditor/issues", "variant": "outline" },
+      { "label": "GitHub", "url": "https://github.com/zozimustechnologies/ImageEditor", "variant": "outline" }
+    ],
+    "screenshots": [
+      { "url": "https://raw.githubusercontent.com/zozimustechnologies/ImageEditor/main/storeassets/screenshot-1280x800.png", "alt": "Image Editor full view", "width": 1280, "height": 800 },
+      { "url": "https://raw.githubusercontent.com/zozimustechnologies/ImageEditor/main/storeassets/screenshot-640x400.png", "alt": "Image Editor compact view", "width": 640, "height": 400 }
+    ]
+  },
+  {
+    "id": "pipcamera",
+    "name": "PiP Camera",
+    "tag": "Productivity",
+    "status": "coming-soon",
+    "cardUrl": "https://zozimustechnologies.github.io/pipcamera/",
+    "bannerImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/pipcamera/main/store-assets/largepromotionaltile.png", "alt": "PiP Camera banner", "width": 1400, "height": 560 },
+    "logoImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/pipcamera/main/store-assets/extensionlogo.png", "alt": "PiP Camera logo" },
+    "description": "A tiny, always-on-top camera feed that floats in the corner of your screen. Open your webcam in picture-in-picture mode while browsing, presenting, or video chatting.",
+    "longDescription": "A tiny, always-on-top camera feed that floats in the corner of your screen using the browser's native Picture-in-Picture API. Keep your webcam visible while browsing, presenting, or video chatting — without switching tabs.",
+    "featurePills": ["Picture-in-Picture", "One-click launch", "Always on top", "Privacy focused", "Lightweight"],
+    "featureGrid": [
+      { "emoji": "📷", "title": "Picture-in-Picture", "description": "Uses the browser's native PiP API for a floating, always-on-top window." },
+      { "emoji": "⚡", "title": "One-click Launch", "description": "Open your camera in seconds — no setup, no permissions dance." },
+      { "emoji": "🔝", "title": "Always on Top", "description": "The feed stays visible while you browse, present, or video chat." },
+      { "emoji": "🔒", "title": "Privacy Focused", "description": "No recording, no storage, no data ever leaves your device." },
+      { "emoji": "🧶", "title": "Lightweight", "description": "Pure HTML/CSS/JS. No dependencies. Loads instantly." },
+      { "emoji": "🔓", "title": "Free & Open Source", "description": "MIT licensed. Audit it, fork it, or contribute on GitHub." }
+    ],
+    "links": [
+      { "label": "Learn More", "url": "https://zozimustechnologies.github.io/pipcamera/", "variant": "primary" },
+      { "label": "GitHub", "url": "https://github.com/zozimustechnologies/pipcamera", "variant": "outline" }
+    ],
+    "screenshots": [
+      { "url": "https://raw.githubusercontent.com/zozimustechnologies/pipcamera/main/store-assets/largepromotionaltile.png", "alt": "PiP Camera overview", "width": 1400, "height": 560 }
+    ]
+  },
+  {
+    "id": "qrcodereader",
+    "name": "QR Code Reader",
+    "tag": "Productivity",
+    "status": "coming-soon",
+    "cardUrl": "https://the-qrcode-reader.netlify.app/",
+    "bannerImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/the-qrcode-reader/main/storeassets/largepromotionaltile-1400x560.png", "alt": "QR Code Reader banner", "width": 1400, "height": 560 },
+    "logoImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/the-qrcode-reader/main/storeassets/extensionlogo-300x300.png", "alt": "QR Code Reader logo" },
+    "description": "A fast, private QR code scanner. Point your webcam at any QR code for instant decoding, or upload a screenshot. 100% local processing — no data collected or transmitted.",
+    "longDescription": "A fast, private QR code scanner available as a browser extension and web app. Point your webcam at any QR code for instant decoding, or upload a screenshot. All processing happens locally — no data is collected or transmitted.",
+    "featurePills": ["Camera scanning", "Image file scanning", "100% private", "Clean modern UI", "Lightweight"],
+    "featureGrid": [
+      { "emoji": "📷", "title": "Camera Scanning", "description": "Point your webcam at any QR code for instant decoding." },
+      { "emoji": "📁", "title": "Image File Scanning", "description": "Upload a screenshot or photo containing a QR code." },
+      { "emoji": "🔒", "title": "100% Private", "description": "All processing happens locally in your browser. No data sent." },
+      { "emoji": "🎨", "title": "Clean Modern UI", "description": "Gradient-themed design with smooth animations." },
+      { "emoji": "🧶", "title": "Lightweight", "description": "No background processes. Only runs when you open it." },
+      { "emoji": "🔓", "title": "Free & Open Source", "description": "MIT licensed, no ads, no premium tiers." }
+    ],
+    "links": [
+      { "label": "Learn More", "url": "https://zozimustechnologies.github.io/the-qrcode-reader/", "variant": "primary" },
+      { "label": "Open App", "url": "https://the-qrcode-reader.netlify.app/", "variant": "outline" },
+      { "label": "File a Bug", "url": "https://github.com/zozimustechnologies/the-qrcode-reader/issues", "variant": "outline" },
+      { "label": "GitHub", "url": "https://github.com/zozimustechnologies/the-qrcode-reader", "variant": "outline" }
+    ],
+    "screenshots": [
+      { "url": "https://raw.githubusercontent.com/zozimustechnologies/the-qrcode-reader/main/storeassets/screenshot-1280x800.png", "alt": "QR Code Reader overview", "width": 1280, "height": 800 }
+    ]
+  },
+  {
+    "id": "vocabbuilder",
+    "name": "VocabBuilder",
+    "tag": "Education",
+    "status": "coming-soon",
+    "cardUrl": "https://zozimustechnologies.github.io/vocabbuilder/",
+    "bannerImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/vocabbuilder/main/storeassets/largepromotionaltile.png", "alt": "VocabBuilder banner", "width": 1400, "height": 560 },
+    "logoImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/vocabbuilder/main/storeassets/extensionlogo.png", "alt": "VocabBuilder logo" },
+    "description": "Master vocabulary through spaced repetition — right in your browser sidebar. Four difficulty levels including GMAT/GRE/LSAT words, streak tracking, and daily reminders.",
+    "longDescription": "Master vocabulary through spaced repetition — right in your browser sidebar. VocabBuilder serves you one word per day and schedules reviews at progressive intervals (1→3→7→14→30 days) so words move from short-term to long-term memory efficiently.",
+    "featurePills": ["Spaced repetition", "4 difficulty levels", "Streak & badges", "Daily reminders", "100% local"],
+    "featureGrid": [
+      { "emoji": "📚", "title": "4 Difficulty Levels", "description": "Simple, Medium, Complex, and Competitive (GMAT/GRE/LSAT) word sets." },
+      { "emoji": "🧠", "title": "Spaced Repetition", "description": "Progressive 1→3→7→14→30 day review intervals for lasting retention." },
+      { "emoji": "🔥", "title": "Streak & Badges", "description": "Daily streak counter with milestone badges at 3, 7, 30, and 365 days." },
+      { "emoji": "🔔", "title": "Daily Reminders", "description": "9 AM browser notification keeps vocabulary building a daily habit." },
+      { "emoji": "📊", "title": "Progress Dashboard", "description": "Track streaks, words learned, daily goal, and monthly totals." },
+      { "emoji": "🔒", "title": "100% Local", "description": "All data in Chrome Storage API — no accounts, no tracking, no cloud." }
+    ],
+    "links": [
+      { "label": "Learn More", "url": "https://zozimustechnologies.github.io/vocabbuilder/", "variant": "primary" },
+      { "label": "File a Bug", "url": "https://github.com/zozimustechnologies/vocabbuilder/issues", "variant": "outline" },
+      { "label": "GitHub", "url": "https://github.com/zozimustechnologies/vocabbuilder", "variant": "outline" }
+    ],
+    "screenshots": [
+      { "url": "https://raw.githubusercontent.com/zozimustechnologies/vocabbuilder/main/storeassets/screenshot-1280x800.png", "alt": "VocabBuilder full view", "width": 1280, "height": 800 }
+    ]
+  }
+]
