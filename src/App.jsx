@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route, useLocation, Navigate } from 'react-router-dom';
+import externalRoutes from './externalRoutes.json';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
 import SimpleFooter from './components/SimpleFooter';
@@ -99,9 +100,9 @@ export default function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/github" element={<ExternalRedirect to="https://github.com/zozimustechnologies" />} />
-        <Route path="/instagram" element={<ExternalRedirect to="https://www.instagram.com/zozimustechnologies" />} />
-        <Route path="/donate" element={<ExternalRedirect to="https://wise.com/pay/business/sandeepchadda?utm_source=open_link" />} />
+        {externalRoutes.map(({ path, url }) => (
+          <Route key={path} path={path} element={<ExternalRedirect to={url} />} />
+        ))}
         <Route path="*" element={<Layout />} />
       </Routes>
     </BrowserRouter>
