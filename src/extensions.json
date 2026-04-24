@@ -4,151 +4,172 @@
     "name": "Site Blocker",
     "tag": "Productivity",
     "status": "available",
-    "cardUrl": "https://chromewebstore.google.com/detail/site-blocker/TODO_EXTENSION_ID",
-    "bannerImage": {
-      "url": "https://placehold.co/1280x400/1a1a2e/ffffff?text=Site+Blocker",
-      "alt": "Site Blocker banner",
-      "width": 1280,
-      "height": 400
-    },
-    "logoImage": {
-      "url": "https://placehold.co/128x128/6c63ff/ffffff?text=SB",
-      "alt": "Site Blocker logo"
-    },
-    "description": "Block distracting websites with a single click. Set schedules, add custom rules, and stay focused — all without any data leaving your browser.",
-    "longDescription": "Site Blocker is a lightweight browser extension that helps you stay productive by blocking distracting websites on demand or on a schedule. Everything runs locally — no accounts, no cloud sync, no tracking. Just a simple, powerful focus tool.",
-    "featurePills": ["Schedule blocking", "Custom rules", "100% local", "No account needed"],
+    "cardUrl": "https://zozimustechnologies.github.io/siteblocker/",
+    "bannerImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/siteblocker/main/store-assets/promo-1400x560.png", "alt": "Site Blocker banner", "width": 1400, "height": 560 },
+    "logoImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/siteblocker/main/store-assets/icon-300x300.png", "alt": "Site Blocker logo" },
+    "description": "Block distracting websites and boost your productivity. Manage up to 100 sites with individual toggle controls and a math-challenge child safety gate.",
+    "longDescription": "Take control of your browsing. Block up to 100 distracting websites with a clean side panel interface. Includes individual toggle controls per site, a master switch, subdomain blocking, and an optional math-challenge gate that prevents children from modifying the blocklist.",
+    "featurePills": ["100 site limit", "Master switch", "Child safety", "Subdomain blocking", "Side panel UI"],
     "featureGrid": [
-      { "emoji": "🚫", "title": "Block Any Site", "description": "Add any domain to your blocklist in seconds. Wildcards and subdomains supported." },
-      { "emoji": "⏰", "title": "Time Schedules", "description": "Set daily schedules so blocking activates automatically during your focus hours." },
-      { "emoji": "🔒", "title": "Password Lock", "description": "Lock your settings with a password to avoid impulsive overrides." },
-      { "emoji": "🛡️", "title": "Privacy First", "description": "Zero data collection. Blocklists stay on your device and never touch a server." }
+      { "emoji": "🛡", "title": "Block 100 Sites", "description": "Add any domain and it's blocked immediately across all subdomains." },
+      { "emoji": "🔄", "title": "Individual Toggles", "description": "Pause blocking per site without removing it from your list." },
+      { "emoji": "⚡", "title": "Master Switch", "description": "Turn all blocking on/off with one click. Your list is preserved." },
+      { "emoji": "🔒", "title": "Child Safety", "description": "Math question gate prevents kids from modifying settings." },
+      { "emoji": "🌐", "title": "Subdomain Blocking", "description": "Block facebook.com and all variants are blocked too." },
+      { "emoji": "🎯", "title": "Side Panel UI", "description": "Modern interface in the browser sidebar. No popups." }
     ],
     "links": [
-      { "label": "Add to Chrome", "url": "https://chromewebstore.google.com/detail/site-blocker/TODO_EXTENSION_ID", "variant": "primary" },
-      { "label": "View Source", "url": "https://github.com/zozimustechnologies", "variant": "outline" }
+      { "label": "Learn More", "url": "https://zozimustechnologies.github.io/siteblocker/", "variant": "primary" },
+      { "label": "Download from Edge", "url": "https://microsoftedge.microsoft.com/addons/detail/site-blocker/lkcklabdlogcdcmbddiffonafahgagmm", "variant": "outline" },
+      { "label": "File a Bug", "url": "https://github.com/zozimustechnologies/siteblocker/issues", "variant": "outline" },
+      { "label": "GitHub", "url": "https://github.com/zozimustechnologies/siteblocker", "variant": "outline" }
     ],
-    "screenshots": []
+    "screenshots": [
+      { "url": "https://raw.githubusercontent.com/zozimustechnologies/siteblocker/main/store-assets/screenshot-1-overview.png", "alt": "Site Blocker overview", "width": 1280, "height": 800 },
+      { "url": "https://raw.githubusercontent.com/zozimustechnologies/siteblocker/main/store-assets/screenshot-5-features.png", "alt": "Site Blocker math challenge", "width": 1280, "height": 800 }
+    ]
   },
   {
     "id": "qrcodegenerator",
     "name": "QR Code Generator",
     "tag": "Productivity",
     "status": "available",
-    "cardUrl": "https://chromewebstore.google.com/detail/qr-code-generator/TODO_EXTENSION_ID",
-    "bannerImage": {
-      "url": "https://placehold.co/1280x400/1a1a2e/ffffff?text=QR+Code+Generator",
-      "alt": "QR Code Generator banner",
-      "width": 1280,
-      "height": 400
-    },
-    "logoImage": {
-      "url": "https://placehold.co/128x128/6c63ff/ffffff?text=QR",
-      "alt": "QR Code Generator logo"
-    },
-    "description": "Instantly generate QR codes for any URL, text, or data right from your browser toolbar. No sign-up, no limits, no tracking.",
-    "longDescription": "QR Code Generator lets you create QR codes for any URL, text, email, or phone number directly in your browser. Generated codes can be downloaded as PNG — no data is sent anywhere, everything is rendered locally using the Canvas API.",
-    "featurePills": ["Instant generation", "PNG download", "Any text/URL", "100% local"],
+    "cardUrl": "https://zozimustechnologies.github.io/qrcodegenerator/",
+    "bannerImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/qrcodegenerator/main/extension/screenshots/screenshot-1400x560.png", "alt": "QR Code Generator banner", "width": 1400, "height": 560 },
+    "logoImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/qrcodegenerator/main/images/icon.png", "alt": "QR Code Generator logo" },
+    "description": "Generate QR codes instantly for any URL or text, right from your browser sidebar. Lightweight, fast, and privacy-friendly with a clean side panel UI.",
+    "longDescription": "Generate QR codes instantly for any URL or text, right from your browser sidebar. A simple, lightweight side panel extension — no sign-up, no external scripts, just fast QR code generation.",
+    "featurePills": ["Instant generation", "Side panel UI", "No sign-up", "Responsive", "Zero dependencies"],
     "featureGrid": [
-      { "emoji": "⚡", "title": "Instant Results", "description": "QR codes render in real-time as you type — no button press needed." },
-      { "emoji": "📥", "title": "Download as PNG", "description": "Save any QR code as a high-quality PNG with a single click." },
-      { "emoji": "🔗", "title": "Any Content", "description": "Encode URLs, plain text, emails, phone numbers, or any arbitrary string." },
-      { "emoji": "🛡️", "title": "No Server Calls", "description": "All generation happens in your browser. Nothing is sent to any server." }
+      { "emoji": "⚡", "title": "Instant Generation", "description": "Enter any URL or text and get a scannable QR code in seconds." },
+      { "emoji": "📁", "title": "Side Panel UI", "description": "Opens in the browser sidebar without leaving your current tab." },
+      { "emoji": "🎨", "title": "Clean Design", "description": "Distraction-free card layout with a polished blue theme." },
+      { "emoji": "📱", "title": "Responsive", "description": "Works beautifully on any screen size. Scan with any mobile device." },
+      { "emoji": "🧶", "title": "Lightweight", "description": "Pure HTML, CSS, and vanilla JS. No frameworks, no bloat." },
+      { "emoji": "🔓", "title": "No Sign-Up", "description": "Works right away. No account, no login, no setup needed." }
     ],
     "links": [
-      { "label": "Add to Chrome", "url": "https://chromewebstore.google.com/detail/qr-code-generator/TODO_EXTENSION_ID", "variant": "primary" },
-      { "label": "View Source", "url": "https://github.com/zozimustechnologies", "variant": "outline" }
+      { "label": "Learn More", "url": "https://zozimustechnologies.github.io/qrcodegenerator/", "variant": "primary" },
+      { "label": "Open App", "url": "https://the-qrcode-generator.netlify.app/", "variant": "outline" },
+      { "label": "Download from Edge", "url": "https://microsoftedge.microsoft.com/addons/detail/qr-code-generator/kcjdgoccjamenahcmpipbdcfkpnknami", "variant": "outline" },
+      { "label": "File a Bug", "url": "https://github.com/zozimustechnologies/qrcodegenerator/issues", "variant": "outline" },
+      { "label": "GitHub", "url": "https://github.com/zozimustechnologies/qrcodegenerator", "variant": "outline" }
     ],
-    "screenshots": []
+    "screenshots": [
+      { "url": "https://raw.githubusercontent.com/zozimustechnologies/qrcodegenerator/main/extension/screenshots/screenshot-440x280.png", "alt": "QR Code Generator promo tile", "width": 440, "height": 280 }
+    ]
   },
   {
     "id": "imageeditor",
     "name": "Image Editor",
     "tag": "Creative",
     "status": "coming-soon",
-    "cardUrl": "/products",
-    "bannerImage": {
-      "url": "https://placehold.co/1280x400/1a1a2e/ffffff?text=Image+Editor",
-      "alt": "Image Editor banner",
-      "width": 1280,
-      "height": 400
-    },
-    "logoImage": {
-      "url": "https://placehold.co/128x128/6c63ff/ffffff?text=IE",
-      "alt": "Image Editor logo"
-    },
-    "description": "Crop, resize, convert, and annotate images directly in your browser — no uploads, no accounts, no waiting.",
-    "longDescription": "Image Editor is an upcoming browser extension that brings a full-featured image editing suite to your browser toolbar. Built entirely with the Canvas API, every operation happens locally — your images never leave your device.",
-    "featurePills": ["Crop & resize", "Format convert", "Annotate", "100% local"],
+    "cardUrl": "https://zozimustechnologies.github.io/ImageEditor/",
+    "bannerImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/ImageEditor/main/storeassets/largepromotionaltile.png", "alt": "Image Editor banner", "width": 1400, "height": 560 },
+    "logoImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/ImageEditor/main/storeassets/extensionlogo.png", "alt": "Image Editor logo" },
+    "description": "A full image editing toolkit in your browser sidebar. Crop, resize, apply 8 filters, 8 presets, and 12 creative pixel-manipulation effects — all without leaving your tab.",
+    "longDescription": "A lightweight, privacy-first image editor that lives in your browser's side panel. Crop, resize, apply 8 filter sliders, 8 one-click presets, and 12 unique creative pixel-manipulation effects — all without leaving your current tab.",
+    "featurePills": ["Crop & Resize", "16 Filters", "12 Creative Effects", "Export PNG/JPEG/WebP", "Drag & drop"],
     "featureGrid": [
-      { "emoji": "✂️", "title": "Crop & Resize", "description": "Precisely crop or resize any image to an exact pixel dimension or free-form selection." },
-      { "emoji": "🎨", "title": "Annotate", "description": "Add text, arrows, shapes, and highlights to images for sharing or documentation." },
-      { "emoji": "🔄", "title": "Format Convert", "description": "Convert between PNG, JPEG, WebP, and more with quality controls." },
-      { "emoji": "🛡️", "title": "Fully Offline", "description": "No uploads. No API calls. Every pixel stays on your machine." }
+      { "emoji": "✂", "title": "Crop", "description": "Drag handles with 5 aspect ratio presets and pixel input." },
+      { "emoji": "↔", "title": "Resize", "description": "Scale by dimension or percentage with locked aspect ratio." },
+      { "emoji": "🎨", "title": "16 Filters", "description": "8 adjustable sliders plus 8 one-click presets." },
+      { "emoji": "✨", "title": "12 Creative Effects", "description": "Memory Drift, Signal Corruption, Time Slice, and more." },
+      { "emoji": "💾", "title": "Multi-format Export", "description": "Save as PNG, JPEG, or WebP with quality control." },
+      { "emoji": "🌐", "title": "Page Image Detection", "description": "Scan and edit any image on the current page." }
     ],
     "links": [
-      { "label": "Notify Me", "url": "https://github.com/zozimustechnologies", "variant": "outline" }
+      { "label": "Learn More", "url": "https://zozimustechnologies.github.io/ImageEditor/", "variant": "primary" },
+      { "label": "File a Bug", "url": "https://github.com/zozimustechnologies/ImageEditor/issues", "variant": "outline" },
+      { "label": "GitHub", "url": "https://github.com/zozimustechnologies/ImageEditor", "variant": "outline" }
     ],
-    "screenshots": []
+    "screenshots": [
+      { "url": "https://raw.githubusercontent.com/zozimustechnologies/ImageEditor/main/storeassets/screenshot-1280x800.png", "alt": "Image Editor full view", "width": 1280, "height": 800 },
+      { "url": "https://raw.githubusercontent.com/zozimustechnologies/ImageEditor/main/storeassets/screenshot-640x400.png", "alt": "Image Editor compact view", "width": 640, "height": 400 }
+    ]
+  },
+  {
+    "id": "pipcamera",
+    "name": "PiP Camera",
+    "tag": "Productivity",
+    "status": "coming-soon",
+    "cardUrl": "https://zozimustechnologies.github.io/pipcamera/",
+    "bannerImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/pipcamera/main/store-assets/largepromotionaltile.png", "alt": "PiP Camera banner", "width": 1400, "height": 560 },
+    "logoImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/pipcamera/main/store-assets/extensionlogo.png", "alt": "PiP Camera logo" },
+    "description": "A tiny, always-on-top camera feed that floats in the corner of your screen. Open your webcam in picture-in-picture mode while browsing, presenting, or video chatting.",
+    "longDescription": "A tiny, always-on-top camera feed that floats in the corner of your screen using the browser's native Picture-in-Picture API. Keep your webcam visible while browsing, presenting, or video chatting — without switching tabs.",
+    "featurePills": ["Picture-in-Picture", "One-click launch", "Always on top", "Privacy focused", "Lightweight"],
+    "featureGrid": [
+      { "emoji": "📷", "title": "Picture-in-Picture", "description": "Uses the browser's native PiP API for a floating, always-on-top window." },
+      { "emoji": "⚡", "title": "One-click Launch", "description": "Open your camera in seconds — no setup, no permissions dance." },
+      { "emoji": "🔝", "title": "Always on Top", "description": "The feed stays visible while you browse, present, or video chat." },
+      { "emoji": "🔒", "title": "Privacy Focused", "description": "No recording, no storage, no data ever leaves your device." },
+      { "emoji": "🧶", "title": "Lightweight", "description": "Pure HTML/CSS/JS. No dependencies. Loads instantly." },
+      { "emoji": "🔓", "title": "Free & Open Source", "description": "MIT licensed. Audit it, fork it, or contribute on GitHub." }
+    ],
+    "links": [
+      { "label": "Learn More", "url": "https://zozimustechnologies.github.io/pipcamera/", "variant": "primary" },
+      { "label": "GitHub", "url": "https://github.com/zozimustechnologies/pipcamera", "variant": "outline" }
+    ],
+    "screenshots": [
+      { "url": "https://raw.githubusercontent.com/zozimustechnologies/pipcamera/main/store-assets/largepromotionaltile.png", "alt": "PiP Camera overview", "width": 1400, "height": 560 }
+    ]
   },
   {
     "id": "qrcodereader",
     "name": "QR Code Reader",
     "tag": "Productivity",
     "status": "coming-soon",
-    "cardUrl": "/products",
-    "bannerImage": {
-      "url": "https://placehold.co/1280x400/1a1a2e/ffffff?text=QR+Code+Reader",
-      "alt": "QR Code Reader banner",
-      "width": 1280,
-      "height": 400
-    },
-    "logoImage": {
-      "url": "https://placehold.co/128x128/6c63ff/ffffff?text=QRR",
-      "alt": "QR Code Reader logo"
-    },
-    "description": "Scan and decode QR codes from any image on the page or uploaded file — entirely in-browser, with zero data sent externally.",
-    "longDescription": "QR Code Reader is an upcoming extension that lets you decode QR codes from images anywhere on the web or from files on your computer. Powered by a local JS decoding library — no camera required, no server uploads.",
-    "featurePills": ["Scan from image", "File upload", "No camera needed", "100% local"],
+    "cardUrl": "https://the-qrcode-reader.netlify.app/",
+    "bannerImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/the-qrcode-reader/main/storeassets/largepromotionaltile-1400x560.png", "alt": "QR Code Reader banner", "width": 1400, "height": 560 },
+    "logoImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/the-qrcode-reader/main/storeassets/extensionlogo-300x300.png", "alt": "QR Code Reader logo" },
+    "description": "A fast, private QR code scanner. Point your webcam at any QR code for instant decoding, or upload a screenshot. 100% local processing — no data collected or transmitted.",
+    "longDescription": "A fast, private QR code scanner available as a browser extension and web app. Point your webcam at any QR code for instant decoding, or upload a screenshot. All processing happens locally — no data is collected or transmitted.",
+    "featurePills": ["Camera scanning", "Image file scanning", "100% private", "Clean modern UI", "Lightweight"],
     "featureGrid": [
-      { "emoji": "🖼️", "title": "Scan from Page", "description": "Right-click any image on any webpage to instantly decode its QR code." },
-      { "emoji": "📂", "title": "From File", "description": "Upload an image from your device and decode it locally." },
-      { "emoji": "📋", "title": "Copy Result", "description": "Decoded text is shown and copied to clipboard in one click." },
-      { "emoji": "🛡️", "title": "No Uploads", "description": "All decoding is done in-browser. No image ever leaves your device." }
+      { "emoji": "📷", "title": "Camera Scanning", "description": "Point your webcam at any QR code for instant decoding." },
+      { "emoji": "📁", "title": "Image File Scanning", "description": "Upload a screenshot or photo containing a QR code." },
+      { "emoji": "🔒", "title": "100% Private", "description": "All processing happens locally in your browser. No data sent." },
+      { "emoji": "🎨", "title": "Clean Modern UI", "description": "Gradient-themed design with smooth animations." },
+      { "emoji": "🧶", "title": "Lightweight", "description": "No background processes. Only runs when you open it." },
+      { "emoji": "🔓", "title": "Free & Open Source", "description": "MIT licensed, no ads, no premium tiers." }
     ],
     "links": [
-      { "label": "Notify Me", "url": "https://github.com/zozimustechnologies", "variant": "outline" }
+      { "label": "Learn More", "url": "https://zozimustechnologies.github.io/the-qrcode-reader/", "variant": "primary" },
+      { "label": "Open App", "url": "https://the-qrcode-reader.netlify.app/", "variant": "outline" },
+      { "label": "File a Bug", "url": "https://github.com/zozimustechnologies/the-qrcode-reader/issues", "variant": "outline" },
+      { "label": "GitHub", "url": "https://github.com/zozimustechnologies/the-qrcode-reader", "variant": "outline" }
     ],
-    "screenshots": []
+    "screenshots": [
+      { "url": "https://raw.githubusercontent.com/zozimustechnologies/the-qrcode-reader/main/storeassets/screenshot-1280x800.png", "alt": "QR Code Reader overview", "width": 1280, "height": 800 }
+    ]
   },
   {
     "id": "vocabbuilder",
     "name": "VocabBuilder",
     "tag": "Education",
     "status": "coming-soon",
-    "cardUrl": "/products",
-    "bannerImage": {
-      "url": "https://placehold.co/1280x400/1a1a2e/ffffff?text=VocabBuilder",
-      "alt": "VocabBuilder banner",
-      "width": 1280,
-      "height": 400
-    },
-    "logoImage": {
-      "url": "https://placehold.co/128x128/6c63ff/ffffff?text=VB",
-      "alt": "VocabBuilder logo"
-    },
-    "description": "Build your vocabulary passively as you browse. Highlight any word to get definitions, examples, and save it to your personal word list.",
-    "longDescription": "VocabBuilder is an upcoming extension that turns any webpage into a language learning opportunity. Highlight a word to see its definition, pronunciation, and example sentences. Save words to a local list and review them later — all without leaving your browser or sending any data externally.",
-    "featurePills": ["Inline definitions", "Word list", "Flashcard review", "100% local"],
+    "cardUrl": "https://zozimustechnologies.github.io/vocabbuilder/",
+    "bannerImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/vocabbuilder/main/storeassets/largepromotionaltile.png", "alt": "VocabBuilder banner", "width": 1400, "height": 560 },
+    "logoImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/vocabbuilder/main/storeassets/extensionlogo.png", "alt": "VocabBuilder logo" },
+    "description": "Master vocabulary through spaced repetition — right in your browser sidebar. Four difficulty levels including GMAT/GRE/LSAT words, streak tracking, and daily reminders.",
+    "longDescription": "Master vocabulary through spaced repetition — right in your browser sidebar. VocabBuilder serves you one word per day and schedules reviews at progressive intervals (1→3→7→14→30 days) so words move from short-term to long-term memory efficiently.",
+    "featurePills": ["Spaced repetition", "4 difficulty levels", "Streak & badges", "Daily reminders", "100% local"],
     "featureGrid": [
-      { "emoji": "📖", "title": "Inline Definitions", "description": "Highlight any word on any page to instantly see its definition and pronunciation." },
-      { "emoji": "📝", "title": "Personal Word List", "description": "Save words you want to remember. Your list is stored locally in browser storage." },
-      { "emoji": "🃏", "title": "Flashcard Review", "description": "Review saved words with a built-in flashcard mode directly in the popup." },
-      { "emoji": "🛡️", "title": "No Account", "description": "Your word list never touches a server. 100% local, 100% private." }
+      { "emoji": "📚", "title": "4 Difficulty Levels", "description": "Simple, Medium, Complex, and Competitive (GMAT/GRE/LSAT) word sets." },
+      { "emoji": "🧠", "title": "Spaced Repetition", "description": "Progressive 1→3→7→14→30 day review intervals for lasting retention." },
+      { "emoji": "🔥", "title": "Streak & Badges", "description": "Daily streak counter with milestone badges at 3, 7, 30, and 365 days." },
+      { "emoji": "🔔", "title": "Daily Reminders", "description": "9 AM browser notification keeps vocabulary building a daily habit." },
+      { "emoji": "📊", "title": "Progress Dashboard", "description": "Track streaks, words learned, daily goal, and monthly totals." },
+      { "emoji": "🔒", "title": "100% Local", "description": "All data in Chrome Storage API — no accounts, no tracking, no cloud." }
     ],
     "links": [
-      { "label": "Notify Me", "url": "https://github.com/zozimustechnologies", "variant": "outline" }
+      { "label": "Learn More", "url": "https://zozimustechnologies.github.io/vocabbuilder/", "variant": "primary" },
+      { "label": "File a Bug", "url": "https://github.com/zozimustechnologies/vocabbuilder/issues", "variant": "outline" },
+      { "label": "GitHub", "url": "https://github.com/zozimustechnologies/vocabbuilder", "variant": "outline" }
     ],
-    "screenshots": []
+    "screenshots": [
+      { "url": "https://raw.githubusercontent.com/zozimustechnologies/vocabbuilder/main/storeassets/screenshot-1280x800.png", "alt": "VocabBuilder full view", "width": 1280, "height": 800 }
+    ]
   }
 ]
