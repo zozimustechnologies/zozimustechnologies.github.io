@@ -4,12 +4,19 @@
   <meta charset="utf-8">
   <title>Zozimus Technologies</title>
   <script>
-    // SPA redirect for GitHub Pages
-    // Stores the full URL in sessionStorage and redirects to the root
-    var l = window.location;
-    sessionStorage.redirect = l.href;
+    var externalRoutes = {
+      '/github': 'https://github.com/zozimustechnologies',
+      '/instagram': 'https://www.instagram.com/zozimustechnologies',
+      '/donate': 'https://wise.com/pay/business/sandeepchadda?utm_source=open_link'
+    };
+    var path = window.location.pathname.replace(/\/$/, '');
+    if (externalRoutes[path]) {
+      window.location.replace(externalRoutes[path]);
+    } else {
+      sessionStorage.redirect = window.location.href;
+      window.location.replace('/');
+    }
   </script>
-  <meta http-equiv="refresh" content="0;URL='/'">
 </head>
 <body></body>
 </html>
