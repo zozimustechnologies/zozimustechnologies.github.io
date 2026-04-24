@@ -53,23 +53,18 @@ export default function Products() {
   useEffect(() => { document.title = 'Products — Zozimus Technologies'; }, []);
   useScrollReveal();
 
-  const sorted = [...extensions].sort((a, b) => {
-    if (a.status === b.status) return 0;
-    return a.status === 'available' ? -1 : 1;
+  const availableUngrouped = extensions.filter(e => e.status === 'available' && !e.group);
+  const groupMap = {};
+  extensions.filter(e => e.status === 'available' && e.group).forEach(e => {
+    (groupMap[e.group] = groupMap[e.group] || []).push(e);
   });
+  const availableGrouped = Object.values(groupMap).flat();
+  const comingSoon = extensions.filter(e => e.status !== 'available');
+  const sorted = [...availableUngrouped, ...availableGrouped, ...comingSoon];
 
   const rows = [];
-  const processed = new Set();
-  for (const ext of sorted) {
-    if (processed.has(ext.id)) continue;
-    if (ext.group) {
-      const pair = sorted.filter(e => e.group === ext.group);
-      rows.push({ type: 'pair', items: pair });
-      pair.forEach(e => processed.add(e.id));
-    } else {
-      rows.push({ type: 'single', items: [ext] });
-      processed.add(ext.id);
-    }
+  for (let i = 0; i < sorted.length; i += 2) {
+    rows.push(sorted.slice(i, i + 2));
   }
 
   return (
@@ -82,15 +77,11 @@ export default function Products() {
       <TabBar />
 
       <section className="products-section">
-        {rows.map(row =>
-          row.type === 'pair' ? (
-            <div key={row.items.map(e => e.id).join('-')} className="ext-pair">
-              {row.items.map(e => <ExtCard key={e.id} e={e} />)}
-            </div>
-          ) : (
-            <ExtCard key={row.items[0].id} e={row.items[0]} />
-          )
-        )}
+        {rows.map(row => (
+          <div key={row.map(e => e.id).join('-')} className={row.length === 2 ? 'ext-pair' : undefined}>
+            {row.map(e => <ExtCard key={e.id} e={e} />)}
+          </div>
+        ))}
       </section>
     </>
   );
