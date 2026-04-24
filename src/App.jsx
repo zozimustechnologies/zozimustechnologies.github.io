@@ -100,6 +100,7 @@ export default function App() {
       <Routes>
         <Route path="/github" element={<ExternalRedirect to="https://github.com/zozimustechnologies" />} />
         <Route path="/instagram" element={<ExternalRedirect to="https://www.instagram.com/zozimustechnologies" />} />
+        <Route path="/donate" element={<ExternalRedirect to="https://wise.com/pay/business/sandeepchadda?utm_source=open_link" />} />
         <Route path="*" element={<Layout />} />
       </Routes>
     </BrowserRouter>
