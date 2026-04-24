@@ -10,7 +10,7 @@
 /* ── Section ── */
 .products-section { max-width: 1200px; margin: 0 auto; padding: 20px 8px 40px; }
 
-.products-section-heading { padding: 40px 0 12px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+.products-section-heading { padding: 40px 0 12px; border-bottom: 1px solid var(--border); margin-bottom: 32px; scroll-margin-top: 140px; }
 .products-section-heading:first-child { padding-top: 8px; }
 .products-section-heading h2 { font-size: 1.3rem; font-weight: 700; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.08em; margin: 0; }
 
