@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VS Code Extensions — Zozimus Technologies</title>
+  <meta name="description" content="VS Code extensions by Zozimus Technologies. Open source, free, and built for developers.">
+  <meta name="theme-color" content="#3d7ea6">
+  <link rel="icon" type="image/png" sizes="48x48" href="https://avatars.githubusercontent.com/u/175112813?s=48&v=4">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="products.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="/" class="nav-brand">
+      <img src="https://avatars.githubusercontent.com/u/175112813?s=28&v=4" alt="Zozimus Technologies" width="28" height="28" style="border-radius:6px">
+      Zozimus Technologies
+    </a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/products" class="active">Products</a>
+      <a href="/about">About</a>
+      <a href="/privacy">Privacy</a>
+      <a href="https://github.com/zozimustechnologies" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.instagram.com/zozimustechnologies" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://wise.com/pay/business/sandeepchadda?utm_source=open_link" class="nav-cta" target="_blank" rel="noopener">&#9829; Donate</a>
+    </div>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').style.display = document.querySelector('.nav-links').style.display === 'flex' ? 'none' : 'flex'">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </nav>
+
+  <header class="page-header">
+    <h1>VS Code Extensions</h1>
+    <p>Supercharge your editor with open source extensions built for developers.</p>
+  </header>
+
+  <div class="tab-bar">
+    <a href="/products" class="tab">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+      Browser Extensions
+    </a>
+    <a href="/vscode-extensions" class="tab active">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16.5 9.4L7.55 4.24a1 1 0 00-1 0L2 7v10l4.55 2.76a1 1 0 001 0L16.5 14.6"/><path d="M16.5 9.4v5.2M2 7l7 4.5M2 17l7-4.5M9 11.5V21"/></svg>
+      VS Code Extensions
+    </a>
+    <a href="/cli-tools" class="tab">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+      CLI Tools
+    </a>
+  </div>
+
+  <section class="section">
+    <div class="empty-state reveal">
+      <span class="empty-state-icon">&#128736;</span>
+      <h2>Coming Soon</h2>
+      <p>VS Code extensions are in development. Check back soon, or <a href="https://github.com/zozimustechnologies" target="_blank" rel="noopener">follow us on GitHub</a> to get notified when they launch.</p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/about">About</a>
+      <a href="/privacy">Privacy</a>
+      <a href="https://github.com/zozimustechnologies" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.instagram.com/zozimustechnologies" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://wise.com/pay/business/sandeepchadda?utm_source=open_link" target="_blank" rel="noopener">Donate</a>
+    </div>
+    <p>&copy; 2026 Zozimus Technologies. All rights reserved.</p>
+  </footer>
+
+  <script src="vscode-extensions.js"></script>
+
+</body>
+</html>

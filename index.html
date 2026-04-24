@@ -1,34 +1,362 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" sizes="48x48" href="https://avatars.githubusercontent.com/u/175112813?s=48&v=4" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#3d7ea6" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RKTB1B4YDJ"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag("js", new Date());
-      gtag("config", "G-RKTB1B4YDJ");
-    </script>
-    <title>Zozimus Technologies</title>
-  </head>
-  <body>
-    <div id="root"></div>
-    <script>
-      // SPA redirect handler for GitHub Pages 404 trick
-      (function() {
-        var redirect = sessionStorage.redirect;
-        delete sessionStorage.redirect;
-        if (redirect && redirect !== location.href) {
-          history.replaceState(null, null, redirect);
-        }
-      })();
-    </script>
-    <script type="module" src="/src/main.jsx"></script>
-  </body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zozimus Technologies — Browser Extensions That Respect You</title>
+  <meta name="description" content="Privacy-first browser extensions by Zozimus Technologies. Powerful tools that run locally, respect your data, and just work.">
+  <meta name="theme-color" content="#3d7ea6">
+  <link rel="icon" type="image/png" sizes="48x48" href="https://avatars.githubusercontent.com/u/175112813?s=48&v=4">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="index.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RKTB1B4YDJ"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RKTB1B4YDJ');
+</script>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="nav">
+    <a href="/" class="nav-brand">
+      <img src="https://avatars.githubusercontent.com/u/175112813?s=28&v=4" alt="Zozimus Technologies" width="28" height="28" style="border-radius:6px">
+      Zozimus Technologies
+    </a>
+    <div class="nav-links">
+      <a href="/" class="active">Home</a>
+      <a href="/products">Products</a>
+      <a href="/about">About</a>
+      <a href="/privacy">Privacy</a>
+      <a href="https://github.com/zozimustechnologies" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.instagram.com/zozimustechnologies" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://wise.com/pay/business/sandeepchadda?utm_source=open_link" class="nav-cta" target="_blank" rel="noopener">&#9829; Donate</a>
+    </div>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').style.display = document.querySelector('.nav-links').style.display === 'flex' ? 'none' : 'flex'">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-badge"><span class="dot"></span> Open source &middot; Privacy first</div>
+    <h1>Browser tools that<br><span class="gradient-text">respect your privacy</span></h1>
+    <p class="subtitle">We build lightweight, powerful products that run 100% locally. No tracking, no accounts, no data collection. Just tools that work.</p>
+    <div class="hero-buttons">
+      <a href="/products" class="btn btn-primary">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>
+        Explore Products
+      </a>
+      <a href="https://github.com/zozimustechnologies" class="btn btn-outline" target="_blank" rel="noopener">
+        <svg viewBox="0 0 16 16" width="18" height="18" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+        View on GitHub
+      </a>
+      <a href="https://wise.com/pay/business/sandeepchadda?utm_source=open_link" class="btn btn-donate" target="_blank" rel="noopener">
+        &#9829; Donate
+      </a>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="section">
+    <div class="section-header reveal">
+      <span class="section-label">Our Products</span>
+      <h2>Built for people who value their privacy</h2>
+      <p>Each extension is a standalone tool — no dependencies, no accounts, no cloud.</p>
+    </div>
+
+    <div class="ext-grid">
+      <!-- Site Blocker -->
+      <div class="ext-card reveal" onclick="window.open('https://zozimustechnologies.github.io/siteblocker/','_blank')">
+        <div class="ext-card-image">
+          <img src="https://raw.githubusercontent.com/zozimustechnologies/siteblocker/main/store-assets/promo-1400x560.png" alt="Site Blocker promotional banner" width="1400" height="560">
+        </div>
+        <div class="ext-card-body">
+          <div class="ext-card-top">
+            <img src="https://raw.githubusercontent.com/zozimustechnologies/siteblocker/main/store-assets/icon-300x300.png" alt="Site Blocker logo" class="ext-card-logo" width="48" height="48">
+            <div>
+              <h3>Site Blocker</h3>
+              <span class="ext-tag">Productivity</span>
+            </div>
+          </div>
+          <p>Block distracting websites and boost your productivity. Manage up to 100 sites with individual toggle controls and a math-challenge child safety gate.</p>
+          <div class="ext-card-features">
+            <span>100 site limit</span>
+            <span>Master switch</span>
+            <span>Child safety</span>
+            <span>Subdomain blocking</span>
+            <span>Side panel UI</span>
+          </div>
+          <div class="ext-card-actions">
+            <a href="https://zozimustechnologies.github.io/siteblocker/" class="btn btn-primary" target="_blank" rel="noopener">Learn More</a>
+            <a href="https://microsoftedge.microsoft.com/addons/detail/site-blocker/lkcklabdlogcdcmbddiffonafahgagmm" class="btn btn-outline" target="_blank" rel="noopener">Download from Edge</a>
+            <a href="https://github.com/zozimustechnologies/siteblocker" class="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- QR Code Generator -->
+      <div class="ext-card reveal" onclick="window.open('https://zozimustechnologies.github.io/qrcodegenerator/','_blank')">
+        <div class="ext-card-image">
+          <img src="https://raw.githubusercontent.com/zozimustechnologies/qrcodegenerator/main/extension/screenshots/screenshot-1400x560.png" alt="QR Code Generator promotional banner" width="1400" height="560">
+        </div>
+        <div class="ext-card-body">
+          <div class="ext-card-top">
+            <img src="https://raw.githubusercontent.com/zozimustechnologies/qrcodegenerator/main/images/icon.png" alt="QR Code Generator logo" class="ext-card-logo" width="48" height="48">
+            <div>
+              <h3>QR Code Generator</h3>
+              <span class="ext-tag">Productivity</span>
+            </div>
+          </div>
+          <p>Generate QR codes instantly for any URL or text, right from your browser sidebar. Lightweight, fast, and privacy-friendly with a clean side panel UI.</p>
+          <div class="ext-card-features">
+            <span>Instant generation</span>
+            <span>Side panel UI</span>
+            <span>No sign-up</span>
+            <span>Responsive</span>
+            <span>Zero dependencies</span>
+          </div>
+          <div class="ext-card-actions">
+            <a href="https://zozimustechnologies.github.io/qrcodegenerator/" class="btn btn-primary" target="_blank" rel="noopener">Learn More</a>
+            <a href="https://the-qrcode-generator.netlify.app/" class="btn btn-outline" target="_blank" rel="noopener">Open App</a>
+            <a href="https://microsoftedge.microsoft.com/addons/detail/qr-code-generator/kcjdgoccjamenahcmpipbdcfkpnknami" class="btn btn-outline" target="_blank" rel="noopener">Download from Edge</a>
+            <a href="https://github.com/zozimustechnologies/qrcodegenerator" class="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Image Editor -->
+      <div class="ext-card reveal" onclick="window.open('https://zozimustechnologies.github.io/ImageEditor/','_blank')">
+        <div class="ext-card-image">
+          <img src="https://raw.githubusercontent.com/zozimustechnologies/ImageEditor/main/storeassets/largepromotionaltile.png" alt="Image Editor promotional banner" width="1400" height="560">
+        </div>
+        <div class="ext-card-body">
+          <div class="ext-card-top">
+            <img src="https://raw.githubusercontent.com/zozimustechnologies/ImageEditor/main/storeassets/extensionlogo.png" alt="Image Editor logo" class="ext-card-logo" width="48" height="48">
+            <div>
+              <h3>Image Editor</h3>
+              <span class="ext-tag">Creative</span>
+              <span class="coming-soon-badge">Coming Soon</span>
+            </div>
+          </div>
+          <p>A full image editing toolkit in your browser sidebar. Crop, resize, apply 8 filters, 8 presets, and 12 creative pixel-manipulation effects — all without leaving your tab.</p>
+          <div class="ext-card-features">
+            <span>Crop &amp; Resize</span>
+            <span>16 Filters</span>
+            <span>12 Creative Effects</span>
+            <span>Export PNG/JPEG/WebP</span>
+            <span>Drag &amp; drop</span>
+          </div>
+          <div class="ext-card-actions">
+            <a href="https://zozimustechnologies.github.io/ImageEditor/" class="btn btn-primary" target="_blank" rel="noopener">Learn More</a>
+            <a href="https://github.com/zozimustechnologies/ImageEditor" class="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- PiP Camera -->
+      <div class="ext-card reveal" onclick="window.open('https://zozimustechnologies.github.io/pipcamera/','_blank')">
+        <div class="ext-card-image">
+          <img src="https://raw.githubusercontent.com/zozimustechnologies/pipcamera/main/store-assets/largepromotionaltile.png" alt="PiP Camera promotional banner" width="1400" height="560">
+        </div>
+        <div class="ext-card-body">
+          <div class="ext-card-top">
+            <img src="https://raw.githubusercontent.com/zozimustechnologies/pipcamera/main/store-assets/extensionlogo.png" alt="PiP Camera logo" class="ext-card-logo" width="48" height="48">
+            <div>
+              <h3>PiP Camera</h3>
+              <span class="ext-tag">Productivity</span>
+              <span class="coming-soon-badge">Coming Soon</span>
+            </div>
+          </div>
+          <p>A tiny, always-on-top camera feed that floats in the corner of your screen. Open your webcam in picture-in-picture mode while browsing, presenting, or video chatting.</p>
+          <div class="ext-card-features">
+            <span>Picture-in-Picture</span>
+            <span>One-click launch</span>
+            <span>Always on top</span>
+            <span>Privacy focused</span>
+            <span>Lightweight</span>
+          </div>
+          <div class="ext-card-actions">
+            <a href="https://zozimustechnologies.github.io/pipcamera/" class="btn btn-primary" target="_blank" rel="noopener">Learn More</a>
+            <a href="https://github.com/zozimustechnologies/pipcamera" class="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- QR Code Reader -->
+      <div class="ext-card reveal" onclick="window.open('https://the-qrcode-reader.netlify.app/','_blank')">
+        <div class="ext-card-image">
+          <img src="https://raw.githubusercontent.com/zozimustechnologies/the-qrcode-reader/main/storeassets/largepromotionaltile-1400x560.png" alt="QR Code Reader promotional banner" width="1400" height="560">
+        </div>
+        <div class="ext-card-body">
+          <div class="ext-card-top">
+            <img src="https://raw.githubusercontent.com/zozimustechnologies/the-qrcode-reader/main/storeassets/extensionlogo-300x300.png" alt="QR Code Reader logo" class="ext-card-logo" width="48" height="48">
+            <div>
+              <h3>QR Code Reader</h3>
+              <span class="ext-tag">Productivity</span>
+              <span class="coming-soon-badge">Coming Soon</span>
+            </div>
+          </div>
+          <p>A fast, private QR code scanner. Point your webcam at any QR code for instant decoding, or upload a screenshot. 100% local processing — no data collected or transmitted.</p>
+          <div class="ext-card-features">
+            <span>Camera scanning</span>
+            <span>Image file scanning</span>
+            <span>100% private</span>
+            <span>Clean modern UI</span>
+            <span>Lightweight</span>
+          </div>
+          <div class="ext-card-actions">
+            <a href="https://zozimustechnologies.github.io/the-qrcode-reader/" class="btn btn-primary" target="_blank" rel="noopener">Learn More</a>
+            <a href="https://the-qrcode-reader.netlify.app/" class="btn btn-outline" target="_blank" rel="noopener">Open App</a>
+            <a href="https://github.com/zozimustechnologies/the-qrcode-reader" class="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- VocabBuilder -->
+      <div class="ext-card reveal" onclick="window.open('https://zozimustechnologies.github.io/vocabbuilder/','_blank')">
+        <div class="ext-card-image">
+          <img src="https://raw.githubusercontent.com/zozimustechnologies/vocabbuilder/main/storeassets/largepromotionaltile.png" alt="VocabBuilder promotional banner" width="1400" height="560">
+        </div>
+        <div class="ext-card-body">
+          <div class="ext-card-top">
+            <img src="https://raw.githubusercontent.com/zozimustechnologies/vocabbuilder/main/storeassets/extensionlogo.png" alt="VocabBuilder logo" class="ext-card-logo" width="48" height="48">
+            <div>
+              <h3>VocabBuilder</h3>
+              <span class="ext-tag">Education</span>
+              <span class="coming-soon-badge">Coming Soon</span>
+            </div>
+          </div>
+          <p>Master vocabulary through spaced repetition — right in your browser sidebar. Four difficulty levels including GMAT/GRE/LSAT words, streak tracking, and rich word cards with IPA pronunciation.</p>
+          <div class="ext-card-features">
+            <span>Spaced repetition</span>
+            <span>4 difficulty levels</span>
+            <span>Streak &amp; badges</span>
+            <span>Daily reminders</span>
+            <span>100% local</span>
+          </div>
+          <div class="ext-card-actions">
+            <a href="https://zozimustechnologies.github.io/vocabbuilder/" class="btn btn-primary" target="_blank" rel="noopener">Learn More</a>
+            <a href="https://github.com/zozimustechnologies/vocabbuilder" class="btn btn-outline" target="_blank" rel="noopener">GitHub</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <div class="stats reveal">
+    <div class="stat">
+      <div class="number">6</div>
+      <div class="label">Products</div>
+    </div>
+    <div class="stat">
+      <div class="number">100%</div>
+      <div class="label">Local Processing</div>
+    </div>
+    <div class="stat">
+      <div class="number">0</div>
+      <div class="label">Data Collected</div>
+    </div>
+    <div class="stat">
+      <div class="number">0</div>
+      <div class="label">External Dependencies</div>
+    </div>
+  </div>
+
+  <!-- Values -->
+  <section class="section">
+    <div class="section-header reveal">
+      <span class="section-label">Why Zozimus</span>
+      <h2>What we believe in</h2>
+      <p>Every decision we make starts with these principles.</p>
+    </div>
+
+    <div class="values-grid">
+      <div class="value-card reveal">
+        <div class="icon">&#128274;</div>
+        <h3>Privacy by Default</h3>
+        <p>We never collect, store, or transmit your data. Everything runs locally in your browser — period.</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="icon">&#9889;</div>
+        <h3>Lightweight &amp; Fast</h3>
+        <p>Pure HTML, CSS, and vanilla JS. No frameworks, no bloat, no build steps. Our extensions load instantly.</p>
+      </div>
+      <div class="value-card reveal">
+        <div class="icon">&#128064;</div>
+        <h3>Open Source</h3>
+        <p>Every line of code is public on GitHub. Audit it, fork it, improve it — transparency is non-negotiable.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section reveal">
+    <h2>Ready to take back control?</h2>
+    <p>Install our extensions and experience tools that actually respect you.</p>
+    <div class="cta-buttons">
+      <a href="/products" class="btn btn-outline">Browse Products</a>
+      <a href="https://wise.com/pay/business/sandeepchadda?utm_source=open_link" class="btn btn-donate" target="_blank" rel="noopener">&#9829; Support Our Work</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="/" class="nav-brand">
+          <img src="https://avatars.githubusercontent.com/u/175112813?s=28&v=4" alt="Zozimus Technologies" width="28" height="28" style="border-radius:6px">
+          Zozimus Technologies
+        </a>
+        <p>Building privacy-first browser extensions that are lightweight, open source, and free forever.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Products</h4>
+        <a href="https://zozimustechnologies.github.io/siteblocker/" target="_blank" rel="noopener">Site Blocker</a>
+        <a href="https://zozimustechnologies.github.io/ImageEditor/" target="_blank" rel="noopener">Image Editor</a>
+        <a href="https://zozimustechnologies.github.io/pipcamera/" target="_blank" rel="noopener">PiP Camera</a>
+        <a href="https://zozimustechnologies.github.io/qrcodegenerator/" target="_blank" rel="noopener">QR Code Generator</a>
+        <a href="https://the-qrcode-reader.netlify.app/" target="_blank" rel="noopener">QR Code Reader</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="/about">About</a>
+        <a href="/privacy">Privacy</a>
+        <a href="https://wise.com/pay/business/sandeepchadda?utm_source=open_link" target="_blank" rel="noopener">Donate</a>
+      </div>
+      <div class="footer-col">
+        <h4>Source Code</h4>
+        <a href="https://github.com/zozimustechnologies/siteblocker" target="_blank" rel="noopener">Site Blocker</a>
+        <a href="https://github.com/zozimustechnologies/ImageEditor" target="_blank" rel="noopener">Image Editor</a>
+        <a href="https://github.com/zozimustechnologies/pipcamera" target="_blank" rel="noopener">PiP Camera</a>
+        <a href="https://github.com/zozimustechnologies/qrcodegenerator" target="_blank" rel="noopener">QR Code Generator</a>
+        <a href="https://github.com/zozimustechnologies/the-qrcode-reader" target="_blank" rel="noopener">QR Code Reader</a>
+        <a href="https://github.com/zozimustechnologies" target="_blank" rel="noopener">All Repos</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Zozimus Technologies. All rights reserved.</p>
+      <div class="footer-socials">
+        <a href="https://github.com/zozimustechnologies" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 16 16" width="20" height="20" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+        </a>
+        <a href="https://www.instagram.com/zozimustechnologies" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.17.054 1.97.24 2.43.403a4.088 4.088 0 011.47.957c.453.453.757.91.957 1.47.163.46.349 1.26.404 2.43.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.055 1.17-.241 1.97-.404 2.43a4.088 4.088 0 01-.957 1.47 4.088 4.088 0 01-1.47.957c-.46.163-1.26.349-2.43.404-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.17-.055-1.97-.241-2.43-.404a4.088 4.088 0 01-1.47-.957 4.088 4.088 0 01-.957-1.47c-.163-.46-.349-1.26-.404-2.43C2.175 15.584 2.163 15.204 2.163 12s.012-3.584.07-4.85c.055-1.17.241-1.97.404-2.43a4.088 4.088 0 01.957-1.47A4.088 4.088 0 015.064 2.293c.46-.163 1.26-.349 2.43-.404C8.416 2.175 8.796 2.163 12 2.163zM12 0C8.741 0 8.333.014 7.053.072 5.775.131 4.902.333 4.14.63a5.882 5.882 0 00-2.126 1.384A5.882 5.882 0 00.63 4.14C.333 4.902.131 5.775.072 7.053.014 8.333 0 8.741 0 12s.014 3.667.072 4.947c.059 1.278.261 2.151.558 2.913a5.882 5.882 0 001.384 2.126 5.882 5.882 0 002.126 1.384c.762.297 1.635.499 2.913.558C8.333 23.986 8.741 24 12 24s3.667-.014 4.947-.072c1.278-.059 2.151-.261 2.913-.558a5.882 5.882 0 002.126-1.384 5.882 5.882 0 001.384-2.126c.297-.762.499-1.635.558-2.913.058-1.28.072-1.688.072-4.947s-.014-3.667-.072-4.947c-.059-1.278-.261-2.151-.558-2.913a5.882 5.882 0 00-1.384-2.126A5.882 5.882 0 0019.86.63C19.098.333 18.225.131 16.947.072 15.667.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="index.js"></script>
+
+</body>
 </html>

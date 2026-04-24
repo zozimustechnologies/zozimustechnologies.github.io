@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About — Zozimus Technologies</title>
+  <meta name="description" content="Learn about Zozimus Technologies — the team behind privacy-first browser extensions.">
+  <meta name="theme-color" content="#3d7ea6">
+  <link rel="icon" type="image/png" sizes="48x48" href="https://avatars.githubusercontent.com/u/175112813?s=48&v=4">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="about.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="/" class="nav-brand">
+      <img src="https://avatars.githubusercontent.com/u/175112813?s=28&v=4" alt="Zozimus Technologies" width="28" height="28" style="border-radius:6px">
+      Zozimus Technologies
+    </a>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/products">Products</a>
+      <a href="/about" class="active">About</a>
+      <a href="/privacy">Privacy</a>
+      <a href="https://github.com/zozimustechnologies" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.instagram.com/zozimustechnologies" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://wise.com/pay/business/sandeepchadda?utm_source=open_link" class="nav-cta" target="_blank" rel="noopener">&#9829; Donate</a>
+    </div>
+    <button class="nav-toggle" onclick="document.querySelector('.nav-links').style.display = document.querySelector('.nav-links').style.display === 'flex' ? 'none' : 'flex'">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </nav>
+
+  <header class="page-header">
+    <h1>About Us</h1>
+    <p>We&rsquo;re a small team that believes software should work for you, not against you.</p>
+  </header>
+
+  <section class="section">
+
+    <!-- Story -->
+    <div class="story reveal">
+      <p><span class="highlight">Zozimus Technologies</span> started with a simple frustration: every browser extension we tried either harvested our data, locked features behind paywalls, or required an account just to block a website.</p>
+      <p>So we decided to build our own. Extensions that are <span class="highlight">genuinely private</span>, <span class="highlight">completely free</span>, and <span class="highlight">open source</span>. No strings attached. No dark patterns. Just tools that do exactly what they promise.</p>
+      <p>Every line of code we write runs locally in your browser. We don&rsquo;t operate servers, collect analytics, or even know how many people use our extensions. And that&rsquo;s exactly how we like it.</p>
+    </div>
+
+    <!-- Timeline -->
+    <div class="timeline reveal">
+      <div class="timeline-item">
+        <div class="date">2026</div>
+        <h3>Image Editor launched</h3>
+        <p>A full image editing toolkit in the browser sidebar — crop, resize, 16 filters, and 12 creative effects. Zero dependencies.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="date">2026</div>
+        <h3>Site Blocker launched</h3>
+        <p>Simple, reliable website blocking with child safety protection. Our first extension built on the principle of privacy by default.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="date">2026</div>
+        <h3>Zozimus Technologies founded</h3>
+        <p>Born from the belief that useful software doesn&rsquo;t need to spy on its users. We started building tools we&rsquo;d actually want to use.</p>
+      </div>
+    </div>
+
+    <!-- Principles -->
+    <div class="principles-grid reveal">
+      <div class="principle">
+        <span class="num">01</span>
+        <h3>Privacy is a right, not a feature</h3>
+        <p>We don&rsquo;t collect data. Not because regulations require it, but because we believe your browser is your personal space.</p>
+      </div>
+      <div class="principle">
+        <span class="num">02</span>
+        <h3>Simplicity over complexity</h3>
+        <p>We use vanilla HTML, CSS, and JavaScript. No frameworks, no build tools, no dependencies. The result is faster, smaller, and more transparent code.</p>
+      </div>
+      <div class="principle">
+        <span class="num">03</span>
+        <h3>Free means free</h3>
+        <p>No premium tiers, no subscriptions, no &ldquo;upgrade to unlock&rdquo; banners. Every feature is available to everyone, always.</p>
+      </div>
+      <div class="principle">
+        <span class="num">04</span>
+        <h3>Open by default</h3>
+        <p>All our code is public on GitHub. We believe transparency builds trust — and trust is earned, not assumed.</p>
+      </div>
+    </div>
+
+    <!-- Tech -->
+    <div class="reveal">
+      <h2 class="tech-section" style="font-size:1.4rem;font-weight:800;color:var(--text-bright);margin-bottom:20px;text-align:center;">Our Stack</h2>
+      <div class="tech-grid">
+        <span class="tech-pill">HTML5</span>
+        <span class="tech-pill">CSS3</span>
+        <span class="tech-pill">Vanilla JavaScript</span>
+        <span class="tech-pill">Canvas 2D API</span>
+        <span class="tech-pill">Manifest V3</span>
+        <span class="tech-pill">Side Panel API</span>
+        <span class="tech-pill">DeclarativeNetRequest</span>
+        <span class="tech-pill">Chrome Storage API</span>
+      </div>
+    </div>
+
+    <!-- CTA -->
+    <div class="about-cta reveal">
+      <h2>Want to support our work?</h2>
+      <p>We keep everything free. If you find our tools useful, a small donation helps us keep going.</p>
+      <div class="about-cta-buttons">
+        <a href="https://wise.com/pay/business/sandeepchadda?utm_source=open_link" class="btn btn-donate" target="_blank" rel="noopener">&#9829; Donate via Wise</a>
+        <a href="https://github.com/zozimustechnologies" class="btn btn-outline" target="_blank" rel="noopener">Star us on GitHub</a>
+      </div>
+    </div>
+
+  </section>
+
+  <footer class="site-footer">
+    <div class="links">
+      <a href="/">Home</a>
+      <a href="/products">Products</a>
+      <a href="/privacy">Privacy</a>
+      <a href="https://github.com/zozimustechnologies" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.instagram.com/zozimustechnologies" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://wise.com/pay/business/sandeepchadda?utm_source=open_link" target="_blank" rel="noopener">Donate</a>
+    </div>
+    <p>&copy; 2026 Zozimus Technologies. All rights reserved.</p>
+  </footer>
+
+  <script src="about.js"></script>
+
+</body>
+</html>
