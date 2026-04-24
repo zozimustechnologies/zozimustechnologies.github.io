@@ -12,7 +12,7 @@ export default function VscodeExtensions() {
   return (
     <>
       <header className="page-header">
-        <h1>VS Code Extensions</h1>
+        <h1>Our Products</h1>
         <p>Every product we build is open source, privacy-first, and completely free. No exceptions.</p>
       </header>
 

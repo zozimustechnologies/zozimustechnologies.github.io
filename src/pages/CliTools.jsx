@@ -11,8 +11,8 @@ export default function CliTools() {
   return (
     <>
       <header className="page-header">
-        <h1>CLI Tools</h1>
-        <p>Powerful command-line tools built for developers. Open source and free.</p>
+        <h1>Our Products</h1>
+        <p>Every product we build is open source, privacy-first, and completely free. No exceptions.</p>
       </header>
 
       <TabBar />
