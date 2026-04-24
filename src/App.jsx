@@ -1,5 +1,8 @@
 import { BrowserRouter, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import externalRoutes from './externalRoutes.json';
+import extensions from './extensions.json';
+import vscodeExtensions from './vscodeExtensions.json';
+import cliTools from './cliTools.json';
 import Nav from './components/Nav';
 import Footer from './components/Footer';
 import SimpleFooter from './components/SimpleFooter';
@@ -20,9 +23,27 @@ function ExternalRedirect({ to }) {
 
 const ROUTES = [
   { path: '/', label: 'Home', aliases: ['home', 'index', 'main', 'start'] },
-  { path: '/products', label: 'Products', aliases: ['product', 'extensions', 'extension', 'browser', 'apps', 'app'] },
-  { path: '/vscode-extensions', label: 'VS Code Extensions', aliases: ['vscode', 'vscode-extension', 'vs-code', 'editor', 'ide'] },
-  { path: '/cli-tools', label: 'CLI Tools', aliases: ['cli', 'cli-tool', 'terminal', 'command', 'icongen'] },
+  {
+    path: '/products',
+    label: 'Products',
+    aliases: ['product', 'extensions', 'extension', 'browser', 'apps', 'app',
+      ...extensions.flatMap(e => [e.id, e.name.toLowerCase()]),
+    ],
+  },
+  {
+    path: '/vscode-extensions',
+    label: 'VS Code Extensions',
+    aliases: ['vscode', 'vscode-extension', 'vs-code', 'editor', 'ide',
+      ...vscodeExtensions.flatMap(e => [e.id, e.name.toLowerCase()]),
+    ],
+  },
+  {
+    path: '/cli-tools',
+    label: 'CLI Tools',
+    aliases: ['cli', 'cli-tool', 'terminal', 'command',
+      ...cliTools.flatMap(e => [e.id, e.name.toLowerCase()]),
+    ],
+  },
   { path: '/about', label: 'About', aliases: ['about-us', 'team', 'us', 'who'] },
   { path: '/privacy', label: 'Privacy Policy', aliases: ['privacy-policy', 'policy', 'data', 'gdpr'] },
   { path: '/donate', label: 'Donate', aliases: ['donation', 'support', 'wise', 'pay', 'contribute'] },

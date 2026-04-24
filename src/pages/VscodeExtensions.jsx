@@ -1,7 +1,8 @@
 import { useEffect } from 'react';
 import TabBar from '../components/TabBar';
 import useScrollReveal from '../hooks/useScrollReveal';
-import vscodeExtensions from '../vscodeExtensions';
+import _vscodeExtensions from '../vscodeExtensions.json';
+const vscodeExtensions = _vscodeExtensions.filter(e => !e._template);
 import '../styles/products.css';
 
 export default function VscodeExtensions() {

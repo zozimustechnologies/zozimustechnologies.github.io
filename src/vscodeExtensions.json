@@ -1,0 +1,31 @@
+[
+  {
+    "_template": true,
+    "id": "my-extension",
+    "name": "My Extension",
+    "tag": "Productivity",
+    "status": "available",
+    "cardUrl": "https://marketplace.visualstudio.com/items?itemName=zozimustechnologies.my-extension",
+    "bannerImage": {
+      "url": "https://...",
+      "alt": "My Extension banner",
+      "width": 1400,
+      "height": 560
+    },
+    "logoImage": {
+      "url": "https://...",
+      "alt": "My Extension logo"
+    },
+    "description": "Short description shown on the card (1-2 sentences).",
+    "longDescription": "Full description shown in the detail view (2-4 sentences).",
+    "featurePills": ["Feature 1", "Feature 2", "Feature 3"],
+    "featureGrid": [
+      { "emoji": "⚡", "title": "Feature Title", "description": "Feature detail sentence." }
+    ],
+    "links": [
+      { "label": "Install", "url": "https://marketplace.visualstudio.com/items?itemName=...", "variant": "primary" },
+      { "label": "View Source", "url": "https://github.com/zozimustechnologies/...", "variant": "outline" }
+    ],
+    "screenshots": []
+  }
+]

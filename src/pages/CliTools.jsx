@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import TabBar from '../components/TabBar';
 import useScrollReveal from '../hooks/useScrollReveal';
-import cliTools from '../cliTools';
+import cliTools from '../cliTools.json';
 import '../styles/products.css';
 
 export default function CliTools() {
