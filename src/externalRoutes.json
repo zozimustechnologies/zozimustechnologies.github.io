@@ -9,5 +9,5 @@
   { "path": "/qrcodegenerator-addon","url": "https://microsoftedge.microsoft.com/addons/detail/qr-code-generator/kcjdgoccjamenahcmpipbdcfkpnknami" },
   { "path": "/pipcamera-addon",      "url": "https://microsoftedge.microsoft.com/addons/detail/pip-camera/jgojchmadgbdkiobcmhephdmlajnenja" },
   { "path": "/qrcodereader-addon",   "url": "https://microsoftedge.microsoft.com/addons/detail/qr-code-reader/jipjmdekhpmnelljajfakhekdlhgeola" },
-  { "path": "zentab",                "url": "https://www.zozimustechnologies.github.io/ZenTab" }
+  { "path": "zentab",                "url": "https://zozimustechnologies.github.io/ZenTab" }
 ]
