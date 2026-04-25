@@ -57,7 +57,7 @@
 .ext-feat { padding: 12px; background: var(--bg-elevated); border-radius: var(--radius-sm); border: 1px solid var(--border); }
 .ext-feat h4 { font-size: 0.82rem; color: var(--text-bright); margin-bottom: 2px; }
 .ext-feat p { font-size: 0.75rem; color: var(--text-muted); }
-.ext-feat code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.72rem; color: var(--accent-light); }
+.ext-feat code { font-family: 'SF Mono', 'Fira Code', monospace; font-size: 0.72rem; color: var(--accent-light); white-space: pre-wrap; word-break: break-all; }
 
 .ext-screenshots { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; }
 .ext-screenshots img {

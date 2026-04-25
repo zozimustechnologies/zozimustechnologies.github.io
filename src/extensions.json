@@ -176,5 +176,34 @@
     "screenshots": [
       { "url": "https://raw.githubusercontent.com/zozimustechnologies/vocabbuilder/main/storeassets/screenshot-1280x800.png", "alt": "VocabBuilder full view", "width": 1280, "height": 800 }
     ]
+  },
+  {
+    "id": "zentab",
+    "name": "Zen Tab",
+    "tag": "Productivity",
+    "status": "coming-soon",
+    "cardUrl": "https://zozimustechnologies.github.io/ZenTab/",
+    "bannerImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/ZenTab/main/storeassets/largepromotionaltile.png", "alt": "Zen Tab banner", "width": 1400, "height": 560 },
+    "logoImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/ZenTab/main/storeassets/extensionlogo.png", "alt": "Zen Tab logo" },
+    "description": "A fast, distraction-free new tab page for Chrome and Edge. Live clock, smart greeting, weather, to-do list, notes, favourite tabs, and focus mode — all stored locally.",
+    "longDescription": "A fast, distraction-free new tab page for Microsoft Edge and Google Chrome. Features a live clock with smart personalised greeting, a search bar with custom /shortcut keys, pinned favourite tabs, recent sites feed, to-do list, freeform notes, live weather, and a Focus Mode for deep work. No account required — everything is stored locally in your browser.",
+    "featurePills": ["Live clock", "Smart greeting", "Live weather", "To-do list", "Focus mode", "Backup & Restore"],
+    "featureGrid": [
+      { "emoji": "🕐", "title": "Live Clock & Greeting", "description": "12 h or 24 h clock with a personalised greeting that adapts to the time of day." },
+      { "emoji": "🔍", "title": "Search + Shortcuts", "description": "Google-powered search bar with custom /flag shortcut keys for fast navigation." },
+      { "emoji": "⭐", "title": "Favourite Tabs", "description": "Pin up to 6 frequently visited sites as icon tiles for one-click access." },
+      { "emoji": "🌤", "title": "Live Weather", "description": "Current temperature and conditions via Open-Meteo — no API key required." },
+      { "emoji": "🎯", "title": "Focus Mode", "description": "Hides non-essential widgets and shows only tasks and a minimal clock for deep work." },
+      { "emoji": "💾", "title": "Backup & Restore", "description": "Export all settings, shortcuts, tasks, and notes to JSON. Import to restore instantly." }
+    ],
+    "links": [
+      { "label": "Learn More", "url": "https://zozimustechnologies.github.io/ZenTab/", "variant": "primary" },
+      { "label": "File a Bug", "url": "https://github.com/zozimustechnologies/ZenTab/issues", "variant": "outline" },
+      { "label": "GitHub", "url": "https://github.com/zozimustechnologies/ZenTab", "variant": "outline" }
+    ],
+    "screenshots": [
+      { "url": "https://raw.githubusercontent.com/zozimustechnologies/ZenTab/main/storeassets/screenshot-1280x800.png", "alt": "Zen Tab full view", "width": 1280, "height": 800 },
+      { "url": "https://raw.githubusercontent.com/zozimustechnologies/ZenTab/main/storeassets/screenshot-onboarding.png", "alt": "Zen Tab onboarding", "width": 1280, "height": 800 }
+    ]
   }
 ]
