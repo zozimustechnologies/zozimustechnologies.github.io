@@ -36,8 +36,8 @@
     "group": "qr-tools",
     "status": "available",
     "cardUrl": "https://zozimustechnologies.github.io/qrcodegenerator/",
-    "bannerImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/qrcodegenerator/main/extension/screenshots/screenshot-1400x560.png", "alt": "QR Code Generator banner", "width": 1400, "height": 560 },
-    "logoImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/qrcodegenerator/main/images/icon.png", "alt": "QR Code Generator logo" },
+    "bannerImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/qrcodegenerator/main/extension/screenshots/marquee-promo-tile.png", "alt": "QR Code Generator banner", "width": 1400, "height": 560 },
+    "logoImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/qrcodegenerator/main/extension/icons/icon-300.png", "alt": "QR Code Generator logo" },
     "description": "Generate QR codes instantly for any URL or text, right from your browser sidebar. Lightweight, fast, and privacy-friendly with a clean side panel UI.",
     "longDescription": "Generate QR codes instantly for any URL or text, right from your browser sidebar. A simple, lightweight side panel extension — no sign-up, no external scripts, just fast QR code generation.",
     "featurePills": ["Instant generation", "Side panel UI", "No sign-up", "Responsive", "Zero dependencies"],
@@ -57,7 +57,7 @@
       { "label": "GitHub", "url": "https://github.com/zozimustechnologies/qrcodegenerator", "variant": "outline" }
     ],
     "screenshots": [
-      { "url": "https://raw.githubusercontent.com/zozimustechnologies/qrcodegenerator/main/extension/screenshots/screenshot-440x280.png", "alt": "QR Code Generator promo tile", "width": 440, "height": 280 }
+      { "url": "https://raw.githubusercontent.com/zozimustechnologies/qrcodegenerator/main/extension/screenshots/small-promo-tile.png", "alt": "QR Code Generator promo tile", "width": 440, "height": 280 }
     ]
   },
   {
