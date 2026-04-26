@@ -23,6 +23,9 @@ function ExtDetail({ e }) {
               <h2>{e.name}</h2>
               <span className="tag">{e.tag}</span>
               {e.status === 'coming-soon' && <span className="coming-soon-badge">Coming Soon</span>}
+              {e.status === 'coming-soon' && e.launchDate && (
+                <span className="launch-date-badge">Launching {new Date(e.launchDate).toLocaleDateString('en-GB', { day: 'numeric', month: 'long' })}</span>
+              )}
             </div>
           </div>
           <div className="ext-detail-body">

@@ -4,6 +4,7 @@
     "name": "Site Blocker",
     "tag": "Productivity",
     "status": "available",
+    "chromeLaunchDate": "2026-04-30",
     "cardUrl": "https://zozimustechnologies.github.io/siteblocker/",
     "bannerImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/siteblocker/main/store-assets/promo-1400x560.png", "alt": "Site Blocker banner", "width": 1400, "height": 560 },
     "logoImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/siteblocker/main/store-assets/icon-300x300.png", "alt": "Site Blocker logo" },
@@ -58,35 +59,6 @@
     ],
     "screenshots": [
       { "url": "https://raw.githubusercontent.com/zozimustechnologies/qrcodegenerator/main/extension/screenshots/screenshot-440x280.png", "alt": "QR Code Generator promo tile", "width": 440, "height": 280 }
-    ]
-  },
-  {
-    "id": "imageeditor",
-    "name": "Image Editor",
-    "tag": "Creative",
-    "status": "coming-soon",
-    "cardUrl": "https://zozimustechnologies.github.io/ImageEditor/",
-    "bannerImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/ImageEditor/main/storeassets/largepromotionaltile.png", "alt": "Image Editor banner", "width": 1400, "height": 560 },
-    "logoImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/ImageEditor/main/storeassets/extensionlogo.png", "alt": "Image Editor logo" },
-    "description": "A full image editing toolkit in your browser sidebar. Crop, resize, apply 8 filters, 8 presets, and 12 creative pixel-manipulation effects — all without leaving your tab.",
-    "longDescription": "A lightweight, privacy-first image editor that lives in your browser's side panel. Crop, resize, apply 8 filter sliders, 8 one-click presets, and 12 unique creative pixel-manipulation effects — all without leaving your current tab.",
-    "featurePills": ["Crop & Resize", "16 Filters", "12 Creative Effects", "Export PNG/JPEG/WebP", "Drag & drop"],
-    "featureGrid": [
-      { "emoji": "✂", "title": "Crop", "description": "Drag handles with 5 aspect ratio presets and pixel input." },
-      { "emoji": "↔", "title": "Resize", "description": "Scale by dimension or percentage with locked aspect ratio." },
-      { "emoji": "🎨", "title": "16 Filters", "description": "8 adjustable sliders plus 8 one-click presets." },
-      { "emoji": "✨", "title": "12 Creative Effects", "description": "Memory Drift, Signal Corruption, Time Slice, and more." },
-      { "emoji": "💾", "title": "Multi-format Export", "description": "Save as PNG, JPEG, or WebP with quality control." },
-      { "emoji": "🌐", "title": "Page Image Detection", "description": "Scan and edit any image on the current page." }
-    ],
-    "links": [
-      { "label": "Learn More", "url": "https://zozimustechnologies.github.io/ImageEditor/", "variant": "primary" },
-      { "label": "File a Bug", "url": "https://github.com/zozimustechnologies/ImageEditor/issues", "variant": "outline" },
-      { "label": "GitHub", "url": "https://github.com/zozimustechnologies/ImageEditor", "variant": "outline" }
-    ],
-    "screenshots": [
-      { "url": "https://raw.githubusercontent.com/zozimustechnologies/ImageEditor/main/storeassets/screenshot-1280x800.png", "alt": "Image Editor full view", "width": 1280, "height": 800 },
-      { "url": "https://raw.githubusercontent.com/zozimustechnologies/ImageEditor/main/storeassets/screenshot-640x400.png", "alt": "Image Editor compact view", "width": 640, "height": 400 }
     ]
   },
   {
@@ -150,6 +122,66 @@
     ]
   },
   {
+    "id": "imageeditor",
+    "name": "Image Editor",
+    "tag": "Creative",
+    "status": "coming-soon",
+    "launchDate": "2026-04-29",
+    "cardUrl": "https://zozimustechnologies.github.io/ImageEditor/",
+    "bannerImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/ImageEditor/main/storeassets/largepromotionaltile.png", "alt": "Image Editor banner", "width": 1400, "height": 560 },
+    "logoImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/ImageEditor/main/storeassets/extensionlogo.png", "alt": "Image Editor logo" },
+    "description": "A full image editing toolkit in your browser sidebar. Crop, resize, apply 8 filters, 8 presets, and 12 creative pixel-manipulation effects — all without leaving your tab.",
+    "longDescription": "A lightweight, privacy-first image editor that lives in your browser's side panel. Crop, resize, apply 8 filter sliders, 8 one-click presets, and 12 unique creative pixel-manipulation effects — all without leaving your current tab.",
+    "featurePills": ["Crop & Resize", "16 Filters", "12 Creative Effects", "Export PNG/JPEG/WebP", "Drag & drop"],
+    "featureGrid": [
+      { "emoji": "✂", "title": "Crop", "description": "Drag handles with 5 aspect ratio presets and pixel input." },
+      { "emoji": "↔", "title": "Resize", "description": "Scale by dimension or percentage with locked aspect ratio." },
+      { "emoji": "🎨", "title": "16 Filters", "description": "8 adjustable sliders plus 8 one-click presets." },
+      { "emoji": "✨", "title": "12 Creative Effects", "description": "Memory Drift, Signal Corruption, Time Slice, and more." },
+      { "emoji": "💾", "title": "Multi-format Export", "description": "Save as PNG, JPEG, or WebP with quality control." },
+      { "emoji": "🌐", "title": "Page Image Detection", "description": "Scan and edit any image on the current page." }
+    ],
+    "links": [
+      { "label": "Learn More", "url": "https://zozimustechnologies.github.io/ImageEditor/", "variant": "primary" },
+      { "label": "File a Bug", "url": "https://github.com/zozimustechnologies/ImageEditor/issues", "variant": "outline" },
+      { "label": "GitHub", "url": "https://github.com/zozimustechnologies/ImageEditor", "variant": "outline" }
+    ],
+    "screenshots": [
+      { "url": "https://raw.githubusercontent.com/zozimustechnologies/ImageEditor/main/storeassets/screenshot-1280x800.png", "alt": "Image Editor full view", "width": 1280, "height": 800 },
+      { "url": "https://raw.githubusercontent.com/zozimustechnologies/ImageEditor/main/storeassets/screenshot-640x400.png", "alt": "Image Editor compact view", "width": 640, "height": 400 }
+    ]
+  },
+  {
+    "id": "zentab",
+    "name": "Zen Tab",
+    "tag": "Productivity",
+    "status": "coming-soon",
+    "launchDate": "2026-05-05",
+    "cardUrl": "https://zozimustechnologies.github.io/ZenTab/",
+    "bannerImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/ZenTab/main/storeassets/largepromotionaltile.png", "alt": "Zen Tab banner", "width": 1400, "height": 560 },
+    "logoImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/ZenTab/main/storeassets/extensionlogo.png", "alt": "Zen Tab logo" },
+    "description": "A fast, distraction-free new tab page for Chrome and Edge. Live clock, smart greeting, weather, to-do list, notes, favourite tabs, and focus mode — all stored locally.",
+    "longDescription": "A fast, distraction-free new tab page for Microsoft Edge and Google Chrome. Features a live clock with smart personalised greeting, a search bar with custom /shortcut keys, pinned favourite tabs, recent sites feed, to-do list, freeform notes, live weather, and a Focus Mode for deep work. No account required — everything is stored locally in your browser.",
+    "featurePills": ["Live clock", "Smart greeting", "Live weather", "To-do list", "Focus mode", "Backup & Restore"],
+    "featureGrid": [
+      { "emoji": "🕐", "title": "Live Clock & Greeting", "description": "12 h or 24 h clock with a personalised greeting that adapts to the time of day." },
+      { "emoji": "🔍", "title": "Search + Shortcuts", "description": "Google-powered search bar with custom /flag shortcut keys for fast navigation." },
+      { "emoji": "⭐", "title": "Favourite Tabs", "description": "Pin up to 6 frequently visited sites as icon tiles for one-click access." },
+      { "emoji": "🌤", "title": "Live Weather", "description": "Current temperature and conditions via Open-Meteo — no API key required." },
+      { "emoji": "🎯", "title": "Focus Mode", "description": "Hides non-essential widgets and shows only tasks and a minimal clock for deep work." },
+      { "emoji": "💾", "title": "Backup & Restore", "description": "Export all settings, shortcuts, tasks, and notes to JSON. Import to restore instantly." }
+    ],
+    "links": [
+      { "label": "Learn More", "url": "https://zozimustechnologies.github.io/ZenTab/", "variant": "primary" },
+      { "label": "File a Bug", "url": "https://github.com/zozimustechnologies/ZenTab/issues", "variant": "outline" },
+      { "label": "GitHub", "url": "https://github.com/zozimustechnologies/ZenTab", "variant": "outline" }
+    ],
+    "screenshots": [
+      { "url": "https://raw.githubusercontent.com/zozimustechnologies/ZenTab/main/storeassets/screenshot-1280x800.png", "alt": "Zen Tab full view", "width": 1280, "height": 800 },
+      { "url": "https://raw.githubusercontent.com/zozimustechnologies/ZenTab/main/storeassets/screenshot-onboarding.png", "alt": "Zen Tab onboarding", "width": 1280, "height": 800 }
+    ]
+  },
+  {
     "id": "vocabbuilder",
     "name": "VocabBuilder",
     "tag": "Education",
@@ -175,35 +207,6 @@
     ],
     "screenshots": [
       { "url": "https://raw.githubusercontent.com/zozimustechnologies/vocabbuilder/main/storeassets/screenshot-1280x800.png", "alt": "VocabBuilder full view", "width": 1280, "height": 800 }
-    ]
-  },
-  {
-    "id": "zentab",
-    "name": "Zen Tab",
-    "tag": "Productivity",
-    "status": "coming-soon",
-    "cardUrl": "https://zozimustechnologies.github.io/ZenTab/",
-    "bannerImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/ZenTab/main/storeassets/largepromotionaltile.png", "alt": "Zen Tab banner", "width": 1400, "height": 560 },
-    "logoImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/ZenTab/main/storeassets/extensionlogo.png", "alt": "Zen Tab logo" },
-    "description": "A fast, distraction-free new tab page for Chrome and Edge. Live clock, smart greeting, weather, to-do list, notes, favourite tabs, and focus mode — all stored locally.",
-    "longDescription": "A fast, distraction-free new tab page for Microsoft Edge and Google Chrome. Features a live clock with smart personalised greeting, a search bar with custom /shortcut keys, pinned favourite tabs, recent sites feed, to-do list, freeform notes, live weather, and a Focus Mode for deep work. No account required — everything is stored locally in your browser.",
-    "featurePills": ["Live clock", "Smart greeting", "Live weather", "To-do list", "Focus mode", "Backup & Restore"],
-    "featureGrid": [
-      { "emoji": "🕐", "title": "Live Clock & Greeting", "description": "12 h or 24 h clock with a personalised greeting that adapts to the time of day." },
-      { "emoji": "🔍", "title": "Search + Shortcuts", "description": "Google-powered search bar with custom /flag shortcut keys for fast navigation." },
-      { "emoji": "⭐", "title": "Favourite Tabs", "description": "Pin up to 6 frequently visited sites as icon tiles for one-click access." },
-      { "emoji": "🌤", "title": "Live Weather", "description": "Current temperature and conditions via Open-Meteo — no API key required." },
-      { "emoji": "🎯", "title": "Focus Mode", "description": "Hides non-essential widgets and shows only tasks and a minimal clock for deep work." },
-      { "emoji": "💾", "title": "Backup & Restore", "description": "Export all settings, shortcuts, tasks, and notes to JSON. Import to restore instantly." }
-    ],
-    "links": [
-      { "label": "Learn More", "url": "https://zozimustechnologies.github.io/ZenTab/", "variant": "primary" },
-      { "label": "File a Bug", "url": "https://github.com/zozimustechnologies/ZenTab/issues", "variant": "outline" },
-      { "label": "GitHub", "url": "https://github.com/zozimustechnologies/ZenTab", "variant": "outline" }
-    ],
-    "screenshots": [
-      { "url": "https://raw.githubusercontent.com/zozimustechnologies/ZenTab/main/storeassets/screenshot-1280x800.png", "alt": "Zen Tab full view", "width": 1280, "height": 800 },
-      { "url": "https://raw.githubusercontent.com/zozimustechnologies/ZenTab/main/storeassets/screenshot-onboarding.png", "alt": "Zen Tab onboarding", "width": 1280, "height": 800 }
     ]
   }
 ]
