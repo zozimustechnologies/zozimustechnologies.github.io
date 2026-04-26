@@ -31,6 +31,63 @@ body {
 a { color: var(--accent-light); text-decoration: none; transition: color 0.2s; }
 a:hover { color: #7bc4f0; }
 
+/* ── Campaign Banner ── */
+.campaign-banner {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 200;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  border-bottom: 2px solid #e94560;
+  padding: 12px 48px 12px 24px;
+  display: flex; align-items: center; justify-content: center;
+  gap: 16px; flex-wrap: wrap;
+  animation: bannerSlideIn 0.5s ease-out;
+}
+@keyframes bannerSlideIn {
+  from { transform: translateY(-100%); }
+  to { transform: translateY(0); }
+}
+.campaign-banner .banner-icon { font-size: 1.3rem; flex-shrink: 0; }
+.campaign-banner .banner-text {
+  font-size: 0.88rem; font-weight: 500; color: #e0e0e0;
+  text-align: center; line-height: 1.4;
+}
+.campaign-banner .banner-text strong { color: #fff; font-weight: 700; }
+.campaign-banner .banner-text .banner-highlight { color: #e94560; font-weight: 700; }
+.campaign-banner .banner-cta {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 7px 18px; background: #e94560; color: #fff;
+  font-size: 0.8rem; font-weight: 700; border-radius: 6px;
+  text-decoration: none; white-space: nowrap; flex-shrink: 0;
+  text-transform: uppercase; letter-spacing: 0.05em;
+  box-shadow: 0 2px 12px rgba(233, 69, 96, 0.3);
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+}
+.campaign-banner .banner-cta:hover {
+  background: #ff6b81; transform: translateY(-1px);
+  box-shadow: 0 4px 20px rgba(233, 69, 96, 0.5);
+  color: #fff; text-decoration: none;
+}
+.campaign-banner .banner-close {
+  position: absolute; right: 12px; top: 50%; transform: translateY(-50%);
+  background: none; border: none; color: #8b949e;
+  cursor: pointer; padding: 4px; line-height: 1; font-size: 1.1rem;
+  transition: color 0.2s;
+}
+.campaign-banner .banner-close:hover { color: #fff; }
+
+/* When banner is present, push nav and hero down */
+body.banner-visible .nav { top: var(--banner-height, 48px); }
+body.banner-visible .hero { padding-top: calc(120px + var(--banner-height, 48px)); }
+body.banner-visible .page-header { padding-top: calc(100px + var(--banner-height, 48px)); }
+body.banner-visible .nav-links.nav-open { top: calc(61px + var(--banner-height, 48px)); }
+
+@media (max-width: 640px) {
+  .campaign-banner { padding: 10px 36px 10px 16px; gap: 10px; }
+  .campaign-banner .banner-text { font-size: 0.8rem; }
+  .campaign-banner .banner-cta { padding: 6px 14px; font-size: 0.75rem; }
+}
+
 /* ── Navigation ── */
 .nav {
   position: fixed;
@@ -44,6 +101,7 @@ a:hover { color: #7bc4f0; }
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-bottom: 1px solid var(--border);
+  transition: top 0.3s ease;
 }
 
 .nav-brand {

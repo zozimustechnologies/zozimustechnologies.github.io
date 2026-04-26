@@ -4,6 +4,7 @@ import extensions from './extensions.json';
 import vscodeExtensions from './vscodeExtensions.json';
 import cliTools from './cliTools.json';
 import Nav from './components/Nav';
+import CampaignBanner from './components/CampaignBanner';
 import Footer from './components/Footer';
 import SimpleFooter from './components/SimpleFooter';
 import Home from './pages/Home';
@@ -101,6 +102,7 @@ function Layout() {
   const isHome = pathname === '/';
   return (
     <>
+      <CampaignBanner />
       <Nav />
       <Routes>
         <Route path="/" element={<Home />} />
