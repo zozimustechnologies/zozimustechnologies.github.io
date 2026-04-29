@@ -124,8 +124,7 @@
     "id": "imageeditor",
     "name": "Image Editor",
     "tag": "Creative",
-    "status": "coming-soon",
-    "launchDate": "2026-04-29",
+    "status": "available",
     "cardUrl": "https://zozimustechnologies.github.io/ImageEditor/",
     "bannerImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/ImageEditor/main/storeassets/largepromotionaltile.png", "alt": "Image Editor banner", "width": 1400, "height": 560 },
     "logoImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/ImageEditor/main/storeassets/extensionlogo.png", "alt": "Image Editor logo" },
@@ -142,6 +141,7 @@
     ],
     "links": [
       { "label": "Learn More", "url": "https://zozimustechnologies.github.io/ImageEditor/", "variant": "primary" },
+      { "label": "Download from Edge", "url": "https://microsoftedge.microsoft.com/addons/detail/image-editor/jnmbhgfohmajljlmjidalknbalmecclc", "variant": "outline" },
       { "label": "File a Bug", "url": "https://github.com/zozimustechnologies/ImageEditor/issues", "variant": "outline" },
       { "label": "GitHub", "url": "https://github.com/zozimustechnologies/ImageEditor", "variant": "outline" }
     ],
