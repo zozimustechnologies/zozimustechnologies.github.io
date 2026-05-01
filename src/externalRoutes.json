@@ -11,7 +11,7 @@
   { "path": "/qrcodereader-addon",              "url": "https://microsoftedge.microsoft.com/addons/detail/qr-code-reader/jipjmdekhpmnelljajfakhekdlhgeola" },
   { "path": "/imageeditor-addon",               "url": "https://microsoftedge.microsoft.com/addons/detail/image-editor/jnmbhgfohmajljlmjidalknbalmecclc" },
   { "path": "/browserextensionvalidator-addon", "url": "https://marketplace.visualstudio.com/items?itemName=zozimustechnologies.zozimus-extension-validator" },
-  { "path": "/zentab",                          "url": "https://microsoftedge.microsoft.com/addons/detail/zen-tab/lmngimokiabknkchgiagejkphjejlnpp" },
+  { "path": "/zentab",                          "url": "https://zozimustechnologies.github.io/ZenTab" },
   { "path": "/zentab-addon",                    "url": "https://microsoftedge.microsoft.com/addons/detail/zen-tab/lmngimokiabknkchgiagejkphjejlnpp" },
   { "path": "/petition",                        "url": "https://standup-petition.vercel.app" },
   { "path": "/imageeditor",                     "url": "https://zozimustechnologies.github.io/ImageEditor" }
