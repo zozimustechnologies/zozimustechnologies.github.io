@@ -24,7 +24,7 @@ export default function About() {
         <div className="timeline reveal">
           <div className="timeline-item">
             <div className="date">May 2026</div>
-            <h3>Zen Tab — coming soon</h3>
+            <h3>Zen Tab <a href="https://zozimustechnologies.github.io/zentab-addon" target="_blank" rel="noopener">launched</a> on Edge</h3>
             <p>A fast, distraction-free new tab page for Chrome and Edge. Live clock, smart greeting, weather, to-do list, notes, favourite tabs, and focus mode.</p>
           </div>
           <div className="timeline-item">

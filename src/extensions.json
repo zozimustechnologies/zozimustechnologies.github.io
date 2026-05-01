@@ -154,8 +154,7 @@
     "id": "zentab",
     "name": "Zen Tab",
     "tag": "Productivity",
-    "status": "coming-soon",
-    "launchDate": "2026-05-05",
+    "status": "available",
     "cardUrl": "https://zozimustechnologies.github.io/ZenTab/",
     "bannerImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/ZenTab/main/storeassets/largepromotionaltile.png", "alt": "Zen Tab banner", "width": 1400, "height": 560 },
     "logoImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/ZenTab/main/storeassets/extensionlogo.png", "alt": "Zen Tab logo" },
@@ -172,6 +171,7 @@
     ],
     "links": [
       { "label": "Learn More", "url": "https://zozimustechnologies.github.io/ZenTab/", "variant": "primary" },
+      { "label": "Download from Edge", "url": "https://microsoftedge.microsoft.com/addons/detail/zen-tab/lmngimokiabknkchgiagejkphjejlnpp", "variant": "outline" },
       { "label": "File a Bug", "url": "https://github.com/zozimustechnologies/ZenTab/issues", "variant": "outline" },
       { "label": "GitHub", "url": "https://github.com/zozimustechnologies/ZenTab", "variant": "outline" }
     ],
