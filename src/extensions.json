@@ -185,7 +185,7 @@
     "name": "VocabBuilder",
     "tag": "Education",
     "status": "coming-soon",
-    "launchDate": "2026-05-05",
+    "launchDate": "2026-05-12",
     "cardUrl": "https://zozimustechnologies.github.io/vocabbuilder/",
     "bannerImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/vocabbuilder/main/storeassets/largepromotionaltile.png", "alt": "VocabBuilder banner", "width": 1400, "height": 560 },
     "logoImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/vocabbuilder/main/storeassets/extensionlogo.png", "alt": "VocabBuilder logo" },
