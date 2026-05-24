@@ -184,8 +184,7 @@
     "id": "vocabbuilder",
     "name": "VocabBuilder",
     "tag": "Education",
-    "status": "coming-soon",
-    "launchDate": "2026-05-12",
+    "status": "available",
     "cardUrl": "https://zozimustechnologies.github.io/vocabbuilder/",
     "bannerImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/vocabbuilder/main/storeassets/largepromotionaltile.png", "alt": "VocabBuilder banner", "width": 1400, "height": 560 },
     "logoImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/vocabbuilder/main/storeassets/extensionlogo.png", "alt": "VocabBuilder logo" },
@@ -202,6 +201,7 @@
     ],
     "links": [
       { "label": "Learn More", "url": "https://zozimustechnologies.github.io/vocabbuilder/", "variant": "primary" },
+      { "label": "Download from Edge", "url": "https://microsoftedge.microsoft.com/addons/detail/adlcegdnlegibhdgcgnadnbfklmfhodl", "variant": "outline" },
       { "label": "File a Bug", "url": "https://github.com/zozimustechnologies/vocabbuilder/issues", "variant": "outline" },
       { "label": "GitHub", "url": "https://github.com/zozimustechnologies/vocabbuilder", "variant": "outline" }
     ],
