@@ -208,5 +208,34 @@
     "screenshots": [
       { "url": "https://raw.githubusercontent.com/zozimustechnologies/vocabbuilder/main/storeassets/screenshot-1280x800.png", "alt": "VocabBuilder full view", "width": 1280, "height": 800 }
     ]
+  },
+  {
+    "id": "collectionsforedge",
+    "name": "Collections",
+    "tag": "Productivity",
+    "status": "coming-soon",
+    "cardUrl": "https://zozimustechnologies.github.io/collections/",
+    "bannerImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/collections/main/storeassets/largepromotionaltile.png", "alt": "Collections banner", "width": 1400, "height": 560 },
+    "logoImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/collections/main/storeassets/extensionlogo.png", "alt": "Collections logo" },
+    "description": "Collect and organize web content — links, quotes, images, and notes — right inside your browser sidebar. A faithful recreation of the deprecated Microsoft Edge Collections feature.",
+    "longDescription": "A browser extension that recreates the deprecated Microsoft Edge Collections feature. Save links, capture selected text, save images by URL, and write notes — all organized into named, colour-coded collections. Lives in your browser sidebar and stores everything locally using chrome.storage.local.",
+    "featurePills": ["Save pages", "Capture text", "Save images", "Write notes", "Colour-coded collections", "Context menu"],
+    "featureGrid": [
+      { "emoji": "🔖", "title": "Save Pages", "description": "One click to save the current page's URL, title, and favicon to any collection." },
+      { "emoji": "✍", "title": "Capture Text", "description": "Interactive selection mode lets you highlight and save any text from a page." },
+      { "emoji": "🖼", "title": "Save Images", "description": "Save images by URL — paste manually or auto-fill from the current tab." },
+      { "emoji": "📝", "title": "Write Notes", "description": "Attach freeform notes to any collection for context and commentary." },
+      { "emoji": "🗂", "title": "Multiple Collections", "description": "Colour-coded, renameable, and deleteable collections to keep things organised." },
+      { "emoji": "🖱", "title": "Context Menu", "description": "Right-click any page, link, image, or selection to add it instantly." }
+    ],
+    "links": [
+      { "label": "Learn More", "url": "https://zozimustechnologies.github.io/collections/", "variant": "primary" },
+      { "label": "File a Bug", "url": "https://github.com/zozimustechnologies/collections/issues", "variant": "outline" },
+      { "label": "GitHub", "url": "https://github.com/zozimustechnologies/collections", "variant": "outline" }
+    ],
+    "screenshots": [
+      { "url": "https://raw.githubusercontent.com/zozimustechnologies/collections/main/storeassets/screenshot-1280x800.png", "alt": "Collections overview", "width": 1280, "height": 800 },
+      { "url": "https://raw.githubusercontent.com/zozimustechnologies/collections/main/storeassets/screenshot-640x400.png", "alt": "Collections compact view", "width": 640, "height": 400 }
+    ]
   }
 ]
