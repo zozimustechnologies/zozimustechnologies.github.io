@@ -210,7 +210,36 @@
     ]
   },
   {
-    "id": "collectionsforedge",
+    "id": "pdftools",
+    "name": "PDF Tools",
+    "tag": "Productivity",
+    "status": "coming-soon",
+    "cardUrl": "https://zozimustechnologies.github.io/pdftools/",
+    "bannerImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/pdftools/main/storeassets/largepromotionaltile-1400x560.png", "alt": "PDF Tools banner", "width": 1400, "height": 560 },
+    "logoImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/pdftools/main/storeassets/extensionlogo-300x300.png", "alt": "PDF Tools logo" },
+    "description": "A full PDF toolkit in your browser sidebar. Password protect, sign, watermark, merge, split, rotate, and extract pages — 100% local processing, no uploads.",
+    "longDescription": "A privacy-first, full-featured PDF toolkit built into the Microsoft Edge side panel. Password protect with AES-256 encryption, draw and embed digital signatures, add custom watermarks, merge multiple PDFs, split or extract pages, rotate pages, and edit document metadata — all processed entirely in your browser with no uploads and no accounts required.",
+    "featurePills": ["AES-256 encryption", "Digital signatures", "Watermarks", "Merge & Split", "100% local", "Side panel UI"],
+    "featureGrid": [
+      { "emoji": "🔒", "title": "Password Protection", "description": "AES-256 encryption with separate user and owner passwords plus granular permissions." },
+      { "emoji": "✍", "title": "Digital Signatures", "description": "Draw your signature with mouse or touch, attach metadata, and add timestamps." },
+      { "emoji": "💧", "title": "Watermarks", "description": "Custom text, opacity, placement, font size, and colour with live preview." },
+      { "emoji": "📄", "title": "Merge & Split", "description": "Combine multiple PDFs into one or separate every page into its own file." },
+      { "emoji": "✂", "title": "Extract & Rotate", "description": "Extract specific pages by number or range, and rotate pages 90°, 180°, or 270°." },
+      { "emoji": "🔓", "title": "100% Local", "description": "All processing runs in your browser via PDF-lib and PDF.js — nothing leaves your device." }
+    ],
+    "links": [
+      { "label": "Learn More", "url": "https://zozimustechnologies.github.io/pdftools/", "variant": "primary" },
+      { "label": "File a Bug", "url": "https://github.com/zozimustechnologies/pdftools/issues", "variant": "outline" },
+      { "label": "GitHub", "url": "https://github.com/zozimustechnologies/pdftools", "variant": "outline" }
+    ],
+    "screenshots": [
+      { "url": "https://raw.githubusercontent.com/zozimustechnologies/pdftools/main/storeassets/screenshot-1280x800.png", "alt": "PDF Tools full view", "width": 1280, "height": 800 },
+      { "url": "https://raw.githubusercontent.com/zozimustechnologies/pdftools/main/storeassets/screenshot-640x400.png", "alt": "PDF Tools compact view", "width": 640, "height": 400 }
+    ]
+  },
+  {
+    "id": "collections",
     "name": "Collections",
     "tag": "Productivity",
     "status": "coming-soon",
