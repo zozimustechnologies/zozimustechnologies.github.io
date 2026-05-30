@@ -13,6 +13,7 @@ import VscodeExtensions from './pages/VscodeExtensions';
 import CliTools from './pages/CliTools';
 import About from './pages/About';
 import Privacy from './pages/Privacy';
+import ForFun from './pages/ForFun';
 import './styles/global.css';
 
 import { useEffect } from 'react';
@@ -47,6 +48,7 @@ const ROUTES = [
   },
   { path: '/about', label: 'About', aliases: ['about-us', 'team', 'us', 'who'] },
   { path: '/privacy', label: 'Privacy Policy', aliases: ['privacy-policy', 'policy', 'data', 'gdpr'] },
+  { path: '/forfun', label: 'For Fun', aliases: ['fun', 'games', 'game', 'play', 'reaction', 'dino'] },
   { path: '/donate', label: 'Donate', aliases: ['donation', 'support', 'wise', 'pay', 'contribute'] },
 ];
 
@@ -112,6 +114,7 @@ function Layout() {
         <Route path="/cli-tools" element={<Navigate to="/products" replace />} />
         <Route path="/about" element={<About />} />
         <Route path="/privacy" element={<Privacy />} />
+        <Route path="/forfun" element={<ForFun />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       {isHome ? <Footer /> : <SimpleFooter />}

@@ -19,6 +19,7 @@ export default function Nav() {
       <div className={`nav-links${open ? ' nav-open' : ''}`}>
         <NavLink to="/" end onClick={() => setOpen(false)}>Home</NavLink>
         <NavLink to="/products" onClick={() => setOpen(false)}>Products</NavLink>
+        <NavLink to="/forfun" onClick={() => setOpen(false)}>For Fun</NavLink>
         <NavLink to="/about" onClick={() => setOpen(false)}>About</NavLink>
         <NavLink to="/privacy" onClick={() => setOpen(false)}>Privacy</NavLink>
         <a href="https://github.com/zozimustechnologies" target="_blank" rel="noopener">GitHub</a>
