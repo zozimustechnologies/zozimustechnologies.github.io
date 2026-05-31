@@ -1,69 +1,65 @@
-.forfun-page {
+/* ── Layout ── */
+.page {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
 /* ── Header ── */
-.forfun-header {
-  padding: 100px 32px 0;
+.site-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 24px 32px;
 }
-body.banner-visible .forfun-header {
-  padding-top: calc(100px + var(--banner-height, 48px));
-}
-.forfun-header-inner {
+.header-inner {
   max-width: 1100px;
   margin: 0 auto;
-  padding-bottom: 24px;
-  border-bottom: 1px solid var(--border);
   display: flex;
   align-items: center;
   gap: 16px;
 }
-.forfun-logo-mark {
+.logo-mark {
   font-size: 2.5rem;
   line-height: 1;
 }
-.forfun-site-title {
+.site-title {
   font-size: 1.75rem;
   font-weight: 800;
   letter-spacing: -0.03em;
-  color: var(--text-bright);
+  color: #f0f6fc;
   line-height: 1.1;
 }
-.forfun-site-subtitle {
+.site-subtitle {
   font-size: 0.9rem;
-  color: var(--text-muted);
+  color: rgba(201, 209, 217, 0.6);
   margin-top: 2px;
 }
 
 /* ── Catalog ── */
-.forfun-catalog {
+.catalog {
   flex: 1;
   max-width: 1100px;
   margin: 0 auto;
   padding: 48px 32px;
   width: 100%;
 }
-.forfun-catalog-heading {
+.catalog-heading {
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--text-muted);
-  opacity: 0.6;
+  color: rgba(201, 209, 217, 0.45);
   margin-bottom: 20px;
 }
-.forfun-catalog-grid {
+.catalog-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
   gap: 16px;
 }
 
 /* ── Game Card ── */
-.forfun-game-card {
-  background: var(--bg-card);
-  border: 1px solid var(--border);
+.game-card {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 14px;
   padding: 24px;
   display: flex;
@@ -74,56 +70,68 @@ body.banner-visible .forfun-header {
   transition: background 0.18s, border-color 0.18s, transform 0.18s;
   cursor: pointer;
 }
-.forfun-game-card:not(.coming-soon):hover {
-  background: var(--bg-elevated);
-  border-color: var(--border-strong, rgba(255, 255, 255, 0.18));
+.game-card:not(.coming-soon):hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(255, 255, 255, 0.18);
   transform: translateY(-2px);
 }
-.forfun-game-card.coming-soon {
+.game-card.coming-soon {
   opacity: 0.45;
   cursor: default;
   border-style: dashed;
 }
-.forfun-game-card-emoji {
+.game-card-emoji {
   font-size: 2rem;
   line-height: 1;
 }
-.forfun-game-card-body {
+.game-card-body {
   flex: 1;
   display: flex;
   flex-direction: column;
   gap: 6px;
 }
-.forfun-game-card-tag {
+.game-card-tag {
   font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--accent-light);
+  color: #58a6ff;
 }
-.forfun-game-card.coming-soon .forfun-game-card-tag {
-  color: var(--text-muted);
-  opacity: 0.5;
+.game-card.coming-soon .game-card-tag {
+  color: rgba(201, 209, 217, 0.5);
 }
-.forfun-game-card-title {
+.game-card-title {
   font-size: 1.15rem;
   font-weight: 700;
-  color: var(--text-bright);
+  color: #f0f6fc;
   letter-spacing: -0.01em;
 }
-.forfun-game-card-desc {
+.game-card-desc {
   font-size: 0.875rem;
-  color: var(--text-muted);
+  color: rgba(201, 209, 217, 0.65);
   line-height: 1.55;
 }
-.forfun-game-card-play {
+.game-card-play {
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--accent-light);
+  color: #58a6ff;
   margin-top: 4px;
+  transition: gap 0.15s;
 }
 
-@media (max-width: 600px) {
-  .forfun-header { padding: 80px 20px 0; }
-  .forfun-catalog { padding: 32px 20px; }
+/* ── Footer ── */
+.site-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 20px 32px;
+  text-align: center;
+  font-size: 0.8rem;
+  color: rgba(201, 209, 217, 0.35);
 }
+
+/* ── Responsive ── */
+@media (max-width: 600px) {
+  .site-header { padding: 20px; }
+  .catalog { padding: 32px 20px; }
+  .site-footer { padding: 20px; }
+}
+

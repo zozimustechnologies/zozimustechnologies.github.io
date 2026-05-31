@@ -14,6 +14,7 @@ import CliTools from './pages/CliTools';
 import About from './pages/About';
 import Privacy from './pages/Privacy';
 import ForFun from './pages/ForFun';
+import ReactionTest from './pages/ReactionTest';
 import './styles/global.css';
 
 import { useEffect } from 'react';
@@ -129,6 +130,7 @@ export default function App() {
         {externalRoutes.map(({ path, url }) => (
           <Route key={path} path={path} element={<ExternalRedirect to={url} />} />
         ))}
+        <Route path="/forfun/reaction-test" element={<ReactionTest />} />
         <Route path="*" element={<Layout />} />
       </Routes>
     </BrowserRouter>
