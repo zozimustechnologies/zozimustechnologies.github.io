@@ -15,6 +15,8 @@ import About from './pages/About';
 import Privacy from './pages/Privacy';
 import ForFun from './pages/ForFun';
 import ReactionTest from './pages/ReactionTest';
+import UpdateSimulator from './pages/UpdateSimulator';
+import OsUpdateSimulator from './pages/OsUpdateSimulator';
 import './styles/global.css';
 
 import { useEffect } from 'react';
@@ -131,6 +133,8 @@ export default function App() {
           <Route key={path} path={path} element={<ExternalRedirect to={url} />} />
         ))}
         <Route path="/forfun/reaction-test" element={<ReactionTest />} />
+        <Route path="/forfun/update-simulator" element={<UpdateSimulator />} />
+        <Route path="/forfun/os-update-simulator" element={<OsUpdateSimulator />} />
         <Route path="*" element={<Layout />} />
       </Routes>
     </BrowserRouter>

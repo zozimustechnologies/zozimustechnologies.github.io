@@ -1,0 +1,411 @@
+/* ── Picker / Time screen ─────────────────────────────────── */
+
+.ossim-root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px 40px;
+  background: var(--bg);
+}
+
+.ossim-back {
+  position: fixed;
+  top: 20px;
+  left: 24px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-decoration: none;
+  transition: color 0.18s;
+  z-index: 10;
+}
+.ossim-back:hover { color: var(--accent-light); }
+
+.ossim-window {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 48px 40px;
+  width: 100%;
+  max-width: 520px;
+  box-shadow: 0 12px 48px rgba(0, 0, 0, 0.45);
+}
+
+.ossim-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  text-align: center;
+  animation: ossim-in 0.3s ease;
+}
+
+@keyframes ossim-in {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.ossim-eyebrow {
+  font-size: 2.8rem;
+  line-height: 1;
+  margin-bottom: 2px;
+}
+
+.ossim-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-bright);
+  letter-spacing: -0.025em;
+  line-height: 1.2;
+}
+
+.ossim-sub {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 4px;
+}
+
+/* ── OS Selection Cards ─────────────────────────────────── */
+
+.ossim-os-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  width: 100%;
+  margin-top: 6px;
+}
+
+.ossim-os-card {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 24px 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  transition: background 0.18s, border-color 0.18s, transform 0.15s;
+  color: inherit;
+  text-align: center;
+}
+
+.ossim-os-card:hover {
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(255,255,255,0.2);
+  transform: translateY(-2px);
+}
+.ossim-os-card:active { transform: translateY(0); }
+
+.ossim-os-apple-img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+}
+
+.ossim-os-win-img {
+  width: 52px;
+  height: 52px;
+  object-fit: contain;
+}
+
+.ossim-os-emoji {
+  font-size: 2.6rem;
+  line-height: 1;
+}
+
+.ossim-os-win-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 52px;
+}
+
+.ossim-os-name {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-bright);
+  line-height: 1.2;
+}
+
+.ossim-os-ver {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* ── Back button (time screen) ──────────────────────────── */
+
+.ossim-back-btn {
+  align-self: flex-start;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.18s;
+}
+.ossim-back-btn:hover { color: var(--accent-light); }
+
+/* ── Time Form ──────────────────────────────────────────── */
+
+.ossim-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  width: 100%;
+  margin-top: 4px;
+}
+
+.ossim-time-row {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.ossim-input,
+.ossim-select {
+  background: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--text-bright);
+  font-size: 1rem;
+  padding: 11px 14px;
+  transition: border-color 0.18s;
+  outline: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.ossim-input:focus,
+.ossim-select:focus {
+  border-color: var(--accent-light);
+}
+
+.ossim-input {
+  flex: 1;
+  min-width: 0;
+  font-size: 1.2rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.ossim-select {
+  cursor: pointer;
+  padding-right: 36px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%238b949e' d='M6 8L1 3h10z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+}
+
+.ossim-btn {
+  width: 100%;
+  max-width: 280px;
+  padding: 12px 28px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: opacity 0.18s, transform 0.12s;
+}
+.ossim-btn:hover:not(:disabled) { opacity: 0.88; transform: translateY(-1px); }
+.ossim-btn:active:not(:disabled) { transform: translateY(0); }
+.ossim-btn:disabled { opacity: 0.3; cursor: not-allowed; }
+
+/* ── Fullscreen overlays ────────────────────────────────── */
+
+.os-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: ossim-in 0.4s ease;
+}
+
+.mac-overlay {
+  background: #000;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;
+}
+
+.win-overlay {
+  background: #050b14;
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+/* ── macOS Screen ───────────────────────────────────────── */
+
+.mac-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+  text-align: center;
+}
+
+.mac-apple-img {
+  width: 140px;
+  height: 140px;
+  object-fit: contain;
+  mix-blend-mode: screen;
+}
+
+/* bar sits below the logo with a fixed gap */
+.mac-bar-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+}
+
+.mac-bar-track {
+  width: 220px;
+  height: 4px;
+  background: rgba(255, 255, 255, 0.22);
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.mac-bar-fill {
+  height: 100%;
+  background: rgba(255, 255, 255, 0.88);
+  border-radius: 99px;
+  transition: width 0.4s linear;
+}
+
+/* done state */
+.mac-done-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.mac-done-title {
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.01em;
+}
+
+.mac-restart-btn {
+  padding: 10px 28px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.mac-restart-btn:hover { background: rgba(255, 255, 255, 0.22); }
+
+/* ── Windows Screen ─────────────────────────────────────── */
+
+.win-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  text-align: center;
+}
+
+/* Chasing-dots spinner */
+.win-spinner-wrap {
+  position: relative;
+  width: 36px;
+  height: 36px;
+}
+
+.win-dot {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  margin: -2.5px 0 0 -2.5px;
+  border-radius: 50%;
+  background: #ffffff;
+  animation: win-dot-fade 1.25s linear infinite;
+}
+
+@keyframes win-dot-fade {
+  0%   { opacity: 1;    }
+  50%  { opacity: 0.15; }
+  100% { opacity: 1;    }
+}
+
+@keyframes win-spin {
+  to { transform: rotate(360deg); }
+}
+
+.win-pct-label {
+  font-size: 0.95rem;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.88);
+  letter-spacing: 0.01em;
+}
+
+.win-keep-on {
+  font-size: 0.88rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.6);
+  letter-spacing: 0.01em;
+  margin-top: -8px;
+}
+
+.win-footer {
+  position: absolute;
+  bottom: 56px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 0.8rem;
+  font-weight: 300;
+  color: rgba(255, 255, 255, 0.45);
+  letter-spacing: 0.01em;
+}
+
+/* ── ESC hint ───────────────────────────────────────────── */
+
+.os-esc-hint {
+  position: absolute;
+  bottom: 20px;
+  right: 24px;
+  font-size: 0.72rem;
+  color: rgba(255, 255, 255, 0.2);
+  letter-spacing: 0.03em;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.os-hint-hidden {
+  opacity: 0;
+}
+
+.os-cursor-hidden {
+  cursor: none;
+}
+
+/* ── Responsive ─────────────────────────────────────────── */
+
+@media (max-width: 540px) {
+  .ossim-window { padding: 36px 22px; border-radius: 16px; }
+  .ossim-os-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+  .ossim-os-card { padding: 18px 12px; }
+  .ossim-back { top: 14px; left: 16px; }
+  .win-pct-big { font-size: 5rem; }
+  .win-pct-pct { font-size: 2rem; }
+  .mac-bar-track { width: 80vw; }
+}
