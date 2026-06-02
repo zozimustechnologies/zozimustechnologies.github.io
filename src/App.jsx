@@ -17,6 +17,7 @@ import ForFun from './pages/ForFun';
 import ReactionTest from './pages/ReactionTest';
 import UpdateSimulator from './pages/UpdateSimulator';
 import OsUpdateSimulator from './pages/OsUpdateSimulator';
+import PrankScreens from './pages/PrankScreens';
 import './styles/global.css';
 
 import { useEffect } from 'react';
@@ -118,6 +119,7 @@ function Layout() {
         <Route path="/about" element={<About />} />
         <Route path="/privacy" element={<Privacy />} />
         <Route path="/forfun" element={<ForFun />} />
+        <Route path="/forfun/prank-screens" element={<PrankScreens />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       {isHome ? <Footer /> : <SimpleFooter />}

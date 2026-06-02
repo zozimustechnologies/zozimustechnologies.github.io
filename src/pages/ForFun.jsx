@@ -11,23 +11,12 @@ const GAMES = [
     to: '/forfun/reaction-test',
     tag: 'Reflex',
   },
-];
-
-const PRANK_SCREENS = [
   {
-    id: 'update-simulator',
-    title: 'Update Simulator',
-    description: 'Experience the full joy of a software update — including the stall at 99% and cryptic error messages.',
-    emoji: '💿',
-    to: '/forfun/update-simulator',
-    tag: 'Simulation',
-  },
-  {
-    id: 'os-update-simulator',
-    title: 'OS Update Simulator',
-    description: 'Pick macOS or Windows, set a duration, then suffer through a full-screen authentic update screen.',
-    emoji: '🖥️',
-    to: '/forfun/os-update-simulator',
+    id: 'prank-screens',
+    title: 'Prank Screens',
+    description: 'Trick your friends with realistic fake update screens, complete with progress bars and error messages.',
+    emoji: '🎭',
+    to: '/forfun/prank-screens',
     tag: 'Simulation',
   },
 ];
@@ -75,15 +64,6 @@ export default function ForFun() {
               <p className="forfun-game-card-desc">New games are on the way. Check back later!</p>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section className="forfun-catalog">
-        <h2 className="forfun-catalog-heading">Prank Screens</h2>
-        <div className="forfun-catalog-grid">
-          {PRANK_SCREENS.map(item => (
-            <GameCard key={item.id} {...item} />
-          ))}
         </div>
       </section>
     </main>

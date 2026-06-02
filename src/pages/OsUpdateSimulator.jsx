@@ -251,7 +251,7 @@ export default function OsUpdateSimulator() {
 
       {!isFullscreen && (
         <div className="ossim-root">
-          <Link className="ossim-back" to="/forfun">← All games</Link>
+          <Link className="ossim-back" to="/forfun/prank-screens">← All games</Link>
           <div className="ossim-window">
 
             {phase === 'pick' && (

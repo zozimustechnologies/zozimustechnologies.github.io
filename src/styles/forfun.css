@@ -4,6 +4,18 @@
   flex-direction: column;
 }
 
+/* ── Back link ── */
+.forfun-back-link {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-decoration: none;
+  margin-bottom: 16px;
+  transition: color 0.18s;
+}
+.forfun-back-link:hover { color: var(--accent-light); }
+
 /* ── Header ── */
 .forfun-header {
   padding: 100px 32px 0;
