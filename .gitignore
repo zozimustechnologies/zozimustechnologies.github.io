@@ -7,9 +7,6 @@ dist/
 # Vite cache
 .vite/
 
-# GitHub config
-.github/
-
 # Editor directories
 .vscode/
 .idea/

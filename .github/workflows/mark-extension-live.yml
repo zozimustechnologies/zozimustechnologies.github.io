@@ -1,0 +1,75 @@
+name: Mark Extension Live
+
+# Trigger 1 — manually from the Actions tab
+# Trigger 2 — via repository_dispatch from an extension repo
+#
+# Example curl to trigger from another repo's workflow:
+#   curl -X POST \
+#     -H "Authorization: Bearer ${{ secrets.WEBSITE_DISPATCH_TOKEN }}" \
+#     -H "Accept: application/vnd.github+json" \
+#     https://api.github.com/repos/zozimustechnologies/zozimustechnologies.github.io/dispatches \
+#     -d '{"event_type":"extension-published","client_payload":{"extension_id":"imageeditor","store_url":"https://microsoftedge.microsoft.com/addons/detail/...","store_label":"Download from Edge"}}'
+
+on:
+  workflow_dispatch:
+    inputs:
+      extension_id:
+        description: 'Extension id (matches "id" field in extensions.json)'
+        required: true
+      store_url:
+        description: 'Store listing URL to add to the links array (optional)'
+        required: false
+      store_label:
+        description: 'Button label for the store link'
+        required: false
+        default: 'Download from Edge'
+
+  repository_dispatch:
+    types: [extension-published]
+
+permissions:
+  contents: write
+
+jobs:
+  mark-live:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout website repo
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Resolve inputs
+        id: inputs
+        run: |
+          if [ "${{ github.event_name }}" = "repository_dispatch" ]; then
+            echo "extension_id=${{ github.event.client_payload.extension_id }}" >> $GITHUB_OUTPUT
+            echo "store_url=${{ github.event.client_payload.store_url }}"       >> $GITHUB_OUTPUT
+            echo "store_label=${{ github.event.client_payload.store_label }}"   >> $GITHUB_OUTPUT
+          else
+            echo "extension_id=${{ inputs.extension_id }}" >> $GITHUB_OUTPUT
+            echo "store_url=${{ inputs.store_url }}"       >> $GITHUB_OUTPUT
+            echo "store_label=${{ inputs.store_label }}"   >> $GITHUB_OUTPUT
+          fi
+
+      - name: Update extensions.json
+        run: |
+          node .github/scripts/mark-live.js \
+            "${{ steps.inputs.outputs.extension_id }}" \
+            "${{ steps.inputs.outputs.store_url }}" \
+            "${{ steps.inputs.outputs.store_label }}"
+
+      - name: Commit and push
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git diff --quiet && echo "No changes to commit." && exit 0
+          git add src/extensions.json
+          git commit -m "chore: mark ${{ steps.inputs.outputs.extension_id }} as available"
+          git push
