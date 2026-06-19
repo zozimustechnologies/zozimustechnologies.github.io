@@ -1,17 +1,58 @@
-name: Archive Website
+name: Archive Zozimus Sites
 
 on:
-  push:
-    branches: [main]
-
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 0 * * *' # Daily
 
   workflow_dispatch:
+
+  push:
+    branches:
+      - main
 
 jobs:
   archive:
     runs-on: ubuntu-latest
 
     steps:
-      - run: curl -L -X POST "https://web.archive.org/save/https://zozimustechnologies.github.io/"
+      - name: Archive Websites
+        run: |
+          urls=(
+            "https://zozimustechnologies.github.io/"
+            "https://zozimustechnologies.github.io/products"
+            "https://zozimustechnologies.github.io/forfun"
+            "https://zozimustechnologies.github.io/about"
+            "https://zozimustechnologies.github.io/privacy"
+
+            "https://zozimustechnologies.github.io/qrcodegenerator/"
+            "https://zozimustechnologies.github.io/the-qrcode-reader/"
+            "https://zozimustechnologies.github.io/siteblocker/"
+            "https://zozimustechnologies.github.io/pipcamera/"
+            "https://zozimustechnologies.github.io/ImageEditor/"
+            "https://zozimustechnologies.github.io/ZenTab/"
+            "https://zozimustechnologies.github.io/vocabbuilder/"
+            "https://zozimustechnologies.github.io/pdftools/"
+            "https://zozimustechnologies.github.io/collections/"
+
+            "https://zozimustechnologies.github.io/forfun/reaction-test"
+            "https://zozimustechnologies.github.io/forfun/prank-screens"
+            "https://zozimustechnologies.github.io/forfun/update-simulator"
+            "https://zozimustechnologies.github.io/forfun/os-update-simulator"
+
+            "https://the-qrcode-reader.netlify.app/"
+            "https://the-qrcode-generator.netlify.app/"
+          )
+
+          for url in "${urls[@]}"; do
+            echo "Archiving $url"
+
+            curl \
+              -L \
+              -s \
+              -o /dev/null \
+              -A "Mozilla/5.0" \
+              -X POST \
+              "https://web.archive.org/save/$url"
+
+            sleep 30
+          done
