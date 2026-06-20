@@ -1,58 +1,65 @@
 name: Archive Zozimus Sites
 
 on:
-  schedule:
-    - cron: '0 0 * * *' # Daily
+schedule:
+- cron: '0 0 * * *'
 
-  workflow_dispatch:
+workflow_dispatch:
 
-  push:
-    branches:
-      - main
+push:
+branches:
+- main
 
 jobs:
-  archive:
-    runs-on: ubuntu-latest
+archive:
+runs-on: ubuntu-latest
 
-    steps:
-      - name: Archive Websites
-        run: |
-          urls=(
-            "https://zozimustechnologies.github.io/"
-            "https://zozimustechnologies.github.io/products"
-            "https://zozimustechnologies.github.io/forfun"
-            "https://zozimustechnologies.github.io/about"
-            "https://zozimustechnologies.github.io/privacy"
+steps:
+  - name: Archive Websites
+    shell: bash
+    run: |
+      urls=(
+        "https://zozimustechnologies.github.io/"
+        "https://zozimustechnologies.github.io/products"
+        "https://zozimustechnologies.github.io/forfun"
+        "https://zozimustechnologies.github.io/about"
+        "https://zozimustechnologies.github.io/privacy"
 
-            "https://zozimustechnologies.github.io/qrcodegenerator/"
-            "https://zozimustechnologies.github.io/the-qrcode-reader/"
-            "https://zozimustechnologies.github.io/siteblocker/"
-            "https://zozimustechnologies.github.io/pipcamera/"
-            "https://zozimustechnologies.github.io/ImageEditor/"
-            "https://zozimustechnologies.github.io/ZenTab/"
-            "https://zozimustechnologies.github.io/vocabbuilder/"
-            "https://zozimustechnologies.github.io/pdftools/"
-            "https://zozimustechnologies.github.io/collections/"
+        "https://zozimustechnologies.github.io/qrcodegenerator/"
+        "https://zozimustechnologies.github.io/the-qrcode-reader/"
+        "https://zozimustechnologies.github.io/siteblocker/"
+        "https://zozimustechnologies.github.io/pipcamera/"
+        "https://zozimustechnologies.github.io/ImageEditor/"
+        "https://zozimustechnologies.github.io/ZenTab/"
+        "https://zozimustechnologies.github.io/vocabbuilder/"
+        "https://zozimustechnologies.github.io/pdftools/"
+        "https://zozimustechnologies.github.io/collections/"
 
-            "https://zozimustechnologies.github.io/forfun/reaction-test"
-            "https://zozimustechnologies.github.io/forfun/prank-screens"
-            "https://zozimustechnologies.github.io/forfun/update-simulator"
-            "https://zozimustechnologies.github.io/forfun/os-update-simulator"
+        "https://zozimustechnologies.github.io/forfun/reaction-test"
+        "https://zozimustechnologies.github.io/forfun/prank-screens"
+        "https://zozimustechnologies.github.io/forfun/update-simulator"
+        "https://zozimustechnologies.github.io/forfun/os-update-simulator"
 
-            "https://the-qrcode-reader.netlify.app/"
-            "https://the-qrcode-generator.netlify.app/"
-          )
+        "https://the-qrcode-reader.netlify.app/"
+        "https://the-qrcode-generator.netlify.app/"
+      )
 
-          for url in "${urls[@]}"; do
-            echo "Archiving $url"
+      for url in "${urls[@]}"; do
+        echo ""
+        echo "========================================"
+        echo "Archiving: $url"
+        echo "========================================"
 
-            curl \
-              -L \
-              -s \
-              -o /dev/null \
-              -A "Mozilla/5.0" \
-              -X POST \
-              "https://web.archive.org/save/$url"
+        headers=$(curl -s -D - -o /dev/null \
+          -A "Mozilla/5.0" \
+          -X POST \
+          "https://web.archive.org/save/$url")
 
-            sleep 30
-          done
+        echo "$headers" | grep -i "^http/"
+        echo "$headers" | grep -i "^location:"
+        echo "$headers" | grep -i "^x-location:"
+        echo "$headers" | grep -i "^retry-after:"
+        echo "$headers" | grep -i "^content-location:"
+
+        sleep 30
+      done
