@@ -210,6 +210,33 @@
     ]
   },
   {
+    "id": "ytcommentsearch",
+    "name": "YouTube Comment Search",
+    "tag": "Productivity",
+    "status": "available",
+    "cardUrl": "https://zozimustechnologies.github.io/youtube-comment-search/",
+    "bannerImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/youtube-comment-search/main/public/icons/icon-1024.png", "alt": "YouTube Comment Search logo", "width": 1024, "height": 1024 },
+    "logoImage": { "url": "https://raw.githubusercontent.com/zozimustechnologies/youtube-comment-search/main/public/icons/icon-300.png", "alt": "YouTube Comment Search logo" },
+    "description": "Find any comment instantly. Search by keyword or username, highlight matches, and jump straight to the comment — without endless scrolling.",
+    "longDescription": "Real-time comment search that works directly on the YouTube page. Filter comments by keyword or username as you type, surface top comments using TF-IDF analysis, isolate replies from the video creator, and click any result to jump straight to it — all 100% local, no accounts, no servers, no tracking.",
+    "featurePills": ["Real-time search", "Top comments", "Creator filter", "Jump to comment", "Dark & light mode", "SPA-aware"],
+    "featureGrid": [
+      { "emoji": "🔍", "title": "Real-time Search", "description": "Filter comments by keyword or username as you type — results update instantly, no page reload needed." },
+      { "emoji": "✦", "title": "Top Comments", "description": "Surface the most representative comments using TF-IDF analysis with a single click." },
+      { "emoji": "★", "title": "Creator Filter", "description": "Isolate replies from the video creator to find official responses fast." },
+      { "emoji": "🎯", "title": "Jump to Comment", "description": "Click any result to scroll directly to it on the page. No more hunting through hundreds of comments." },
+      { "emoji": "🌑", "title": "Dark & Light Mode", "description": "Automatically follows YouTube's theme — no configuration required." },
+      { "emoji": "⚡", "title": "SPA-Aware", "description": "Re-indexes comments automatically when you navigate to a new video, without a full page reload." }
+    ],
+    "links": [
+      { "label": "Learn More", "url": "https://zozimustechnologies.github.io/youtube-comment-search/", "variant": "primary" },
+      { "label": "Download from Edge", "url": "https://microsoftedge.microsoft.com/addons/search?developer=Zozimus%20Technologies", "variant": "outline" },
+      { "label": "File a Bug", "url": "https://github.com/zozimustechnologies/youtube-comment-search/issues", "variant": "outline" },
+      { "label": "GitHub", "url": "https://github.com/zozimustechnologies/youtube-comment-search", "variant": "outline" }
+    ],
+    "screenshots": []
+  },
+  {
     "id": "pdftools",
     "name": "PDF Tools",
     "tag": "Productivity",

@@ -84,7 +84,7 @@ export default function Home() {
 
       {/* Stats */}
       <div className="stats reveal">
-        <div className="stat"><div className="number">6</div><div className="label">Products</div></div>
+        <div className="stat"><div className="number">8</div><div className="label">Products</div></div>
         <div className="stat"><div className="number">100%</div><div className="label">Local Processing</div></div>
         <div className="stat"><div className="number">0</div><div className="label">Data Collected</div></div>
         <div className="stat"><div className="number">0</div><div className="label">External Dependencies</div></div>
